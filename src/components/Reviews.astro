@@ -1,71 +1,79 @@
+---
+import { getCollection } from "astro:content";
+const testimonials = await getCollection("testimonials");
+---
+
 <section class="bg-white dark:bg-gray-900">
   <div class="max-w-screen-xl px-4 py-8 mx-auto text-center lg:py-16 lg:px-6">
     <div class="swiper reviews-slider max-w-screen-md mx-auto">
       <div class="swiper-wrapper">
-        <div class="swiper-slide">
-          <figure>
-            <svg class="h-12 mx-auto mb-3 text-gray-400 dark:text-gray-600" viewBox="0 0 24 27" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M14.017 18L14.017 10.609C14.017 4.905 17.748 1.039 23 0L23.995 2.151C21.563 3.068 20 5.789 20 8H24V18H14.017ZM0 18V10.609C0 4.905 3.748 1.038 9 0L9.996 2.151C7.563 3.068 6 5.789 6 8H9.983L9.983 18L0 18Z" fill="currentColor"></path>
-            </svg>
-            <blockquote>
-              <p class="text-2xl font-medium text-gray-900 dark:text-white">"These guys are awesome! We need 10 stars. They helped us move for the first time today and they were on time, professional, courteous, reasonable, and did a great job moving our things. We will recommend them to everyone! Thanks guys!!"</p>
-            </blockquote>
-            <figcaption class="flex items-center justify-center mt-6 space-x-3">
-              <img class="w-6 h-6 rounded-full" src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/michael-gouch.png" alt="profile picture" />
-              <div class="flex items-center divide-x-2 divide-gray-500 dark:divide-gray-700">
-                <div class="pr-3 font-medium text-gray-900 dark:text-white">-Kate Saunders</div>
-                <div class="pl-3 text-sm font-light text-gray-500 dark:text-gray-400">CEO at Google</div>
-              </div>
-            </figcaption>
-          </figure>
-        </div>
-
-        <div class="swiper-slide">
-          <figure>
-            <svg class="h-12 mx-auto mb-3 text-gray-400 dark:text-gray-600" viewBox="0 0 24 27" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M14.017 18L14.017 10.609C14.017 4.905 17.748 1.039 23 0L23.995 2.151C21.563 3.068 20 5.789 20 8H24V18H14.017ZM0 18V10.609C0 4.905 3.748 1.038 9 0L9.996 2.151C7.563 3.068 6 5.789 6 8H9.983L9.983 18L0 18Z" fill="currentColor"></path>
-            </svg>
-            <blockquote>
-              <p class="text-2xl font-medium text-gray-900 dark:text-white">"From the moment I asked for a quote until the move was done, every step of the process was impressive. Over email and phone, everyone was polite and personable. The day of the move, Cliff and Soren showed up exactly on time, finished early, and didn't damage a single thing. Fast, accurate, and best of all safe. I hate moving, but next time I must, I know who to call."</p>
-            </blockquote>
-            <figcaption class="flex items-center justify-center mt-6 space-x-3">
-              <img class="w-6 h-6 rounded-full" src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/michael-gouch.png" alt="profile picture" />
-              <div class="flex items-center divide-x-2 divide-gray-500 dark:divide-gray-700">
-                <div class="pr-3 font-medium text-gray-900 dark:text-white">-Jamie Belanger</div>
-                <div class="pl-3 text-sm font-light text-gray-500 dark:text-gray-400">CEO at Google</div>
-              </div>
-            </figcaption>
-          </figure>
-        </div>
-
-        <div class="swiper-slide">
-          <figure>
-            <svg class="h-12 mx-auto mb-3 text-gray-400 dark:text-gray-600" viewBox="0 0 24 27" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M14.017 18L14.017 10.609C14.017 4.905 17.748 1.039 23 0L23.995 2.151C21.563 3.068 20 5.789 20 8H24V18H14.017ZM0 18V10.609C0 4.905 3.748 1.038 9 0L9.996 2.151C7.563 3.068 6 5.789 6 8H9.983L9.983 18L0 18Z" fill="currentColor"></path>
-            </svg>
-            <blockquote>
-              <p class="text-2xl font-medium text-gray-900 dark:text-white">"We were amazed by this crew! Jake and Julia not only showed up on time, were courteous and professional, they also performed magic in getting all of our oversized pieces up or down narrow staircases. They were toting boxes of books like they were feathers. On top of it all, the price for services was incredibly reasonable -- and they never once made fun of the crap we moved (rocks, anyone?). This outfit came recommended and I will add our names to the list of those doing the recommending. Thank you, thank you, Local Muscle!"</p>
-            </blockquote>
-            <figcaption class="flex items-center justify-center mt-6 space-x-3">
-              <img class="w-6 h-6 rounded-full" src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/michael-gouch.png" alt="profile picture" />
-              <div class="flex items-center divide-x-2 divide-gray-500 dark:divide-gray-700">
-                <div class="pr-3 font-medium text-gray-900 dark:text-white">-Christine Palmer</div>
-                <div class="pl-3 text-sm font-light text-gray-500 dark:text-gray-400">CEO at Google</div>
-              </div>
-            </figcaption>
-          </figure>
-        </div>
+        {
+          testimonials.map((testimonial) => (
+            <div class="swiper-slide">
+              <figure>
+                <svg
+                  class="h-12 mx-auto mb-3 text-gray-400 dark:text-gray-600"
+                  viewBox="0 0 24 27"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M14.017 18L14.017 10.609C14.017 4.905 17.748 1.039 23 0L23.995 2.151C21.563 3.068 20 5.789 20 8H24V18H14.017ZM0 18V10.609C0 4.905 3.748 1.038 9 0L9.996 2.151C7.563 3.068 6 5.789 6 8H9.983L9.983 18L0 18Z"
+                    fill="currentColor"
+                  />
+                </svg>
+                <blockquote>
+                  <p class="text-2xl font-medium text-gray-900 dark:text-white">
+                    {testimonial.data.quote}
+                  </p>
+                </blockquote>
+                <figcaption class="flex items-center justify-center mt-6 space-x-3">
+                  <img
+                    class="w-6 h-6 rounded-full"
+                    src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/michael-gouch.png"
+                    alt="profile picture"
+                  />
+                  <div class="flex items-center divide-x-2 divide-gray-500 dark:divide-gray-700">
+                    <div class="pr-3 font-medium text-gray-900 dark:text-white">
+                      - {testimonial.data.name}
+                    </div>
+                  </div>
+                </figcaption>
+              </figure>
+            </div>
+          ))
+        }
       </div>
 
       <div class="flex items-center justify-center mt-12 gap-8">
         <button class="reviews-button-prev">
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M6.75 15.75L3 12m0 0l3.75-3.75M3 12h18"></path>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="w-6 h-6"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M6.75 15.75L3 12m0 0l3.75-3.75M3 12h18"></path>
           </svg>
         </button>
         <button class="reviews-button-next">
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3"></path>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="w-6 h-6"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3"></path>
           </svg>
         </button>
       </div>

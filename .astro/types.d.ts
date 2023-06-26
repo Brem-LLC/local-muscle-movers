@@ -188,14 +188,38 @@ declare module 'astro:content' {
 	>;
 
 	type ContentEntryMap = {
-		// @@CONTENT_ENTRY_MAP@@
+		
 	};
 
 	type DataEntryMap = {
-		// @@DATA_ENTRY_MAP@@
+		"services": {
+"moving/index": {
+	id: "moving/index";
+  collection: "services";
+  data: any
+};
+};
+"testimonials": {
+"anonymous-yelp-review/index": {
+	id: "anonymous-yelp-review/index";
+  collection: "testimonials";
+  data: any
+};
+"lee-van-dyke/index": {
+	id: "lee-van-dyke/index";
+  collection: "testimonials";
+  data: any
+};
+"melanie-dorn/index": {
+	id: "melanie-dorn/index";
+  collection: "testimonials";
+  data: any
+};
+};
+
 	};
 
 	type AnyEntryMap = ContentEntryMap & DataEntryMap;
 
-	type ContentConfig = '@@CONTENT_CONFIG_TYPE@@';
+	type ContentConfig = never;
 }
