@@ -193,8 +193,23 @@ declare module 'astro:content' {
 
 	type DataEntryMap = {
 		"services": {
+"heavy-items/index": {
+	id: "heavy-items/index";
+  collection: "services";
+  data: any
+};
+"hoisting/index": {
+	id: "hoisting/index";
+  collection: "services";
+  data: any
+};
 "moving/index": {
 	id: "moving/index";
+  collection: "services";
+  data: any
+};
+"rearrangement/index": {
+	id: "rearrangement/index";
   collection: "services";
   data: any
 };

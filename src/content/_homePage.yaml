@@ -1,0 +1,39 @@
+componentBlocks:
+  - discriminant: banner
+    value:
+      bannerImage: /images/home/componentBlocks/0/value/bannerImage.jpeg
+      heading: Let's get moving!!!
+      subheading: >-
+        At Local Muscle, we understand the serious responsibility placed upon us
+        by the pandemic. We closely follow all state and federal guidelines and
+        we've implemented enhanced sanitization routines.
+      buttonText: Get Estimate!
+      buttonLink: /estimate
+  - discriminant: imageText
+    value:
+      image: /images/blocks/componentBlocks/1/value/image.jpeg
+      heading: Trusted for over a decade
+      desciption: >-
+        We've built a reputation throughout New England as a moving company you
+        can trust. Whether you're moving halfway across the country or across
+        the street, we've got you covered. Throughout our history we've seen it
+        all, and we use that experience to make your move as smooth as possible.
+        Our customers return to us time and time again for their moving needs.
+        Let our reviews speak for themselves: Check us out on Google Reviews and
+        Yelp for more firsthand customer feedback!
+      imagePlacement: right
+  - discriminant: imageText
+    value:
+      image: /images/blocks/componentBlocks/2/value/image.jpeg
+      heading: Your Local Moving Team
+      desciption: >-
+        We build crews that work well together, and crews that work well
+        together keep our customers happy. Our staff has experience with all
+        kinds of moves, be it a top floor apartment in the middle of a city or a
+        rural location with rougher terrain, we can handle it all.
+      imagePlacement: left
+  - discriminant: testimonialSelector
+    value:
+      testimonials:
+        - anonymous-yelp-review
+        - lee-van-dyke

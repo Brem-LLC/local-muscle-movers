@@ -1,0 +1,13 @@
+menuItems:
+  - name: Home
+    link: /
+    button: false
+  - name: About
+    link: /about
+    button: false
+  - name: Resources
+    link: /join-our-crew
+    button: false
+  - name: Hire Us
+    link: /hire-us
+    button: true
