@@ -1,11 +1,32 @@
 ---
 import Logo from './logo.astro'
+import portland from '@images/portland.jpeg'
+import burlington from '@images/burlington.jpeg'
 ---
 
-<nav
-	class="navigation group fixed left-0 right-0 top-0 z-50 w-full border-gray-200 bg-gray-50 transition-all duration-200 aria-[scrolled]:bg-white aria-[scrolled]:drop-shadow-lg dark:bg-gray-900">
+<nav class="navigation fixed left-0 right-0 z-50 w-full border-gray-200 bg-primary transition-all duration-200 aria-[scrolled]:drop-shadow-lg">
+	<div class="bg-white py-2 text-center text-primary sm:h-12 sm:py-0">
+		<div class="mx-auto flex h-full w-full max-w-7xl flex-col items-center justify-between gap-2 px-10 sm:flex-row sm:gap-8">
+			<div class="flex items-center gap-1.5">
+				<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="h-6 w-6">
+					<path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+				</svg>
+				<span>Moving 7 days a week</span>
+			</div>
+			<button data-modal-target="popup-modal" data-modal-toggle="popup-modal" class="flex items-center gap-1.5">
+				<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="h-6 w-6">
+					<path
+						stroke-linecap="round"
+						stroke-linejoin="round"
+						d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z"
+					></path>
+				</svg>
+				<span>Call Us: Mon-Fri, 9AM to 4PM</span>
+			</button>
+		</div>
+	</div>
 	<div class="mx-auto flex max-w-screen-xl flex-wrap items-center justify-between p-4 transition-all duration-200 group-aria-[scrolled]:py-4 lg:group-aria-[scrolled]:py-2">
-		<a href="#" class="relative z-0 flex items-center lg:pl-32">
+		<a href="/" class="relative z-0 flex items-center lg:pl-32">
 			<Logo
 				class="absolute -top-8 left-0 hidden h-28 w-32 rounded-b fill-white transition-all duration-200 group-aria-[scrolled]:h-36 group-aria-[scrolled]:bg-white group-aria-[scrolled]:fill-black lg:block"
 			/>
@@ -58,16 +79,63 @@ import Logo from './logo.astro'
 					>
 				</li>
 				<li>
-					<a
-						href="#"
-						class="focus:ring-primary-900 dark:bg-primary-600 block rounded-lg bg-primary px-5 py-3 text-center font-medium text-white hover:bg-primary focus:outline-none focus:ring-4 dark:hover:bg-primary dark:focus:ring-primary"
-						>Hire Us</a
-					>
+					<a href="#" class="focus:ring-primary-900 dark:bg-primary-600 block rounded-lg bg-primary px-5 py-3 text-center font-medium text-white lg:bg-white lg:text-primary">Hire Us</a>
 				</li>
 			</ul>
 		</div>
 	</div>
 </nav>
+
+<!-- Popup -->
+<div id="popup-modal" tabindex="-1" class="fixed left-0 right-0 top-0 z-50 hidden h-[calc(100%-1rem)] max-h-full overflow-y-auto overflow-x-hidden p-4 md:inset-0">
+	<div class="relative max-h-full w-full max-w-md">
+		<div class="relative rounded-lg bg-white shadow dark:bg-gray-700">
+			<button
+				type="button"
+				class="absolute right-2.5 top-3 ml-auto inline-flex items-center rounded-lg bg-transparent p-1.5 text-sm text-gray-400 hover:bg-gray-200 hover:text-gray-900 dark:hover:bg-gray-800 dark:hover:text-white"
+				data-modal-hide="popup-modal">
+				<svg aria-hidden="true" class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"
+					><path
+						fill-rule="evenodd"
+						d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+						clip-rule="evenodd"></path></svg
+				>
+				<span class="sr-only">Close modal</span>
+			</button>
+			<div class="grid grid-cols-2 gap-5 p-6 pt-14 text-center">
+				<div>
+					<img src={portland} alt="Portland" class="mb-2 aspect-video w-full rounded-md" />
+					<h4 class="mb-2 text-base font-bold">Portland, ME</h4>
+					<a href="tel:207-370-9090" class="flex items-center justify-center gap-2 hover:underline">
+						<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="h-4 w-4">
+							<path
+								stroke-linecap="round"
+								stroke-linejoin="round"
+								d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z"
+							></path>
+						</svg>
+						207-370-9090
+					</a>
+				</div>
+
+				<div>
+					<img src={burlington} alt="burlington" class="mb-2 aspect-video w-full rounded-md" />
+					<h4 class="mb-2 text-base font-bold">Burlington, VT</h4>
+					<a href="tel:207-370-9090" class="flex items-center justify-center gap-2 hover:underline">
+						<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="h-4 w-4">
+							<path
+								stroke-linecap="round"
+								stroke-linejoin="round"
+								d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z"
+							></path>
+						</svg>
+						802-899-0908
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
 
 <script is:inline>
 	const navigation = document.querySelector('.navigation')
