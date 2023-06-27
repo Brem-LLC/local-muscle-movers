@@ -1,0 +1,82 @@
+---
+import Logo from './logo.astro'
+---
+
+<nav
+	class="navigation group fixed left-0 right-0 top-0 z-50 w-full border-gray-200 bg-transparent transition-all duration-200 aria-[scrolled]:bg-white aria-[scrolled]:drop-shadow-lg dark:bg-gray-900">
+	<div class="mx-auto flex max-w-screen-xl flex-wrap items-center justify-between p-4 transition-all duration-200 group-aria-[scrolled]:py-4 lg:group-aria-[scrolled]:py-2">
+		<a href="#" class="relative z-0 flex items-center lg:pl-32">
+			<Logo
+				class="absolute -top-8 left-0 hidden h-28 w-32 rounded-b fill-white transition-all duration-200 group-aria-[scrolled]:h-36 group-aria-[scrolled]:bg-white group-aria-[scrolled]:fill-black lg:block"
+			/>
+			<h3
+				class="lg:group-aria-lg:[scrolled]:opacity-0 origin-left text-lg font-bold text-white transition-all group-aria-[scrolled]:text-black md:text-2xl lg:group-aria-[scrolled]:invisible lg:group-aria-[scrolled]:scale-x-0">
+				Local Muscle Movers
+			</h3>
+		</a>
+		<div class="flex items-center lg:order-2 lg:hidden">
+			<button
+				data-collapse-toggle="mobile-menu-2"
+				type="button"
+				class="ml-1 inline-flex items-center rounded-lg p-2 text-sm text-white hover:bg-gray-100 hover:text-black focus:text-black focus:outline-none focus:ring-2 group-aria-[scrolled]:text-black lg:hidden"
+				aria-controls="mobile-menu-2"
+				aria-expanded="false">
+				<span class="sr-only">Open main menu</span>
+				<svg class="h-6 w-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"
+					><path
+						fill-rule="evenodd"
+						d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+						clip-rule="evenodd"></path></svg
+				>
+			</button>
+		</div>
+		<div class="hidden w-full items-center justify-between lg:order-1 lg:flex lg:w-auto" id="mobile-menu-2">
+			<ul
+				class="mt-4 flex flex-col items-start gap-4 rounded-lg border border-gray-100 bg-gray-50 p-4 font-medium lg:mt-0 lg:flex-row lg:items-center lg:gap-0 lg:space-x-8 lg:border-0 lg:bg-transparent lg:p-3">
+				<li hidden>
+					<a href="#" class="block rounded py-2 pl-3 pr-4 text-white aria-[current]:bg-primary aria-[current]:text-white lg:bg-transparent lg:text-primary" aria-current="page">Home</a>
+				</li>
+				<li>
+					<a
+						href="/about"
+						class="block rounded py-2 pl-3 pr-4 text-gray-900 hover:bg-gray-100 group-aria-[scrolled]:text-black dark:border-gray-700 lg:text-white lg:hover:bg-transparent lg:group-aria-[scrolled]:text-black lg:dark:hover:bg-transparent"
+						>About</a
+					>
+				</li>
+				<li>
+					<a
+						href="/resources"
+						class="block rounded py-2 pl-3 pr-4 text-gray-900 hover:bg-gray-100 group-aria-[scrolled]:text-black dark:border-gray-700 lg:text-white lg:hover:bg-transparent lg:group-aria-[scrolled]:text-black lg:dark:hover:bg-transparent"
+						>Resources</a
+					>
+				</li>
+				<li>
+					<a
+						href="/join"
+						class="block rounded py-2 pl-3 pr-4 text-gray-900 hover:bg-gray-100 group-aria-[scrolled]:text-black dark:border-gray-700 lg:text-white lg:hover:bg-transparent lg:group-aria-[scrolled]:text-black lg:dark:hover:bg-transparent"
+						>Join Our Crew</a
+					>
+				</li>
+				<li>
+					<a
+						href="#"
+						class="focus:ring-primary-900 dark:bg-primary-600 block rounded-lg bg-primary px-5 py-3 text-center font-medium text-white hover:bg-primary focus:outline-none focus:ring-4 dark:hover:bg-primary dark:focus:ring-primary"
+						>Hire Us</a
+					>
+				</li>
+			</ul>
+		</div>
+	</div>
+</nav>
+
+<script is:inline>
+	const navigation = document.querySelector('.navigation')
+	window.addEventListener('scroll', () => {
+		let fromTop = window.scrollY
+		if (fromTop >= 50) {
+			navigation.setAttribute('aria-scrolled', 'true')
+		} else {
+			navigation.removeAttribute('aria-scrolled')
+		}
+	})
+</script>
