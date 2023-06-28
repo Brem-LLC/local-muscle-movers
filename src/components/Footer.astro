@@ -1,8 +1,5 @@
 ---
-import { createReader } from '@keystatic/core/reader'
-import keystaticConfig from '../../keystatic.config'
-const reader = createReader(process.cwd(), keystaticConfig)
-const generalInformation = await reader.singletons.general.read()
+
 ---
 
 <footer class="rounded-lg bg-white py-4 sm:py-6 xl:py-8">
@@ -21,11 +18,11 @@ const generalInformation = await reader.singletons.general.read()
 
 	<div class="mx-auto w-full max-w-7xl justify-center px-7 sm:flex sm:items-center sm:justify-between lg:px-10">
 		<p class="mb-4 text-center text-sm text-gray-500 sm:mb-0">
-			{generalInformation?.title}
+			<!-- {generalInformation?.title} -->
 		</p>
 		<div class="flex items-center justify-center divide-x text-sm text-gray-500">
 			<p class="px-3">
-				<strong class="text-gray-800">USDOT</strong> # {generalInformation?.usdot}
+				<!-- <strong class="text-gray-800">USDOT</strong> # {generalInformation?.usdot} -->
 			</p>
 			<p class="px-3">Copryright &copy; 2023</p>
 		</div>

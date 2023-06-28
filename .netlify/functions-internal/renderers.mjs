@@ -1,4 +1,4 @@
-import { s as server_default } from './chunks/astro.ccd62b36.mjs';
+import { s as server_default } from './chunks/astro.88a260a9.mjs';
 import React, { createElement } from 'react';
 import ReactDOM from 'react-dom/server';
 import 'cookie';
