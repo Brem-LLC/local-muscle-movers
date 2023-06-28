@@ -13,6 +13,7 @@ const reader = createReader(process.cwd(), keystaticConfig)
 const homePage = await reader.singletons.homePage.read()
 import { getCollection } from 'astro:content';
 const services = await getCollection('services');
+const testimonials = await getCollection('testimonials');
 ---
 
 <Layout title="Homepage">
@@ -26,7 +27,7 @@ const services = await getCollection('services');
 	{homePage?.componentBlocks?.map((block) => (
 		<>
 			{block?.discriminant == 'imageText' && <TrustableTeam imageTextData={block?.value} />}
-			{block?.discriminant == 'testimonialSelector' && <Reviews testimonials={block?.value} />}
+			{block?.discriminant == 'testimonialSelector' && <Reviews testimonials={testimonials} />}
 		</>
 	))}
 	<CTA />

@@ -6,7 +6,7 @@ menuItems:
     link: /about
     button: false
   - name: Resources
-    link: /join-our-crew
+    link: /resources
     button: false
   - name: Hire Us
     link: /hire-us
