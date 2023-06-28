@@ -7,7 +7,7 @@ export default config({
     repo: {
       owner: "Brem-LLC",
       name: "local-muscle-movers",
-    },
+    }
   },
   singletons: {
     general: singleton({
