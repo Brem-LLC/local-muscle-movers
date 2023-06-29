@@ -7,6 +7,10 @@ import CTA from '@components/CTA.astro'
 import Reviews from '@components/Reviews.astro'
 import TrustableTeam from '@components/TrustableTeam.astro'
 import Services from '@components/Services.astro'
+import { createReader } from '@keystatic/core/reader';
+import keystaticConfig from '../../keystatic.config';
+const reader = createReader(process.cwd(), keystaticConfig);
+const homePage = await reader.singletons.homePage.read();
 import { getCollection } from 'astro:content';
 const services = await getCollection('services');
 const testimonials = await getCollection('testimonials');
@@ -14,7 +18,7 @@ const testimonials = await getCollection('testimonials');
 
 <Layout title="Homepage">
 	<Header />
-	<!-- {homePage?.componentBlocks?.map((block) => (
+	{homePage?.componentBlocks?.map((block) => (
 		<>
 			{block?.discriminant == 'banner' && <Hero heroData={block?.value} />}
 		</>
@@ -25,7 +29,7 @@ const testimonials = await getCollection('testimonials');
 			{block?.discriminant == 'imageText' && <TrustableTeam imageTextData={block?.value} />}
 			{block?.discriminant == 'testimonialSelector' && <Reviews testimonials={testimonials} />}
 		</>
-	))} -->
+	))}
 	<CTA />
 	<Footer />
 </Layout>
