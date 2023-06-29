@@ -8,7 +8,7 @@ componentBlocks:
         by the pandemic. We closely follow all state and federal guidelines and
         we've implemented enhanced sanitization routines.
       buttonText: Get Estimate!
-      buttonLink: /estimate
+      buttonLink: '#'
   - discriminant: imageText
     value:
       image: /images/blocks/componentBlocks/1/value/image.jpeg
