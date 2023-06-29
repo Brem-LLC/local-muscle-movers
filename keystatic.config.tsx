@@ -4,8 +4,8 @@ export default config({
 	storage: {
 		kind: 'github',
 		repo: {
-			owner: "Brem-LLC",
-			name: "local-muscle-movers",
+			owner: 'Brem-LLC',
+			name: 'local-muscle-movers',
 		},
 		// kind: 'local',
 	},
