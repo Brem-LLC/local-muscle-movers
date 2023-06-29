@@ -1,10 +1,13 @@
-<<<<<<< HEAD
-import { s as server_default } from './chunks/astro.f66c1913.mjs';
-=======
-import { s as server_default } from './chunks/astro.88a260a9.mjs';
->>>>>>> 6de80b33758b07122350e73707579e4281990588
+import { s as server_default } from './chunks/astro.9071dbd7.mjs';
 import React, { createElement } from 'react';
 import ReactDOM from 'react-dom/server';
+import 'cookie';
+import 'kleur/colors';
+import '@astrojs/internal-helpers/path';
+import 'path-to-regexp';
+import 'mime';
+import 'string-width';
+import 'html-escaper';
 
 /**
  * Astro passes `children` as a string of HTML, so we need
