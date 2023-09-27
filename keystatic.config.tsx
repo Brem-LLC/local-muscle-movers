@@ -2,8 +2,12 @@ import { config, fields, singleton, collection } from '@keystatic/core'
 
 export default config({
 	storage: {
-		kind: 'local',
-	},
+		// kind: 'local',
+    kind: 'cloud',
+  },
+  cloud: {
+    project: 'local-muscle-movers/local-muscle-movers',
+  },
 	singletons: {
 		general: singleton({
 			label: 'General Information',
