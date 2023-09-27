@@ -1,0 +1,12 @@
+---
+import Base from '@layouts/Base.astro'
+import Header from '@components/Header.astro'
+import QuoteForm from '@components/quoteForm.jsx'
+---
+<Base title="Hire Us">
+  <>
+    <Header />
+    <h2 class="text-3xl font-bold text-center pt-44">Super Cool Form</h2>
+    <QuoteForm client:only="react" />
+  </>
+</Base>
