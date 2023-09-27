@@ -113,6 +113,28 @@ export default config({
 				)
 			}
 		}),
+		posts: collection({
+			label: 'Posts',
+			path: 'src/content/posts/*/',
+			entryLayout: 'content',
+			slugField: 'name',
+			schema: {
+				name: fields.slug({ name: { label: 'Name' } }),
+				publishedOn: fields.date({ label: 'Heading' }),
+				draft: fields.checkbox({ label: 'Description', defaultValue: true }),
+				featuredImage: fields.image({
+					label: 'Featured Image',
+					directory: '/public/images/',
+					publicPath: '/images/'
+				}),
+				content: fields.document({
+					label: 'Content',
+					formatting: true,
+					links: true,
+					images: true
+				})
+			}
+		}),
 		testimonials: collection({
 			label: 'Testimonials',
 			path: 'src/content/testimonials/*/',
