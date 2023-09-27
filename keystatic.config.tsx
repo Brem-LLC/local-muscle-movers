@@ -2,18 +2,20 @@ import { config, fields, singleton, collection } from '@keystatic/core'
 
 export default config({
 	storage: {
-		kind: 'github',
-		repo: {
-			owner: 'Brem-LLC',
-			name: 'local-muscle-movers',
-		},
-		// kind: 'local',
+		kind: 'local',
 	},
 	singletons: {
 		general: singleton({
 			label: 'General Information',
 			path: 'src/content/_general',
 			schema: {
+				logo: fields.image({
+					label: 'Logo',
+					description: 'Local Muscle Mover Logo',
+					// This will output the images in the "public" directory
+					directory: '/public/images/',
+					publicPath: '/images/'
+				}),
 				title: fields.text({ label: 'Title' }),
 				usdot: fields.text({ label: 'USDOT Number' }),
 				phone: fields.text({ label: 'Phone Number Maine' }),
@@ -41,11 +43,15 @@ export default config({
 					}
 				)
 			}
-		}),
-		homePage: singleton({
-			label: 'Home Page',
-			path: 'src/content/_homePage',
+		})
+	},
+	collections: {
+		pages: collection({
+			label: 'Pages',
+			path: 'src/content/pages/*/',
+			slugField: 'name',
 			schema: {
+				name: fields.slug({ name: { label: 'Name' } }),
 				componentBlocks: fields.blocks(
 					{
 						banner: {
@@ -102,9 +108,7 @@ export default config({
 					{ label: 'Component Blocks' }
 				)
 			}
-		})
-	},
-	collections: {
+		}),
 		testimonials: collection({
 			label: 'Testimonials',
 			path: 'src/content/testimonials/*/',

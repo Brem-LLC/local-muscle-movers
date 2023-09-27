@@ -1,7 +1,8 @@
+name: Home
 componentBlocks:
   - discriminant: banner
     value:
-      bannerImage: /images/home/componentBlocks/0/value/bannerImage.jpeg
+      bannerImage: /images/home/home/componentBlocks/0/value/bannerImage.jpeg
       heading: Let's get moving!!!
       subheading: >-
         At Local Muscle, we understand the serious responsibility placed upon us
@@ -11,7 +12,6 @@ componentBlocks:
       buttonLink: '#'
   - discriminant: imageText
     value:
-      image: /images/blocks/componentBlocks/1/value/image.jpeg
       heading: Trusted for over a decade
       desciption: >-
         We've built a reputation throughout New England as a moving company you
@@ -24,7 +24,6 @@ componentBlocks:
       imagePlacement: right
   - discriminant: imageText
     value:
-      image: /images/blocks/componentBlocks/2/value/image.jpeg
       heading: Your Local Moving Team
       desciption: >-
         We build crews that work well together, and crews that work well
