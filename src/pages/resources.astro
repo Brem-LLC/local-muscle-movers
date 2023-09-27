@@ -1,8 +1,9 @@
 ---
+import { Image } from 'astro:assets';
 import Layout from '@layouts/Base.astro'
 import Header from '@components/Header.astro'
 import Footer from '@components/Footer.astro'
-import checklist from '@images/flat-lay-notebook-with-list-desk.jpg'
+import checklist from '@images/checklist.jpg'
 import ShortHero from '@components/ShortHero.astro'
 ---
 
@@ -108,7 +109,7 @@ import ShortHero from '@components/ShortHero.astro'
 				</ul>
 
 				<div class="relative">
-					<img src={checklist} alt="checklist" class="absolute inset-0 h-full w-full object-cover" />
+					<Image src={checklist} alt="checklist" class="absolute inset-0 h-full w-full object-cover" />
 				</div>
 			</div>
 		</div>
@@ -143,10 +144,10 @@ import ShortHero from '@components/ShortHero.astro'
 							<a href="#" class="text-lg leading-relaxed hover:underline">Interstate Carrier Liability Agreement</a>
 						</li>
 						<li>
-							<a href="#" class="text-lg leading-relaxed hover:underline">"Ready to Move"</a><span class="text-yellow-500">[External Link]</span>
+							<a href="#" class="text-lg leading-relaxed hover:underline">"Ready to Move"</a>
 						</li>
 						<li>
-							<a href="#" class="text-lg leading-relaxed hover:underline">"Your Rights and Responsiblities"</a><span class="text-yellow-500">[External Link]</span>
+							<a href="#" class="text-lg leading-relaxed hover:underline">"Your Rights and Responsiblities"</a>
 						</li>
 					</ul>
 				</div>
