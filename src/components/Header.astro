@@ -65,14 +65,14 @@ const menu = await reader.singletons.menu.read();
 						<>
 							{item.button != true && (
 								<li>
-									<a href={item.link} class="block rounded py-2 pl-3 pr-4 text-white aria-[current]:bg-primary aria-[current]:text-white lg:bg-transparent lg:text-primary" aria-current="page">
+									<a href={item.link} class="block rounded-md py-2 pl-3 pr-4 text-primary md:text-white md:aria-[current]:bg-primary md:aria-[current]:text-white lg:bg-transparent lg:text-primary hover:cursor-pointer" aria-current="page">
 										{item.name}
 									</a>
 								</li>
 							)}
 							{item.button == true && (
 								<li>
-									<a href={item.link} class="focus:ring-primary-900 dark:bg-primary-600 block rounded-lg bg-primary px-5 py-3 text-center font-medium text-white lg:bg-white lg:text-primary">
+									<a href={item.link} class="block text-primary rounded-md md:bg-primary pl-3 py-3 text-center font-medium md:text-white lg:bg-white lg:text-primary hover:cursor-pointer">
 										{item.name}
 									</a>
 								</li>
