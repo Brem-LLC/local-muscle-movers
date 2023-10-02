@@ -1,65 +1,28 @@
 ---
-const { testimonials } = Astro.props;
+const { testimonials } = Astro.props
 ---
 
 <section class="bg-white dark:bg-gray-900">
-	<div class="mx-auto max-w-screen-xl px-4 py-8 text-center lg:px-6 lg:py-16">
-		<div class="swiper reviews-slider mx-auto max-w-screen-md">
-			<div class="swiper-wrapper">
-				{
-					testimonials.map((testimonial ) => (
-						<div class="swiper-slide">
-							<figure>
-								<svg class="mx-auto mb-3 h-12 text-gray-400 dark:text-gray-600" viewBox="0 0 24 27" fill="none" xmlns="http://www.w3.org/2000/svg">
-									<path
-										d="M14.017 18L14.017 10.609C14.017 4.905 17.748 1.039 23 0L23.995 2.151C21.563 3.068 20 5.789 20 8H24V18H14.017ZM0 18V10.609C0 4.905 3.748 1.038 9 0L9.996 2.151C7.563 3.068 6 5.789 6 8H9.983L9.983 18L0 18Z"
-										fill="currentColor"
-									/>
-								</svg>
-								<blockquote>
-									<p class="text-base font-medium leading-relaxed text-gray-900 dark:text-white lg:text-2xl lg:leading-relaxed">{testimonial.data?.quote}</p>
-								</blockquote>
-								<figcaption class="mt-6 flex items-center justify-center space-x-3">
-									<div class="flex items-center divide-x-2 divide-gray-500 dark:divide-gray-700">
-										<div class="pr-3 font-medium text-gray-900 dark:text-white">- {testimonial.data?.name}</div>
-									</div>
-								</figcaption>
-							</figure>
-						</div>
-					))
-				}
-			</div>
-
-			<div class="mt-12 flex items-center justify-center gap-8">
-				<button class="reviews-button-prev">
-					<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="h-6 w-6">
-						<path stroke-linecap="round" stroke-linejoin="round" d="M6.75 15.75L3 12m0 0l3.75-3.75M3 12h18"></path>
-					</svg>
-				</button>
-				<button class="reviews-button-next">
-					<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="h-6 w-6">
-						<path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3"></path>
-					</svg>
-				</button>
-			</div>
-		</div>
+	<div class="mx-auto max-w-4xl px-4 py-8 text-center lg:px-6 lg:py-16">
+		<figure>
+			<svg class="mx-auto mb-3 h-12 text-gray-400 dark:text-gray-600" viewBox="0 0 24 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+				<path
+					d="M14.017 18L14.017 10.609C14.017 4.905 17.748 1.039 23 0L23.995 2.151C21.563 3.068 20 5.789 20 8H24V18H14.017ZM0 18V10.609C0 4.905 3.748 1.038 9 0L9.996 2.151C7.563 3.068 6 5.789 6 8H9.983L9.983 18L0 18Z"
+					fill="currentColor"></path>
+			</svg>
+			<blockquote>
+				<p class="text-base font-medium leading-relaxed text-gray-900 dark:text-white lg:text-2xl lg:leading-relaxed">
+					We moved to our home in Portland just before Thanksgiving weekend. We scheduled our PODS arrivals in conjunction with our Local muscle guys, and they were both on time, but worked with
+					efficiency and intelligence. They were a joy to have around, if joy can be had when moving one's life possessions. What I mean to say is they were courteous, careful, and cheerful about the
+					day. Great workers. I'd recommend them absolutely. And you know i"m telling you the truth, because I'm determined to not move again myself, any time soon. i.e. I have no motive other than to
+					assist anyone considering hiring them.
+				</p>
+			</blockquote>
+			<figcaption class="mt-6 flex items-center justify-center space-x-3">
+				<div class="flex items-center divide-x-2 divide-gray-500 dark:divide-gray-700">
+					<div class="pr-3 font-medium text-gray-900 dark:text-white">- Lee Van Dyke</div>
+				</div>
+			</figcaption>
+		</figure>
 	</div>
 </section>
-
-<script is:inline>
-	const reviewsslider = new Swiper('.reviews-slider', {
-		loop: true,
-		slidesPerView: 1,
-		autoHeight: true,
-		effect: 'coverflow',
-		coverflowEffect: {
-			slideShadows: false
-		},
-
-		// Navigation arrows
-		navigation: {
-			nextEl: '.reviews-button-next',
-			prevEl: '.reviews-button-prev'
-		}
-	})
-</script>
