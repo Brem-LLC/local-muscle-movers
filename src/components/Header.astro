@@ -1,4 +1,5 @@
 ---
+import { Image } from 'astro:assets';
 import Logo from './logo.astro'
 import portland from '@images/portland.jpeg'
 import burlington from '@images/burlington.jpeg'
@@ -102,7 +103,7 @@ const menu = await reader.singletons.menu.read();
 			</button>
 			<div class="grid grid-cols-2 gap-5 p-6 pt-14 text-center">
 				<div>
-					<img src={portland} alt="Portland" class="mb-2 aspect-video w-full rounded-md" />
+					<Image src={portland} alt="Portland" class="mb-2 aspect-video w-full rounded-md" />
 					<h4 class="mb-2 text-base font-bold">Portland, ME</h4>
 					<a href="tel:207-370-9090" class="flex items-center justify-center gap-2 hover:underline">
 						<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="h-4 w-4">
@@ -117,7 +118,7 @@ const menu = await reader.singletons.menu.read();
 				</div>
 
 				<div>
-					<img src={burlington} alt="burlington" class="mb-2 aspect-video w-full rounded-md" />
+					<Image src={burlington} alt="burlington" class="mb-2 aspect-video w-full rounded-md" />
 					<h4 class="mb-2 text-base font-bold">Burlington, VT</h4>
 					<a href="tel:207-370-9090" class="flex items-center justify-center gap-2 hover:underline">
 						<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="h-4 w-4">

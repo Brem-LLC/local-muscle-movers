@@ -1,4 +1,5 @@
 ---
+import { Image } from 'astro:assets';
 const { imageTextData } = Astro.props
 ---
 
@@ -15,14 +16,14 @@ const { imageTextData } = Astro.props
 							our reviews speak for themselves: Check us out on Google Reviews and Yelp for more firsthand customer feedback!
 						</p>
 					</div>
-					<img class="mb-4 flex w-full rounded-lg lg:mb-0" src={imageTextData?.image} alt="office feature image" />
+					<Image class="mb-4 flex w-full rounded-lg lg:mb-0" src={imageTextData?.image} alt="office feature image" />
 				</div>
 			)
 		}
 		{
 			imageTextData?.imagePlacement == 'left' && (
 				<div class="grid grid-cols-1 items-center gap-8 lg:grid-cols-2 xl:gap-16">
-					<img class="order-last mb-4 flex w-full rounded-lg lg:order-none lg:mb-0" src={imageTextData?.image} alt="office feature image 2" />
+					<Image class="order-last mb-4 flex w-full rounded-lg lg:order-none lg:mb-0" src={imageTextData?.image} alt="office feature image 2" />
 					<div class="order-first text-gray-500 dark:text-gray-400 sm:text-lg lg:order-none">
 						<h2 class="mb-4 text-4xl font-extrabold tracking-tight text-gray-900 dark:text-white">Your Local Moving Team</h2>
 						<p class="mb-8 font-light lg:text-xl">

@@ -1,10 +1,18 @@
 import { useState } from 'react';
 import { useForm } from 'react-hook-form';
 
-export default function App() {
+export default function Form() {
   const { register, handleSubmit, setValue, formState: { errors } } = useForm();
-  const onSubmit = data => { console.log(data) };
-  console.log(errors);
+  const onSubmit = async data => {
+    const request = await fetch('/api/quote', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(data)
+    })
+    const response = await request.json();
+  }
 
   const [moveType, setMoveType] = useState("Moving with our trucks");
 
