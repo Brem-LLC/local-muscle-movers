@@ -25,29 +25,23 @@ componentBlocks:
       optionalLink:
         link: /join
         text: Contact sales to learn more
-  - discriminant: imageText
+  - discriminant: serviceSelector
     value:
-      heading: Trusted for over a decade
-      description: >-
-        We've built a reputation throughout New England as a moving company you
-        can trust. Whether you're moving halfway across the country or across
-        the street, we've got you covered. Throughout our history we've seen it
-        all, and we use that experience to make your move as smooth as possible.
-        Our customers return to us time and time again for their moving needs.
-        Let our reviews speak for themselves: Check us out on Google Reviews and
-        Yelp for more firsthand customer feedback!
-      imagePlacement: right
-  - discriminant: imageText
+      services:
+        - hoisting
+        - heavy-items
+        - moving
+        - rearrangement
+  - discriminant: testimonialCTA
     value:
-      heading: Your Local Moving Team
-      description: >-
-        We build crews that work well together, and crews that work well
-        together keep our customers happy. Our staff has experience with all
-        kinds of moves, be it a top floor apartment in the middle of a city or a
-        rural location with rougher terrain, we can handle it all.
-      imagePlacement: left
-  - discriminant: testimonialSelector
-    value:
-      testimonials:
-        - anonymous-yelp-review
-        - lee-van-dyke
+      personName: Lee Van Dyke
+      review: >-
+        We moved to our home in Portland just before Thanksgiving weekend. We
+        scheduled our PODS arrivals in conjunction with our Local Muscle guys,
+        and they were both on time, but worked with efficiency and intelligence.
+        They were a joy to have around, if joy can be had when moving one's life
+        possessions. What I mean to say is they were courteous, careful, and
+        cheerful about the day. Great workers. I'd recommend them absolutely.
+        And you know I'm telling you the truth, because I'm determined to not
+        move again myself, any time soon. i.e. I have no motive other than to
+        assist anyone considering hiring them.

@@ -186,40 +186,40 @@ declare module 'astro:content' {
 };
 };
 "services": {
-"heavy-items/index": {
-	id: "heavy-items/index";
+"heavy-items": {
+	id: "heavy-items";
   collection: "services";
   data: any
 };
-"hoisting/index": {
-	id: "hoisting/index";
+"hoisting": {
+	id: "hoisting";
   collection: "services";
   data: any
 };
-"moving/index": {
-	id: "moving/index";
+"moving": {
+	id: "moving";
   collection: "services";
   data: any
 };
-"rearrangement/index": {
-	id: "rearrangement/index";
+"rearrangement": {
+	id: "rearrangement";
   collection: "services";
   data: any
 };
 };
 "testimonials": {
-"anonymous-yelp-review/index": {
-	id: "anonymous-yelp-review/index";
+"anonymous-yelp-review": {
+	id: "anonymous-yelp-review";
   collection: "testimonials";
   data: any
 };
-"lee-van-dyke/index": {
-	id: "lee-van-dyke/index";
+"lee-van-dyke": {
+	id: "lee-van-dyke";
   collection: "testimonials";
   data: any
 };
-"melanie-dorn/index": {
-	id: "melanie-dorn/index";
+"melanie-dorn": {
+	id: "melanie-dorn";
   collection: "testimonials";
   data: any
 };

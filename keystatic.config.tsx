@@ -105,6 +105,28 @@ export default config({
 								})
 							})
 						},
+						testimonialCTA: {
+							label: 'Testimonial CTA',
+							schema: fields.object({
+								personName: fields.text({ label: 'Person\'s Name' }),
+								review: fields.text({ label: 'Review', multiline: true }),
+							})
+						},
+						serviceSelector: {
+							label: 'Service Selector',
+							schema: fields.object({
+								services: fields.array(
+									fields.relationship({
+										label: 'Services',
+										collection: 'services'
+									}),
+									{
+										label: 'Services',
+										itemLabel: (props) => props.value
+									}
+								)
+							})
+						},
 						testimonialSelector: {
 							label: 'Testimonial Selector',
 							schema: fields.object({
@@ -149,7 +171,7 @@ export default config({
 		}),
 		testimonials: collection({
 			label: 'Testimonials',
-			path: 'src/content/testimonials/*/',
+			path: 'src/content/testimonials/*',
 			slugField: 'name',
 			schema: {
 				name: fields.slug({ name: { label: 'Name' } }),
@@ -158,7 +180,7 @@ export default config({
 		}),
 		services: collection({
 			label: 'Services',
-			path: 'src/content/services/*/',
+			path: 'src/content/services/*',
 			slugField: 'name',
 			schema: {
 				name: fields.slug({ name: { label: 'Name' } }),
