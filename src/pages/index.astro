@@ -15,12 +15,13 @@ import keystaticConfig from '../../keystatic.config';
 const reader = createReader(process.cwd(), keystaticConfig);
 const homeData = await reader.collections.pages.read('home');
 const heroData = homeData?.componentBlocks.filter(block => block.discriminant == 'banner');
+const homeServicesData = homeData?.componentBlocks.filter(block => block.discriminant == 'videoText');
 ---
 
 <Layout title="Home">
 	<Header />
 	<Hero heroData={heroData[0].value} />
-	<Services services={services} />
+	<Services services={services} servicesData={homeServicesData[0].value} />
 	<Reviews testimonials={testimonials} />
 	<TrustableTeam />
 	<CTA />

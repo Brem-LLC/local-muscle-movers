@@ -97,7 +97,7 @@ const _hoc_function = config({
               heading: fields.text({
                 label: "Heading"
               }),
-              desciption: fields.text({
+              description: fields.text({
                 label: "Description",
                 multiline: true
               }),

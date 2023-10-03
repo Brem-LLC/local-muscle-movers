@@ -83,7 +83,7 @@ const keystaticConfig = config({
                   publicPath: "/images/blocks/"
                 }),
                 heading: fields.text({ label: "Heading" }),
-                desciption: fields.text({ label: "Description", multiline: true }),
+                description: fields.text({ label: "Description", multiline: true }),
                 imagePlacement: fields.select({
                   label: "Image Placement",
                   description: "Choose whether the image should be on the left or right.",

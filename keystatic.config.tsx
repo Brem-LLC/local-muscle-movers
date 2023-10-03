@@ -81,7 +81,7 @@ export default config({
 									publicPath: '/images/blocks/'
 								}),
 								heading: fields.text({ label: 'Heading' }),
-								desciption: fields.text({ label: 'Description', multiline: true }),
+								description: fields.text({ label: 'Description', multiline: true }),
 								imagePlacement: fields.select({
 									label: 'Image Placement',
 									description: 'Choose whether the image should be on the left or right.',
@@ -90,6 +90,18 @@ export default config({
 										{ label: 'Right', value: 'right' }
 									],
 									defaultValue: 'left'
+								})
+							})
+						},
+						videoText: {
+							label: 'Video and Text',
+							schema: fields.object({
+								video: fields.text({ label: 'Video code' }),
+								heading: fields.text({ label: 'Heading' }),
+								description: fields.text({ label: 'Description', multiline: true }),
+								optionalLink: fields.object({
+									link: fields.text({ label: 'Link URL' }),
+									text: fields.text({ label: 'Link Text' })
 								})
 							})
 						},

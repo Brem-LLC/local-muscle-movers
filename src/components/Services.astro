@@ -1,6 +1,6 @@
 ---
 import { YouTube } from '@astro-community/astro-embed-youtube';
-const { services } = Astro.props
+const { services, servicesData } = Astro.props
 ---
 
 <!-- Icon Blocks -->
@@ -8,13 +8,13 @@ const { services } = Astro.props
 	<!-- Grid -->
 	<div class="grid gap-12 md:grid-cols-2">
 		<div class="lg:w-full">
-			<div class="lg:w-3/4">
-				<h2 class="text-3xl font-bold text-gray-800 dark:text-white lg:text-6xl">Services Offered</h2>
-				<p class="mt-3 text-gray-800 dark:text-gray-400">
-					We help businesses bring ideas to life in the digital world, by designing and implementing the technology tools that they need to win.
+			<div>
+				<h2 class="text-3xl font-bold text-gray-800 dark:text-white lg:text-6xl">{servicesData.heading}</h2>
+				<p class="mt-3 text-gray-800 text-lg dark:text-gray-400">
+					{servicesData.description}
 				</p>
-				<a href="/join" class="mt-5 inline-flex items-center gap-x-2 font-medium text-primary hover:underline">
-					Contact sales to learn more
+				<a href={servicesData.optionalLink.link} class="mt-5 inline-flex items-center gap-x-2 font-medium text-primary hover:underline">
+					{servicesData.optionalLink.text}
 					<svg class="h-2.5 w-2.5 transition ease-in-out group-hover:translate-x-1" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
 						<path
 							fill-rule="evenodd"
@@ -24,7 +24,7 @@ const { services } = Astro.props
 					</svg>
 				</a>
 			</div>
-			<YouTube id="CLv16TFTKNs" />
+			<YouTube id={servicesData.video} />
 		</div>
 
 		<div class="space-y-6 lg:space-y-10">
