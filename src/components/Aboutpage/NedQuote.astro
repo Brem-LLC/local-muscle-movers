@@ -1,0 +1,10 @@
+---
+const { block } = Astro.props
+---
+
+<section class="bg-gray-100 py-16">
+    <div class="mx-auto w-full max-w-7xl px-7 text-center lg:px-10">
+        <blockquote class="mb-2 text-2xl font-medium italic">{block.review}</blockquote>
+        <p class="text-lg font-bold">- {block.personName}</p>
+    </div>
+</section>

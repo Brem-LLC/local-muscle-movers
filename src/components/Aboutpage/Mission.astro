@@ -1,0 +1,10 @@
+---
+const { block } = Astro.props
+---
+
+<section class="bg-gray-100 py-16">
+    <div class="mx-auto w-full max-w-7xl px-7 text-center lg:px-10">
+        <h2 class="mb-8 text-3xl font-bold md:text-5xl">{block.header}</h2>
+        <p class="text-lg leading-relaxed">{block.text}</p>
+    </div>
+</section>

@@ -2,12 +2,12 @@ import { config, fields, singleton, collection } from '@keystatic/core'
 
 export default config({
 	storage: {
-		// kind: 'local',
-		kind: 'cloud',
+		kind: 'local',
+		// kind: 'cloud',
 	},
 	cloud: {
 		project: 'local-muscle-movers/local-muscle-movers',
-  },
+	},
 	singletons: {
 		general: singleton({
 			label: 'General Information',
@@ -72,6 +72,18 @@ export default config({
 								buttonLink: fields.text({ label: 'Button Link' })
 							})
 						},
+						shortHero: {
+							label: 'Short Banner',
+							schema: fields.object({
+								backgroundImage: fields.image({
+									label: 'Background Image',
+									directory: 'public/images/shortHeros',
+									publicPath: '/images/shortHeros/'
+								}),
+								title: fields.text({ label: 'Hero Title' }),
+								description: fields.text({ label: 'Hero Description' })
+							})
+						},
 						imageText: {
 							label: 'Image and Text',
 							schema: fields.object({
@@ -122,7 +134,7 @@ export default config({
 									}),
 									{
 										label: 'Services',
-										itemLabel: (props) => props.value
+										itemLabel: (props) => props.value !== null ? props.value : "Service"
 									}
 								)
 							})
@@ -137,9 +149,67 @@ export default config({
 									}),
 									{
 										label: 'Testimonials',
-										itemLabel: (props) => props.value
+										itemLabel: (props) => props.value !== null ? props.value : "Testimonial"
 									}
 								)
+							})
+						},
+						headerText: {
+							label: 'Header And Text',
+							schema: fields.object({
+								header: fields.text({ label: 'Header' }),
+								text: fields.text({ label: 'Text', multiline: true }),
+							})
+						},
+						movingChecklist: {
+							label: 'Moving Checklist',
+							schema: fields.object({
+								header: fields.text({ label: 'Checklist Header' }),
+								subtext: fields.text({ label: 'Text Under Header' }),
+								image: fields.image({
+									label: 'Moving Image',
+									directory: 'public/images/resources',
+									publicPath: '/images/resources/'
+								}),
+								checklist: fields.array(
+									fields.text({ label: 'Checklist Item' }),
+									{
+										label: 'Checklist Items',
+										itemLabel: (props) => props.value !== null ? props.value : "Checklist Item"
+									}
+								)
+							})
+						},
+						policiesAndContracts: {
+							label: 'Policies And Contracts',
+							schema: fields.object({
+								header: fields.text({ label: 'Header' }),
+								subtext: fields.text({ label: 'Text Under Header' }),
+								localPolicies: fields.array(
+									fields.object({
+										title: fields.text({ label: 'Policy / Contract' }),
+										link: fields.url({
+											label: 'Policy / Contract Link'
+										})
+									}),
+									{
+										label: 'Local Policies / Contracts',
+										// itemLabel: (props) => props.fields.title !== null ? props.fields.title : "Policy"
+									}
+								),
+								interstatePolicies: fields.array(
+									fields.object({
+										title: fields.text({ label: 'Policy / Contract' }),
+										link: fields.url({
+											label: 'Policy / Contract Link'
+										})
+									}),
+									{
+										label: 'Interstate Policies / Contracts',
+										// itemLabel: (props) => props.fields.title !== null ? props.fields.title : "Policy"
+									}
+								),
+								disclaimer: fields.text({ label: 'Disclaimer', multiline: true })
 							})
 						}
 					},

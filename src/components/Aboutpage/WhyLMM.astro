@@ -1,0 +1,15 @@
+---
+const { block } = Astro.props
+const textFrags = block.text.split("\n")
+---
+
+<section>
+    <div class="mx-auto w-full max-w-4xl px-7 py-16 lg:px-10">
+        <div class="mx-auto w-full max-w-6xl text-center">
+            <h1 class="mb-8 text-3xl font-bold md:text-5xl">{block.header}</h1>
+            <div class="flex flex-col gap-5">
+                {textFrags.map(text => ( <p class="text-lg leading-relaxed">{text}</p> ))}
+            </div>
+        </div>
+    </div>
+</section>

@@ -1,14 +1,21 @@
 ---
+import { createReader } from '@keystatic/core/reader'
+import keystaticConfig from 'keystatic.config'
 import Layout from '@layouts/Base.astro'
 import Header from '@components/Header.astro'
 import Footer from '@components/Footer.astro'
 import ShortHero from '@components/ShortHero.astro'
 import ContactForm from '@components/ContactForm.astro'
+
+const reader = createReader(process.cwd(), keystaticConfig);
+const joinData = await reader.collections.pages.read('join');
+const shortHeroBlock = joinData?.componentBlocks.filter(bl => bl.discriminant === 'shortHero')
+console.log(joinData)
 ---
 
 <Layout title="Resources">
 	<Header />
-	<ShortHero title="Join Our Crew" description="Local Muscle is currently looking for able-bodied, reliable people to join us in moving" />
+	<ShortHero block={shortHeroBlock[0].value} />
 	<ContactForm />
 	<Footer />
 </Layout>

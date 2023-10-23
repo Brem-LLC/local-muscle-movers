@@ -1,0 +1,46 @@
+---
+const { block } = Astro.props
+---
+
+<section class="bg-gray-100 py-16">
+	<div class="mx-auto w-full max-w-7xl px-7 text-center lg:px-10">
+		<h2 class="mb-4 text-3xl font-bold md:text-5xl">{block.header}</h2>
+		<p class="mx-auto w-full max-w-4xl">
+			{block.subtext}
+		</p>
+
+		<div class="mt-12 grid grid-cols-1 gap-8 text-left md:grid-cols-2">
+			<div>
+				<h3 class="mb-5 text-2xl font-medium text-primary">Local (in-state)</h3>
+				<ul class="list-disc pl-6 text-left">
+					{
+						block.localPolicies.map((policy) => (
+							<li>
+								<a href={`${policy.link}`} class="text-lg leading-relaxed hover:underline">
+									{policy.title}
+								</a>
+							</li>
+						))
+					}
+				</ul>
+			</div>
+
+			<div>
+				<h3 class="mb-5 text-2xl font-medium text-primary">Interstate</h3>
+				<ul class="list-disc pl-6 text-left">
+					{
+						block.interstatePolicies.map((policy) => (
+							<li>
+								<a href={`${policy.link}`} class="text-lg leading-relaxed hover:underline">
+									{policy.title}
+								</a>
+							</li>
+						))
+					}
+				</ul>
+			</div>
+		</div>
+
+		<p class="mt-8 max-w-3xl text-left">{block.disclaimer}</p>
+	</div>
+</section>
