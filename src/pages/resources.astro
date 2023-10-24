@@ -13,7 +13,6 @@ const resData = await reader.collections.pages.read('resources');
 const shortHeroBlock = resData?.componentBlocks.filter(bl => bl.discriminant === 'shortHero')
 const movingChecklistBlock = resData?.componentBlocks.filter(bl => bl.discriminant === 'movingChecklist')
 const policiesBlock = resData?.componentBlocks.filter(bl => bl.discriminant === 'policiesAndContracts')
-console.log(resData)
 ---
 
 <Layout title="Resources">

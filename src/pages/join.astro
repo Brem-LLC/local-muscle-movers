@@ -10,7 +10,6 @@ import ContactForm from '@components/ContactForm.astro'
 const reader = createReader(process.cwd(), keystaticConfig);
 const joinData = await reader.collections.pages.read('join');
 const shortHeroBlock = joinData?.componentBlocks.filter(bl => bl.discriminant === 'shortHero')
-console.log(joinData)
 ---
 
 <Layout title="Resources">

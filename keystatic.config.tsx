@@ -211,6 +211,54 @@ export default config({
 								),
 								disclaimer: fields.text({ label: 'Disclaimer', multiline: true })
 							})
+						},
+						plainText: {
+							label: 'Text Only Block',
+							schema: fields.object({
+								text: fields.text({ label: 'Any Text', multiline: true })
+							})
+						},
+						applicationForm: {
+							label: 'Application Form',
+							schema: fields.object({
+								details: fields.text({ label: 'Details Paragraph', multiline: true }),
+								header: fields.text({ label: 'Form Header' }),
+								subtext: fields.text({ label: 'Text Under Header' }),
+								formFields: fields.array(
+									fields.object({
+										title: fields.text({ label: 'Field Name' }),
+										isRequired: fields.checkbox({
+											label: 'Is This A Required Field?',
+											description: 'Check this box if you want to make this field required.'
+										}),
+										fieldType: fields.select({
+											label: 'Field Type',
+											description: 'What type of input should this field represent?',
+											options: [
+												{ label: 'Text', value: 'text' },
+												{ label: 'Phone Number', value: 'tel' },
+												{ label: 'Number', value: 'number' },
+												{ label: 'Email', value: 'email' },
+												{ label: 'Select', value: 'select' },
+												{ label: 'Long Text', value: 'longText' }
+											],
+											defaultValue: 'text',
+										})
+									}),
+									{
+										label: 'Input Fields'
+									}
+								),
+								locationOptions: fields.array(
+									fields.object({
+										city: fields.text({ label: 'Location City' }),
+										state: fields.text({ label: 'Location State' })
+									}),
+									{
+										label: 'Location Options'
+									}
+								)
+							})
 						}
 					},
 					{ label: 'Component Blocks' }
