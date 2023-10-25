@@ -2,8 +2,6 @@
 import { createReader } from '@keystatic/core/reader'
 import keystaticConfig from 'keystatic.config'
 import Layout from '@layouts/Base.astro'
-import Header from '@components/Header.astro'
-import Footer from '@components/Footer.astro'
 import ShortHero from '@components/ShortHero.astro'
 import ContactForm from '@components/ContactForm.astro'
 
@@ -13,8 +11,6 @@ const shortHeroBlock = joinData?.componentBlocks.filter(bl => bl.discriminant ==
 ---
 
 <Layout title="Resources">
-	<Header />
-	<ShortHero block={shortHeroBlock[0].value} />
+	{shortHeroBlock[0] && <ShortHero block={shortHeroBlock[0].value} />}
 	<ContactForm />
-	<Footer />
 </Layout>

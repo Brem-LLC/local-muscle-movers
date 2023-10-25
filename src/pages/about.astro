@@ -2,8 +2,6 @@
 import { createReader } from '@keystatic/core/reader'
 import keystaticConfig from 'keystatic.config'
 import Layout from '@layouts/Base.astro'
-import Header from '@components/Header.astro'
-import Footer from '@components/Footer.astro'
 import ShortHero from '@components/ShortHero.astro'
 import Story from '@components/Aboutpage/Story.astro'
 import Mission from '@components/Aboutpage/Mission.astro'
@@ -19,11 +17,9 @@ const quoteBlock = aboutData?.componentBlocks.filter(bl => bl.discriminant === '
 ---
 
 <Layout title="About">
-	<Header />
-	<ShortHero block={shortHeroBlock[0].value} />
-	<Story block={storyBlock[0].value} />
-	<Mission block={headerAndTextBlocks[0].value} />
-	<WhyLMM block={headerAndTextBlocks[1].value} />
-	<NedQuote block={quoteBlock[0].value} />
-	<Footer />
+	{shortHeroBlock[0] && <ShortHero block={shortHeroBlock[0].value} />}
+	{storyBlock[0] && <Story block={storyBlock[0].value} />}
+	{headerAndTextBlocks[0] && <Mission block={headerAndTextBlocks[0].value} />}
+	{headerAndTextBlocks[1] && <WhyLMM block={headerAndTextBlocks[1].value} />}
+	{quoteBlock[0] && <NedQuote block={quoteBlock[0].value} />}
 </Layout>

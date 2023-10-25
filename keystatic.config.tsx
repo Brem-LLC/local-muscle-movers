@@ -114,6 +114,14 @@ export default config({
 								optionalLink: fields.object({
 									link: fields.text({ label: 'Link URL' }),
 									text: fields.text({ label: 'Link Text' })
+								}),
+								type: fields.select({
+									label: 'Align Vertical or Horizontal?',
+									options: [
+										{ label: 'Vertical', value: 'vertical' },
+										{ label: 'Horizontal', value: 'horizontal' }
+									],
+									defaultValue: 'vertical'
 								})
 							})
 						},
@@ -122,6 +130,14 @@ export default config({
 							schema: fields.object({
 								personName: fields.text({ label: 'Person\'s Name' }),
 								review: fields.text({ label: 'Review', multiline: true }),
+								testimonialType: fields.select({
+									label: 'Customer Review or Quote?',
+									options: [
+										{ label: 'Customer Review', value: 'review' },
+										{ label: 'Quote', value: 'quote' }
+									],
+									defaultValue: 'review'
+								})
 							})
 						},
 						serviceSelector: {

@@ -2,8 +2,6 @@
 import { createReader } from '@keystatic/core/reader';
 import keystaticConfig from 'keystatic.config';
 import Layout from '@layouts/Base.astro'
-import Header from '@components/Header.astro'
-import Footer from '@components/Footer.astro'
 import ShortHero from '@components/ShortHero.astro'
 import MovingChecklist from '@components/Resourcespage/MovingChecklist.astro'
 import Policies from '@components/Resourcespage/Policies.astro';
@@ -16,9 +14,7 @@ const policiesBlock = resData?.componentBlocks.filter(bl => bl.discriminant === 
 ---
 
 <Layout title="Resources">
-	<Header />
-	<ShortHero block={shortHeroBlock[0].value} />
-	<MovingChecklist block={movingChecklistBlock[0].value} />
-	<Policies block={policiesBlock[0].value} />
-	<Footer />
+	{shortHeroBlock[0] && <ShortHero block={shortHeroBlock[0].value} />}
+	{movingChecklistBlock[0] && <MovingChecklist block={movingChecklistBlock[0].value} />}
+	{policiesBlock[0] && <Policies block={policiesBlock[0].value} />}
 </Layout>
