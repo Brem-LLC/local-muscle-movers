@@ -9,7 +9,7 @@ componentBlocks:
         by the pandemic. We closely follow all state and federal guidelines and
         we've implemented enhanced sanitization routines.
       buttonText: Get an Estimate Today!
-      buttonLink: '#'
+      buttonLink: /hire-us
   - discriminant: videoText
     value:
       video: CLv16TFTKNs
@@ -25,10 +25,10 @@ componentBlocks:
       optionalLink:
         link: /join
         text: Contact sales to learn more
+      type: vertical
   - discriminant: serviceSelector
     value:
       services:
-        - hoisting
         - heavy-items
         - moving
         - rearrangement
@@ -45,3 +45,4 @@ componentBlocks:
         And you know I'm telling you the truth, because I'm determined to not
         move again myself, any time soon. i.e. I have no motive other than to
         assist anyone considering hiring them.
+      testimonialType: review
