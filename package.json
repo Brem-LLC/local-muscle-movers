@@ -12,6 +12,7 @@
   },
   "dependencies": {
     "@astro-community/astro-embed-youtube": "^0.4.1",
+    "@astrojs/markdoc": "^0.7.0",
     "@astrojs/netlify": "3.0.2",
     "@astrojs/partytown": "^2.0.0",
     "@astrojs/react": "3.0.2",
