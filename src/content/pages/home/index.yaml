@@ -2,8 +2,7 @@ name: Home
 componentBlocks:
   - discriminant: banner
     value:
-      bannerImage: /images/home/home/componentBlocks/0/value/bannerImage.jpeg
-      heading: Let's get moving Michael!!!
+      heading: Let's get moving!
       subheading: >-
         At Local Muscle, we understand the serious responsibility placed upon us
         by the pandemic. We closely follow all state and federal guidelines and
