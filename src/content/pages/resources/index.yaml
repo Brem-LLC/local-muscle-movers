@@ -2,13 +2,11 @@ name: Resources
 componentBlocks:
   - discriminant: shortHero
     value:
-      backgroundImage: /images/shortHeros/resources/componentBlocks/0/value/backgroundImage.jpg
       title: Resources
   - discriminant: movingChecklist
     value:
       header: Moving Checklist
       subtext: Quick reference for steps to ensure your move goes off without a hitch
-      image: /images/resources/resources/componentBlocks/1/value/image.webp
       checklist:
         - All small and loose items are protected and boxed
         - >-
@@ -48,6 +46,7 @@ componentBlocks:
             title: In State Full Value Replacement Coverage
             url: '#'
       interstatePolicies:
+<<<<<<< HEAD
         - discriminant: link
           value:
             title: Interstate Carrier Liability Agreement
@@ -60,6 +59,14 @@ componentBlocks:
           value:
             title: Your Rights and Responsibilities
             url: '#'
+=======
+        - title: Interstate Carrier Liability Agreement
+          link: '#'
+        - title: '"Ready to Move"'
+          link: '#'
+        - title: '"Your Rights and Responsiblities"'
+          link: https://espn.com
+>>>>>>> fff1773263a9c8139a3b809936dc3c82608e8271
       disclaimer: >-
         We bill differently for interstate moves, as mandated by law. We will
         determine a flat rate and provide a quote, rather than create an
