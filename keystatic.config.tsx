@@ -202,24 +202,66 @@ export default config({
 								header: fields.text({ label: 'Header' }),
 								subtext: fields.text({ label: 'Text Under Header' }),
 								localPolicies: fields.array(
-									fields.object({
-										title: fields.text({ label: 'Policy / Contract' }),
-										link: fields.url({
-											label: 'Policy / Contract Link'
-										})
-									}),
+									fields.conditional(
+										fields.select({
+											label: 'Link or File',
+											description: "Are you referencing a link or a file?",
+											options: [
+												{ label: 'Link', value: 'link' },
+												{ label: 'File', value: 'file' }
+											],
+											defaultValue: 'link'
+										}),
+										{
+											link: fields.object({
+												title: fields.text({ label: 'Policy / Contract Title' }),
+												url: fields.url({
+													label: 'Policy / Contract Link'
+												})
+											}),
+											file: fields.object({
+												title: fields.text({ label: 'Policy / Contract Title' }),
+												upload: fields.file({
+													label: 'Choose a file',
+													directory: 'public/files/',
+													publicPath: '/files/'
+												})
+											})
+										}
+									),
 									{
 										label: 'Local Policies / Contracts',
 										// itemLabel: (props) => props.fields.title !== null ? props.fields.title : "Policy"
 									}
 								),
 								interstatePolicies: fields.array(
-									fields.object({
-										title: fields.text({ label: 'Policy / Contract' }),
-										link: fields.url({
-											label: 'Policy / Contract Link'
-										})
-									}),
+									fields.conditional(
+										fields.select({
+											label: 'Link or File',
+											description: "Are you referencing a link or a file?",
+											options: [
+												{ label: 'Link', value: 'link' },
+												{ label: 'File', value: 'file' }
+											],
+											defaultValue: 'link'
+										}),
+										{
+											link: fields.object({
+												title: fields.text({ label: 'Policy / Contract Title' }),
+												url: fields.url({
+													label: 'Policy / Contract Link'
+												})
+											}),
+											file: fields.object({
+												title: fields.text({ label: 'Policy / Contract Title' }),
+												upload: fields.file({
+													label: 'File Name',
+													directory: 'public/files/',
+													publicPath: '/files/'
+												})
+											})
+										}
+									),
 									{
 										label: 'Interstate Policies / Contracts',
 										// itemLabel: (props) => props.fields.title !== null ? props.fields.title : "Policy"

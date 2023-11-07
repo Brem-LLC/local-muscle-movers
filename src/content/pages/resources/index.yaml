@@ -38,17 +38,28 @@ componentBlocks:
         in simple language for quick reference. For interstate moves, the FMCSA
         also provides brochures regarding your legal rights.
       localPolicies:
-        - title: In State Terms and Conditions Outline
-          link: '#'
-        - title: In State Full Value Replacement Coverage
-          link: '#'
+        - discriminant: file
+          value:
+            title: blah blah
+            upload: >-
+              /files/resources/componentBlocks/2/value/localPolicies/0/value/upload.pdf
+        - discriminant: link
+          value:
+            title: In State Full Value Replacement Coverage
+            url: '#'
       interstatePolicies:
-        - title: Interstate Carrier Liability Agreement
-          link: '#'
-        - title: '"Ready to Move"'
-          link: '#'
-        - title: '"Your Rights and Responsiblities"'
-          link: '#'
+        - discriminant: link
+          value:
+            title: Interstate Carrier Liability Agreement
+            url: '#'
+        - discriminant: link
+          value:
+            title: Ready to Move
+            url: '#'
+        - discriminant: link
+          value:
+            title: Your Rights and Responsibilities
+            url: '#'
       disclaimer: >-
         We bill differently for interstate moves, as mandated by law. We will
         determine a flat rate and provide a quote, rather than create an

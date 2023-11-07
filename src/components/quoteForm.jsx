@@ -257,29 +257,29 @@ export default function Form() {
             <div className='flex gap-20 w-full'>
               <div>
                 <div className='flex items-center gap-4'>
-                  <input type='checkbox' value={true} {...register("floorBasement")} />
+                  <input type='checkbox' value={true} {...register("originFloorBasement")} />
                   <label className='font-bold text-xl'>Basement</label>
                 </div>
                 <div className='flex items-center gap-4'>
-                  <input type='checkbox' value={true} {...register("floorFirst")} />
+                  <input type='checkbox' value={true} {...register("originFloorFirst")} />
                   <label className='font-bold text-xl'>1st Floor / Ground Level</label>
                 </div>
                 <div className='flex items-center gap-4'>
-                  <input type='checkbox' value={true} {...register("floorSecond")} />
+                  <input type='checkbox' value={true} {...register("originFloorSecond")} />
                   <label className='font-bold text-xl'>2nd Floor</label>
                 </div>
               </div>
               <div>
                 <div className='flex items-center gap-4'>
-                  <input type='checkbox' value={true} {...register("floorThird")} />
+                  <input type='checkbox' value={true} {...register("originFloorThird")} />
                   <label className='font-bold text-xl'>3rd Floor</label>
                 </div>
                 <div className='flex items-center gap-4'>
-                  <input type='checkbox' value={true} {...register("floorFourth")} />
+                  <input type='checkbox' value={true} {...register("originFloorFourth")} />
                   <label className='font-bold text-xl'>4th Floor or Greater</label>
                 </div>
                 <div className='flex items-center gap-4'>
-                  <input type='checkbox' value={true} {...register("floorElevator")} />
+                  <input type='checkbox' value={true} {...register("originFloorElevator")} />
                   <label className='font-bold text-xl'>Elevator</label>
                 </div>
               </div>
@@ -397,29 +397,29 @@ export default function Form() {
               <div className='flex gap-20 w-full'>
                 <div>
                   <div className='flex items-center gap-4'>
-                    <input type='checkbox' value={true} {...register("floorBasement")} />
+                    <input type='checkbox' value={true} {...register("destFloorBasement")} />
                     <label className='font-bold text-xl'>Basement</label>
                   </div>
                   <div className='flex items-center gap-4'>
-                    <input type='checkbox' value={true} {...register("floorFirst")} />
+                    <input type='checkbox' value={true} {...register("destFloorFirst")} />
                     <label className='font-bold text-xl'>1st Floor / Ground Level</label>
                   </div>
                   <div className='flex items-center gap-4'>
-                    <input type='checkbox' value={true} {...register("floorSecond")} />
+                    <input type='checkbox' value={true} {...register("destFloorSecond")} />
                     <label className='font-bold text-xl'>2nd Floor</label>
                   </div>
                 </div>
                 <div>
                   <div className='flex items-center gap-4'>
-                    <input type='checkbox' value={true} {...register("floorThird")} />
+                    <input type='checkbox' value={true} {...register("destFloorThird")} />
                     <label className='font-bold text-xl'>3rd Floor</label>
                   </div>
                   <div className='flex items-center gap-4'>
-                    <input type='checkbox' value={true} {...register("floorFourth")} />
+                    <input type='checkbox' value={true} {...register("destFloorFourth")} />
                     <label className='font-bold text-xl'>4th Floor or Greater</label>
                   </div>
                   <div className='flex items-center gap-4'>
-                    <input type='checkbox' value={true} {...register("floorElevator")} />
+                    <input type='checkbox' value={true} {...register("destFloorElevator")} />
                     <label className='font-bold text-xl'>Elevator</label>
                   </div>
                 </div>
@@ -449,15 +449,82 @@ export default function Form() {
         <div className='flex flex-col gap-5 bg-[#f5f7f2] p-12 rounded-lg'>
           <h2 className='font-bold text-3xl absolute transform -translate-y-20 bg-[#f5f7f2] pt-2 px-8 rounded-md'>Location Notes:</h2>
           <div className='w-full'>
-            <label className='font-bold mb-1 text-lg'>Special precautions for locations or additional pickup/dropoff spots</label>
+            <label className='font-bold mb-1 text-lg'>Please specify any potential obstacles at pickup/dropoff sites (e.g. steep stairwells, tight corners, difficult parking areas etc.)</label>
             <textarea type="text" className="rounded-md w-full" placeholder="Other location notes" {...register("locationNotes")} />
           </div>
         </div>
         <div className='flex flex-col gap-5 bg-[#f5f7f2] p-12 rounded-lg'>
-          <h2 className='font-bold text-3xl absolute transform -translate-y-20 bg-[#f5f7f2] pt-2 px-8 rounded-md'>Other Notes:</h2>
+          <h2 className='font-bold text-3xl absolute transform -translate-y-20 bg-[#f5f7f2] pt-2 px-8 rounded-md'>Additional Notes:</h2>
           <div className='w-full'>
-            <label className='font-bold mb-1 text-lg'>Please summarize or clarify what you're looking for</label>
-            <textarea type="text" className="rounded-md w-full" {...register("otherNotes")} />
+            <label className='font-bold mb-1 text-lg'>What is your preferred method of contact (phone, email, text)?</label>
+            <select className='rounded-md mb-3 w-full' defaultValue="" {...register("preferredContact", { required: true })}>
+              <option value="" disabled>Select One:</option>
+              <option value="phone">Phone</option>
+              <option value="email">Email</option>
+              <option value="text">Text</option>
+            </select>
+            {errors.preferredContact?.type === "required" && (
+              <p className="text-red-800 font-bold mb-3">Preferred contact method is required</p>
+            )}
+          </div>
+          <div className='w-full'>
+            <label className='font-bold mb-1 text-lg'>Are you interested in Mi-Box portable storage (recommended for larger moves under tight deadlines or renovations)?*</label>
+            <select className='rounded-md mb-3 w-full' defaultValue="" {...register("includeMiBox", { required: true })}>
+              <option value="" disabled>Select One:</option>
+              <option value="yes">Yes</option>
+              <option value="no">No</option>
+            </select>
+            {errors.includeMiBox?.type === "required" && (
+              <p className="text-red-800 font-bold mb-3">Please indicate your interest in Mi-Box portable storage</p>
+            )}
+          </div>
+          <div className='w-full'>
+            <label className='font-bold mb-1 text-lg'>Will any disassembly or reassembly be involved?*</label>
+            <select className='rounded-md mb-3 w-full' defaultValue="" {...register("assemblyRequired", { required: true })}>
+              <option value="" disabled>Select One:</option>
+              <option value="yes">Yes</option>
+              <option value="no">No</option>
+            </select>
+            {errors.assemblyRequired?.type === "required" && (
+              <p className="text-red-800 font-bold mb-3">Please indicate if disassembly or reassembly is involved</p>
+            )}
+          </div>
+          <div className='w-full'>
+            <label className='font-bold mb-1 text-lg'>Are there any obstacles with parking, access points or tight/narrow hallways or stairwells?*</label>
+            <select className='rounded-md mb-3 w-full' defaultValue="" {...register("accessObstacles", { required: true })}>
+              <option value="" disabled>Select One:</option>
+              <option value="yes">Yes</option>
+              <option value="no">No</option>
+            </select>
+            {errors.accessObstacles?.type === "required" && (
+              <p className="text-red-800 font-bold mb-3">This field is required</p>
+            )}
+          </div>
+          <div className='w-full'>
+            <label className='font-bold mb-1 text-lg'>Are any of your items 200+ lbs?*</label>
+            <select className='rounded-md mb-3 w-full' defaultValue="" {...register("weightThreshold", { required: true })}>
+              <option value="" disabled>Select One:</option>
+              <option value="yes">Yes</option>
+              <option value="no">No</option>
+            </select>
+            {errors.weightThreshold?.type === "required" && (
+              <p className="text-red-800 font-bold mb-3">This field is required</p>
+            )}
+          </div>
+          <div className='w-full'>
+            <label className='font-bold mb-1 text-lg'>Will you ensure the inventory submitted is accurate? We can’t guarantee we can accommodate last minute additions.*</label>
+            <select className='rounded-md mb-3 w-full' defaultValue="" {...register("inventoryAccuracy", { required: true })}>
+              <option value="" disabled>Select One:</option>
+              <option value="yes">Yes</option>
+              <option value="no">No</option>
+            </select>
+            {errors.inventoryAccuracy?.type === "required" && (
+              <p className="text-red-800 font-bold mb-3">This field is required</p>
+            )}
+          </div>
+          <div className='w-full'>
+            <label className='font-bold mb-1 text-lg'>Is there any additional information you may have about the size and scope of your move?</label>
+            <textarea type="text" className="rounded-md w-full" placeholder="Additional Information" {...register("additionalInfo")} />
           </div>
         </div>
         <input type="submit" />

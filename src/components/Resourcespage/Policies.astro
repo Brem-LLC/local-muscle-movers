@@ -16,8 +16,8 @@ const { block } = Astro.props
 					{
 						block.localPolicies.map((policy) => (
 							<li>
-								<a href={`${policy.link}`} class="text-lg leading-relaxed hover:underline">
-									{policy.title}
+								<a href={policy.discriminant === 'link' ? `${policy.value.url}` : `http://localhost:4321${policy.value.upload}`} target="_blank" class="text-lg leading-relaxed hover:underline">
+									{policy.value.title}
 								</a>
 							</li>
 						))
@@ -31,8 +31,8 @@ const { block } = Astro.props
 					{
 						block.interstatePolicies.map((policy) => (
 							<li>
-								<a href={`${policy.link}`} class="text-lg leading-relaxed hover:underline">
-									{policy.title}
+								<a href={policy.discriminant === 'link' ? `${policy.value.url}` : `http://localhost:4321${policy.value.upload}`} target="_blank" class="text-lg leading-relaxed hover:underline">
+									{policy.value.title}
 								</a>
 							</li>
 						))
