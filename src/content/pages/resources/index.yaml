@@ -2,13 +2,11 @@ name: Resources
 componentBlocks:
   - discriminant: shortHero
     value:
-      backgroundImage: /images/shortHeros/resources/componentBlocks/0/value/backgroundImage.jpg
       title: Resources
   - discriminant: movingChecklist
     value:
       header: Moving Checklist
       subtext: Quick reference for steps to ensure your move goes off without a hitch
-      image: /images/resources/resources/componentBlocks/1/value/image.webp
       checklist:
         - All small and loose items are protected and boxed
         - >-
@@ -48,7 +46,7 @@ componentBlocks:
         - title: '"Ready to Move"'
           link: '#'
         - title: '"Your Rights and Responsiblities"'
-          link: '#'
+          link: https://espn.com
       disclaimer: >-
         We bill differently for interstate moves, as mandated by law. We will
         determine a flat rate and provide a quote, rather than create an
