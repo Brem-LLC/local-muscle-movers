@@ -34,8 +34,8 @@ componentBlocks:
   - discriminant: serviceSelector
     value:
       services:
-        - heavy-items
         - moving
+        - heavy-items
         - rearrangement
   - discriminant: testimonialCTA
     value:
