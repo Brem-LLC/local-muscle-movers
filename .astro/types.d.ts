@@ -215,11 +215,6 @@ declare module 'astro:content' {
   collection: "services";
   data: any
 };
-"hoisting": {
-	id: "hoisting";
-  collection: "services";
-  data: any
-};
 "moving": {
 	id: "moving";
   collection: "services";
