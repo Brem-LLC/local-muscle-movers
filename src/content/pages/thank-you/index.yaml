@@ -1,0 +1,8 @@
+name: Thank You
+componentBlocks:
+  - discriminant: headerText
+    value:
+      header: Thank you for your interest in Local Muscle movers!
+      text: >-
+        We value your interest and time, and we will have your quote ready
+        within 24 hours.

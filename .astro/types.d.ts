@@ -208,6 +208,11 @@ declare module 'astro:content' {
   collection: "pages";
   data: any
 };
+"thank-you/index": {
+	id: "thank-you/index";
+  collection: "pages";
+  data: any
+};
 };
 "services": {
 "heavy-items": {
