@@ -56,7 +56,7 @@ export default function Form() {
             <div className="flex gap-5 w-full">
               <div className='w-3/4'>
                 <label className='font-bold mb-1 text-lg'>Phone*</label>
-                <input type="tel" className="rounded-md w-full" placeholder="(123) 555-6789" {...register("phone", { required: false })} />
+                <input type="tel" className="rounded-md w-full" placeholder="(123) 555-6789" {...register("phoneNumber", { required: false })} />
                 {errors.phone?.type === "required" && (
                   <p className="text-red-800 font-bold mb-3">Phone number is required</p>
                 )}
@@ -79,7 +79,7 @@ export default function Form() {
             <div className='flex gap-5 w-full'>
               <div className='w-1/3'>
                 <h3 className='font-bold mb-1 text-lg'>Desired Date*</h3>
-                <input className='rounded-md mb-3 w-full' type="date" placeholder="mm/dd/yy" {...register("desiredDate", { required: false })} />
+                <input className='rounded-md mb-3 w-full' type="date" placeholder="mm/dd/yy" {...register("moveDate", { required: false })} />
                 {errors.desiredDate?.type === "required" && (
                   <p className="text-red-800 font-bold mb-3">Email is required</p>
                 )}
@@ -104,7 +104,7 @@ export default function Form() {
             <h2 className='font-bold text-3xl absolute transform -translate-y-20 bg-[#f5f7f2] pt-2 px-8 rounded-md'>Service Details</h2>
             <div>
               <label className='font-bold mb-1 text-lg'>Size*</label>
-              <select className='rounded-md mb-3 w-full' defaultValue="" {...register("size", { required: false })}>
+              <select className='rounded-md mb-3 w-full' defaultValue="" {...register("moveSize", { required: false })}>
                 <option value="" disabled>Select a size</option>
                 <option value="Single Room or Less (600 SQFT)">Single Room or Less (600 SQFT)</option>
                 <option value="" disabled>---</option>
@@ -289,7 +289,7 @@ export default function Form() {
             <div className='w-full'>
               <label className='font-bold mb-1 text-lg'>Distance*</label>
               <div className='w-full'>
-                <select className='w-full' defaultValue="" {...register("OriginDistance", { required: false })}>
+                <select className='w-full' defaultValue="" {...register("originDistance", { required: false })}>
                   <option value="" disabled>How far will we carry your items? (Choose One)</option>
                   <option value="0 to 15 feet - Loading dock or similar">0 to 15 feet - Loading dock or similar</option>
                   <option value=" 15 to 25 feet - Very short walk"> 15 to 25 feet - Very short walk</option>
@@ -312,14 +312,14 @@ export default function Form() {
               <div className='flex gap-5'>
                 <div className='w-full'>
                   <label className='font-bold mb-1 text-lg'>Street Address*</label>
-                  <input type="text" className="rounded-md w-full" placeholder="12 Example St." {...register("destStreet", { required: false })} />
+                  <input type="text" className="rounded-md w-full" placeholder="12 Example St." {...register("destinationStreet", { required: false })} />
                   {errors.destStreet?.type === "required" && (
                     <p className="text-red-800 font-bold mb-3">Street Address is required</p>
                   )}
                 </div>
                 <div>
                   <label className='font-bold mb-1 text-lg'>City*</label>
-                  <input type="text" className="rounded-md w-full" placeholder="City" {...register("destCity", { required: false })} />
+                  <input type="text" className="rounded-md w-full" placeholder="City" {...register("destinationCity", { required: false })} />
                   {errors.destCity?.type === "required" && (
                     <p className="text-red-800 font-bold mb-3">City is required</p>
                   )}
@@ -328,7 +328,7 @@ export default function Form() {
               <div className='flex gap-5'>
                 <div className='w-full'>
                   <label className='font-bold mb-1 text-lg'>State*</label>
-                  <select className='rounded-md mb-3 w-full' defaultValue="Maine" {...register("destState", { required: false })}>
+                  <select className='rounded-md mb-3 w-full' defaultValue="Maine" {...register("destinationState", { required: false })}>
                     <option value="Alabama">Alabama</option>
                     <option value="Alaska">Alaska</option>
                     <option value="Arizona">Arizona</option>
@@ -387,7 +387,7 @@ export default function Form() {
                 </div>
                 <div>
                   <label className='font-bold mb-1 text-lg'>Zip*</label>
-                  <input type="text" className="rounded-md w-full" placeholder="Zip" {...register("destZip", { required: false })} />
+                  <input type="text" className="rounded-md w-full" placeholder="Zip" {...register("destinationZip", { required: false })} />
                   {errors.destZip?.type === "required" && (
                     <p className="text-red-800 font-bold mb-3">Zip is required</p>
                   )}

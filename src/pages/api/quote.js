@@ -4,6 +4,18 @@ export const POST = async ({ request, redirect }) => {
   const client = new postmark.ServerClient(import.meta.env.POSTMARK_TOKEN);
   const data = await request.json();
 
+  try {
+    const request = await fetch("https://api.smartmoving.com/api/leads/from-provider/v2?providerKey=2f400089-28bf-46c7-8a17-adfd01096041", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(data)
+    })
+  } catch (error) {
+    console.log(error)
+  }
+
   client.sendEmail({
     "From": "Local Muscle Movers <jake@localmusclemovers.com>",
     "To": `${data.email}`,
@@ -15,10 +27,10 @@ export const POST = async ({ request, redirect }) => {
       <br>
       Name: ${data.firstName} ${data.lastName}<br>
       Email: ${data.email}<br>
-      Phone: ${data.phone}<br>
-      Desired Date: ${data.desiredDate}<br>
+      Phone: ${data.phoneNumber}<br>
+      Desired Date: ${data.moveDate}<br>
       Flexibility: ${data.flexibility}<br>
-      Move Size: ${data.size}<br>
+      Move Size: ${data.moveSize}<br>
       Service Type: ${data.moveType}<br>
       <br>
       <br>
@@ -38,8 +50,8 @@ export const POST = async ({ request, redirect }) => {
       <br>
       Destination Details:<br>
       <br>
-      ${data.destStreet},<br>
-      ${data.destCity}, ${data.destState} ${data.destZip}<br>
+      ${data.destinationStreet},<br>
+      ${data.destinationCity}, ${data.destinationState} ${data.destinationZip}<br>
       <br>
       Basement: ${data.destFloorBasement ? "Yes" : "No"}<br>
       First Floor: ${data.destFloorFirst ? "Yes" : "No"}<br>
