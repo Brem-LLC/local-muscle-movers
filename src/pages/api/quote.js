@@ -69,5 +69,5 @@ export const POST = async ({ request, redirect }) => {
     "MessageStream": "outbound"
   })
 
-  return redirect("/thank-you", 307)
+  return redirect("/thank-you", 302)
 };
