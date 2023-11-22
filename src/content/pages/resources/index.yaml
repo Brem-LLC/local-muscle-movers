@@ -39,26 +39,30 @@ componentBlocks:
       localPolicies:
         - discriminant: file
           value:
-            title: blah blah
+            title: In State Terms and Conditions Outline
             upload: >-
               /files/resources/componentBlocks/2/value/localPolicies/0/value/upload.pdf
-        - discriminant: link
+        - discriminant: file
           value:
             title: In State Full Value Replacement Coverage
-            url: '#'
+            upload: >-
+              /files/resources/componentBlocks/2/value/localPolicies/1/value/upload.pdf
       interstatePolicies:
-        - discriminant: link
+        - discriminant: file
           value:
             title: Interstate Carrier Liability Agreement
-            url: '#'
-        - discriminant: link
+            upload: >-
+              /files/resources/componentBlocks/2/value/interstatePolicies/0/value/upload.pdf
+        - discriminant: file
           value:
-            title: Ready to Move
-            url: '#'
-        - discriminant: link
+            title: Ready To Move
+            upload: >-
+              /files/resources/componentBlocks/2/value/interstatePolicies/1/value/upload.pdf
+        - discriminant: file
           value:
             title: Your Rights and Responsibilities
-            url: '#'
+            upload: >-
+              /files/resources/componentBlocks/2/value/interstatePolicies/2/value/upload.pdf
       disclaimer: >-
         We bill differently for interstate moves, as mandated by law. We will
         determine a flat rate and provide a quote, rather than create an
