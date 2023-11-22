@@ -2,7 +2,8 @@ import { config, fields, singleton, collection } from '@keystatic/core'
 
 export default config({
 	storage: {
-    kind: 'cloud',
+    // kind: 'cloud',
+		kind: 'local',
   },
   cloud: {
     project: 'local-muscle-movers/local-muscle-movers',
@@ -230,7 +231,7 @@ export default config({
 									),
 									{
 										label: 'Local Policies / Contracts',
-										// itemLabel: (props) => props.fields.title !== null ? props.fields.title : "Policy"
+										// itemLabel: (props) => props.value.title !== null ? props.value.fields.title : "Policy"
 									}
 								),
 								interstatePolicies: fields.array(
