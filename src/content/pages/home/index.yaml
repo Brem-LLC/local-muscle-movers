@@ -2,7 +2,7 @@ name: Home
 componentBlocks:
   - discriminant: banner
     value:
-      bannerImage: /images/home/home/componentBlocks/0/value/bannerImage.jpeg
+      bannerImage: /images/home/home/componentBlocks/0/value/bannerImage.webp
       heading: Let's get moving!
       subheading: >-
         "You don't know how much you have to move until you go to move it."
