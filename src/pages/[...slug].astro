@@ -14,8 +14,7 @@ import QuoteForm from '@components/quoteForm.jsx'
 
 export async function getStaticPaths() {
 	const reader = createReader(process.cwd(), keystaticConfig)
-	const allPages = await reader.collections.pages.all()
-	const pages = allPages.filter(({ slug }) => slug !== 'keystatic')
+	const pages = await reader.collections.pages.all()
 	return pages.map(({ slug, entry }) => {
 		return {
 			params: { slug },
