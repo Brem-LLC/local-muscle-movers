@@ -11,3 +11,6 @@ menuItems:
   - name: Hire Us
     link: /hire-us
     button: true
+  - name: Join Our Crew
+    link: /join
+    button: true
