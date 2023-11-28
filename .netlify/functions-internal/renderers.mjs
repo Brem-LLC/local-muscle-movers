@@ -105,7 +105,7 @@ async function check(Component, props, children) {
 }
 
 async function getNodeWritable() {
-	let nodeStreamBuiltinModuleName = 'stream';
+	let nodeStreamBuiltinModuleName = 'node:stream';
 	let { Writable } = await import(/* @vite-ignore */ nodeStreamBuiltinModuleName);
 	return Writable;
 }
@@ -139,7 +139,8 @@ async function renderToStaticMarkup(Component, props, { default: children, ...sl
 	};
 	const newChildren = children ?? props.children;
 	if (children && opts.experimentalReactChildren) {
-		const convert = await import('./chunks/vnode-children_3769332a.mjs').then((mod) => mod.default);
+		attrs['data-react-children'] = true;
+		const convert = await import('./chunks/vnode-children_e96f1d58.mjs').then((mod) => mod.default);
 		newProps.children = convert(children);
 	} else if (newChildren != null) {
 		newProps.children = React.createElement(StaticHtml, {

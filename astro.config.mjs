@@ -4,15 +4,16 @@ import react from "@astrojs/react";
 import markdoc from '@astrojs/markdoc';
 import keystatic from '@keystatic/astro';
 import netlify from "@astrojs/netlify/functions";
+import partytown from "@astrojs/partytown";
+import sitemap from "@astrojs/sitemap";
 
-
-// https://astro.build/config
 export default defineConfig({
+  site: 'https://localmusclemovers.com',
   integrations: [tailwind({
     config: {
       applyBaseStyles: false
     }
-  }), react(), markdoc(), keystatic()],
+  }), react(), markdoc(), keystatic(), partytown(), sitemap()],
   output: 'hybrid',
   adapter: netlify()
 });
