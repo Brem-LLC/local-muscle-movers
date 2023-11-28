@@ -1,17 +1,14 @@
 import * as adapter from '@astrojs/netlify/netlify-functions.js';
 import { renderers } from './renderers.mjs';
-import { manifest } from './manifest_6cba2614.mjs';
+import { manifest } from './manifest_1aaa02f6.mjs';
 
-const _page0  = () => import('./chunks/keystatic-api_f1bedcfb.mjs');
-const _page1  = () => import('./chunks/keystatic-astro-page_0fc77bec.mjs');
-const _page2  = () => import('./chunks/generic_75c58638.mjs');
-const _page3  = () => import('./chunks/index_32fc6b38.mjs');
-const _page4  = () => import('./chunks/resources_70a84ff1.mjs');
-const _page5  = () => import('./chunks/thank-you_634e69f9.mjs');
-const _page6  = () => import('./chunks/hire-us_7517b953.mjs');
-const _page7  = () => import('./chunks/about_3efdcd0f.mjs');
-const _page8  = () => import('./chunks/join_8f23a8bd.mjs');
-const _page9  = () => import('./chunks/quote_270a605d.mjs');const pageMap = new Map([["node_modules/@keystatic/astro/internal/keystatic-api.js", _page0],["node_modules/@keystatic/astro/internal/keystatic-astro-page.astro", _page1],["node_modules/astro/dist/assets/endpoint/generic.js", _page2],["src/pages/index.astro", _page3],["src/pages/resources.astro", _page4],["src/pages/thank-you.astro", _page5],["src/pages/hire-us.astro", _page6],["src/pages/about.astro", _page7],["src/pages/join.astro", _page8],["src/pages/api/quote.js", _page9]]);
+const _page0  = () => import('./chunks/keystatic-api_02c07db7.mjs');
+const _page1  = () => import('./chunks/keystatic-astro-page_a5cbd398.mjs');
+const _page2  = () => import('./chunks/generic_0463923c.mjs');
+const _page3  = () => import('./chunks/index_74083ca0.mjs');
+const _page4  = () => import('./chunks/quote_fdae1d3b.mjs');
+const _page5  = () => import('./chunks/join_fa8520ae.mjs');
+const _page6  = () => import('./chunks/_.._7de976b3.mjs');const pageMap = new Map([["node_modules/@keystatic/astro/internal/keystatic-api.js", _page0],["node_modules/@keystatic/astro/internal/keystatic-astro-page.astro", _page1],["node_modules/astro/dist/assets/endpoint/generic.js", _page2],["src/pages/index.astro", _page3],["src/pages/api/quote.js", _page4],["src/pages/api/join.js", _page5],["src/pages/[...slug].astro", _page6]]);
 const _manifest = Object.assign(manifest, {
 	pageMap,
 	renderers,
