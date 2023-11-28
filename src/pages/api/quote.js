@@ -18,7 +18,7 @@ export const POST = async ({ request, redirect }) => {
 
   client.sendEmail({
     "From": "Local Muscle Movers <holz@localmusclemovers.com>",
-    "To": `${data.email}`,
+    "To": `${data.email}, holz@localmusclemovers.com, info@brem.io`,
     "Subject": "Local Muscle Movers Quote",
     "HtmlBody": `
       Thank you for your interest in Local Muscle Movers! We have received your quote request and will be in touch shortly.<br>
