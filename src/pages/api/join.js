@@ -5,7 +5,7 @@ export const POST = async ({ request, redirect }) => {
   const data = await request.json();
 
   client.sendEmail({
-    "From": "Local Muscle Movers <jake@localmusclemovers.com>",
+    "From": "Local Muscle Movers <holz@localmusclemovers.com>",
     "To": `${data.email}`,
     "Subject": "Join Local Muscle Movers",
     "HtmlBody": `

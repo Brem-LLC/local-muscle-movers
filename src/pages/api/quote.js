@@ -17,7 +17,7 @@ export const POST = async ({ request, redirect }) => {
   }
 
   client.sendEmail({
-    "From": "Local Muscle Movers <jake@localmusclemovers.com>",
+    "From": "Local Muscle Movers <holz@localmusclemovers.com>",
     "To": `${data.email}`,
     "Subject": "Local Muscle Movers Quote",
     "HtmlBody": `
