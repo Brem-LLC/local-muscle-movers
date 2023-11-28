@@ -1,8 +1,9 @@
-export const prerender = false;
-import * as postmark from "postmark";
+import * as postmark from 'postmark';
 
-export const POST = async ({ request, redirect }) => {
-  const client = new postmark.ServerClient(import.meta.env.POSTMARK_TOKEN);
+const prerender = false;
+
+const POST = async ({ request, redirect }) => {
+  const client = new postmark.ServerClient(({}).POSTMARK_TOKEN);
   const data = await request.json();
 
   try {
@@ -12,9 +13,9 @@ export const POST = async ({ request, redirect }) => {
         "Content-Type": "application/json"
       },
       body: JSON.stringify(data)
-    })
+    });
   } catch (error) {
-    console.log(error)
+    console.log(error);
   }
 
   client.sendEmail({
@@ -80,7 +81,9 @@ export const POST = async ({ request, redirect }) => {
       ${data.additionalInfo}<br>
     `,
     "MessageStream": "outbound"
-  })
+  });
 
   return redirect("/thank-you", 302)
 };
+
+export { POST, prerender };
