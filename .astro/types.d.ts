@@ -203,18 +203,23 @@ declare module 'astro:content' {
   collection: "pages";
   data: any
 };
+"join-thank-you/index": {
+	id: "join-thank-you/index";
+  collection: "pages";
+  data: any
+};
 "join/index": {
 	id: "join/index";
   collection: "pages";
   data: any
 };
-"resources/index": {
-	id: "resources/index";
+"quote-thank-you/index": {
+	id: "quote-thank-you/index";
   collection: "pages";
   data: any
 };
-"thank-you/index": {
-	id: "thank-you/index";
+"resources/index": {
+	id: "resources/index";
   collection: "pages";
   data: any
 };

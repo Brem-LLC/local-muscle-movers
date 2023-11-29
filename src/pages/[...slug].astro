@@ -36,25 +36,11 @@ const policiesBlock = entry?.componentBlocks.filter((bl) => bl.discriminant === 
 <Layout title={entry.name}>
 	{shortHeroBlock[0] && <ShortHero block={shortHeroBlock[0].value} />}
 	{storyBlock[0] && <Story block={storyBlock[0].value} />}
-	{
-		slug !== 'thank-you' && (
-			<>
-				{headerAndTextBlocks[0] && <Mission block={headerAndTextBlocks[0].value} />}
-				{headerAndTextBlocks[1] && <WhyLMM block={headerAndTextBlocks[1].value} />}
-			</>
-		)
-	}
+	{headerAndTextBlocks[0] && <Mission block={headerAndTextBlocks[0].value} />}
+	{headerAndTextBlocks[1] && <WhyLMM block={headerAndTextBlocks[1].value} />}
 	{quoteBlock[0] && <NedQuote block={quoteBlock[0].value} />}
 	{movingChecklistBlock[0] && <MovingChecklist block={movingChecklistBlock[0].value} />}
 	{policiesBlock[0] && <Policies block={policiesBlock[0].value} />}
 	{slug === 'hire-us' && <QuoteForm client:only="react" />}
 	{slug === 'join' && <JoinForm client:only="react" />}
-	{
-		slug === 'thank-you' && headerAndTextBlocks[0] && (
-			<div class="py-80 text-center text-xl">
-				<h3 class="font-bold">{headerAndTextBlocks[0].value.header}</h3>
-				<p>{headerAndTextBlocks[0].value.text}</p>
-			</div>
-		)
-	}
 </Layout>

@@ -1,0 +1,8 @@
+name: Thank You
+componentBlocks:
+  - discriminant: headerText
+    value:
+      header: Thank you for your interest in Local Muscle Movers!
+      text: >-
+        We value your interest and time. We will review your information and get
+        back to you shortly!

@@ -5,17 +5,14 @@ export const POST = async ({ request, redirect }) => {
   const client = new postmark.ServerClient(import.meta.env.POSTMARK_TOKEN);
   const data = await request.json();
 
-  try {
-    const request = await fetch("https://api.smartmoving.com/api/leads/from-provider/v2?providerKey=2f400089-28bf-46c7-8a17-adfd01096041", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json"
-      },
-      body: JSON.stringify(data)
-    })
-  } catch (error) {
-    console.log(error)
-  }
+
+  const req = await fetch("https://api.smartmoving.com/api/leads/from-provider/v2?providerKey=2f400089-28bf-46c7-8a17-adfd01096041", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify(data)
+  })
 
   client.sendEmail({
     "From": "Local Muscle Movers <holz@localmusclemovers.com>",
@@ -82,5 +79,5 @@ export const POST = async ({ request, redirect }) => {
     "MessageStream": "outbound"
   })
 
-  return redirect("/thank-you", 302)
+  return redirect("/quote-thank-you", 302)
 };

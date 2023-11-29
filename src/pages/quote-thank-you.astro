@@ -1,0 +1,20 @@
+---
+import { createReader } from '@keystatic/core/reader'
+import keystaticConfig from 'keystatic.config'
+import Layout from '@layouts/Base.astro'
+
+const reader = createReader(process.cwd(), keystaticConfig)
+const page = await reader.collections.pages.read('quote-thank-you')
+const data = page?.componentBlocks.filter((bl) => bl.discriminant === 'headerText')
+---
+
+<Layout title={page.name}>
+	{data &&
+		(
+			<div class="py-80 text-center text-xl">
+				<h3 class="font-bold">{data[0].value.header}</h3>
+				<p>{data[0].value.text}</p>
+			</div>
+		)
+	}
+</Layout>

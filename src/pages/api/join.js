@@ -26,5 +26,5 @@ export const POST = async ({ request, redirect }) => {
     "MessageStream": "outbound"
   })
 
-  return redirect("/join");
+  return redirect("/join-thank-you", 302);
 };
