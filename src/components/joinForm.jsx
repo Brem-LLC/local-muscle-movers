@@ -5,6 +5,7 @@ export default function Form() {
   const [isSubmitting, setIsSubmitting] = useState(false)
   const { register, handleSubmit, setValue, formState: { errors } } = useForm();
   const onSubmit = async data => {
+    setIsSubmitting(true)
     const request = await fetch('/api/join', {
       method: 'POST',
       headers: {
@@ -19,6 +20,7 @@ export default function Form() {
 
   return (
     <div className="max-w-3xl mx-auto pt-24">
+      {!isSubmitting ?
         <form className='flex flex-col gap-16 items-center' onSubmit={handleSubmit(onSubmit)}>
           <div className='flex flex-col gap-24'>
             <div className='flex flex-col gap-3 bg-[#f5f7f2] p-12 rounded-lg'>
@@ -84,10 +86,16 @@ export default function Form() {
                   <textarea type="text" className="rounded-md w-full" placeholder="Additional Information" {...register("additionalInfo")} />
                 </div>
               </div>
-              <button disabled={isSubmitting} type="submit" className='w-1/4 p-2 bg-green-500 text-white border-green-500 border-2 rounded border-green-500 hover:bg-transparent hover:text-black hover:border-2 hover:border-green-500 hover:cursor-pointer'>Submit</button>
+              <button disabled={isSubmitting} type="submit" className='w-1/4 p-2 bg-[#f5f7f2] text-lg text-black border-[#f5f7f2] border-2 rounded border-[#f5f7f2] hover:bg-transparent hover:text-black hover:cursor-pointer'>Submit</button>
             </div>
           </div>
         </form>
+        :
+        <div class="py-80 text-center text-xl">
+          <h3 class="font-bold">Thank you for your interest in Local Muscle Movers!</h3>
+          <p>We value your interest and time. We will review your information and get back to you shortly!</p>
+        </div>
+      }
     </div>
   );
 }
