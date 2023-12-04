@@ -1,4 +1,12 @@
-export default function Step7({ register, errors, isSubmitting }) {
+import { FaArrowLeft } from "react-icons/fa6";
+
+export default function Step7({ register, errors, isSubmitting, step, setStep }) {
+
+    const handleBackStep = (event) => {
+        event.preventDefault();
+        setStep(step - 1);
+    }
+
     return (
         <div className='flex flex-col gap-5 bg-[#f5f7f2] p-12 rounded-lg'>
             <h2 className='font-bold text-3xl absolute transform -translate-y-20 bg-[#f5f7f2] pt-2 px-8 rounded-md'>Additional Notes:</h2>
@@ -6,7 +14,7 @@ export default function Step7({ register, errors, isSubmitting }) {
                 <div className='flex flex-col gap-5'>
                     <div className='w-full'>
                         <label className='font-bold mb-1 text-lg'>What is your preferred method of contact (phone, email, text)?*</label>
-                        <select className='rounded-md mb-3 w-full' defaultValue="" {...register("preferredContact", { required: false })}>
+                        <select className='rounded-md mb-3 w-full' defaultValue="" {...register("preferredContact", { required: true })}>
                             <option value="" disabled>Select One:</option>
                             <option value="phone">Phone</option>
                             <option value="email">Email</option>
@@ -18,7 +26,7 @@ export default function Step7({ register, errors, isSubmitting }) {
                     </div>
                     <div className='w-full'>
                         <label className='font-bold mb-1 text-lg'>Are you interested in Mi-Box portable storage (recommended for larger moves under tight deadlines or renovations)?*</label>
-                        <select className='rounded-md mb-3 w-full' defaultValue="" {...register("includeMiBox", { required: false })}>
+                        <select className='rounded-md mb-3 w-full' defaultValue="" {...register("includeMiBox", { required: true })}>
                             <option value="" disabled>Select One:</option>
                             <option value="yes">Yes</option>
                             <option value="no">No</option>
@@ -29,7 +37,7 @@ export default function Step7({ register, errors, isSubmitting }) {
                     </div>
                     <div className='w-full'>
                         <label className='font-bold mb-1 text-lg'>Will any disassembly or reassembly be involved?*</label>
-                        <select className='rounded-md mb-3 w-full' defaultValue="" {...register("assemblyRequired", { required: false })}>
+                        <select className='rounded-md mb-3 w-full' defaultValue="" {...register("assemblyRequired", { required: true })}>
                             <option value="" disabled>Select One:</option>
                             <option value="yes">Yes</option>
                             <option value="no">No</option>
@@ -40,7 +48,7 @@ export default function Step7({ register, errors, isSubmitting }) {
                     </div>
                     <div className='w-full'>
                         <label className='font-bold mb-1 text-lg'>Are there any obstacles with parking, access points or tight/narrow hallways or stairwells?*</label>
-                        <select className='rounded-md mb-3 w-full' defaultValue="" {...register("accessObstacles", { required: false })}>
+                        <select className='rounded-md mb-3 w-full' defaultValue="" {...register("accessObstacles", { required: true })}>
                             <option value="" disabled>Select One:</option>
                             <option value="yes">Yes</option>
                             <option value="no">No</option>
@@ -51,7 +59,7 @@ export default function Step7({ register, errors, isSubmitting }) {
                     </div>
                     <div className='w-full'>
                         <label className='font-bold mb-1 text-lg'>Are any of your items 200+ lbs?*</label>
-                        <select className='rounded-md mb-3 w-full' defaultValue="" {...register("weightThreshold", { required: false })}>
+                        <select className='rounded-md mb-3 w-full' defaultValue="" {...register("weightThreshold", { required: true })}>
                             <option value="" disabled>Select One:</option>
                             <option value="yes">Yes</option>
                             <option value="no">No</option>
@@ -76,7 +84,14 @@ export default function Step7({ register, errors, isSubmitting }) {
                         <textarea type="text" className="rounded-md w-full" placeholder="Additional Information" {...register("additionalInfo")} />
                     </div>
                 </div>
-                <button disabled={isSubmitting} type="submit" className='w-1/4 p-2 bg-[#f5f7f2] text-lg text-black border-[#f5f7f2] border-2 rounded border-[#f5f7f2] hover:bg-transparent hover:cursor-pointer'>Submit</button>
+                <div className="flex justify-between w-full">
+                    <div className='flex items-center'>
+                        <FaArrowLeft onClick={(event) => { handleBackStep(event) }} className='hover:cursor-pointer' size='1.25rem' />
+                    </div>
+                    <div className='flex items-center'>
+                        <button disabled={isSubmitting} type="submit" className='w-1/4 p-2 bg-[#f5f7f2] text-lg text-black border-[#f5f7f2] border-2 rounded border-[#f5f7f2] hover:bg-transparent hover:cursor-pointer'>Submit</button>
+                    </div>
+                </div>
             </div>
         </div>
     )

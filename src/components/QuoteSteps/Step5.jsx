@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+import { FaArrowLeft } from "react-icons/fa6";
 
 export default function Step5({ register, errors, setStep, step, moveType }) {
 
@@ -12,6 +13,11 @@ export default function Step5({ register, errors, setStep, step, moveType }) {
             setStep(step + 1)
         }
     }, [moveType])
+
+    const handleBackStep = (event) => {
+        event.preventDefault();
+        setStep(step - 1);
+    }
 
     return (
         <>
@@ -157,7 +163,14 @@ export default function Step5({ register, errors, setStep, step, moveType }) {
                                 </div>
                             </div>
                         </div>
-                        <button onClick={(event) => { handleNextStep(event) }} className='w-1/4 p-2 bg-[#f5f7f2] text-lg text-black border-[#f5f7f2] border-2 rounded border-[#f5f7f2] hover:bg-transparent hover:cursor-pointer'>Next</button>
+                        <div className="flex justify-between w-full">
+                            <div className='flex items-center'>
+                                <FaArrowLeft onClick={(event) => { handleBackStep(event) }} className='hover:cursor-pointer' size='1.25rem' />
+                            </div>
+                            <div className='flex items-center'>
+                                <button onClick={(event) => { handleNextStep(event) }} className='w-1/4 p-2 bg-[#f5f7f2] text-lg text-black border-[#f5f7f2] border-2 rounded border-[#f5f7f2] hover:bg-transparent hover:cursor-pointer'>Next</button>
+                            </div>
+                        </div>
                     </div>
                 </div>
             }

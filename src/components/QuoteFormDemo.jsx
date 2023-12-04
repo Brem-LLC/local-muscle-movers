@@ -30,7 +30,7 @@ export default function QuoteFormDemo() {
     return (
         <div className="max-w-3xl mx-auto pt-16 h-lg">
             {!isSubmitting ?
-                <form className='flex flex-col gap-16 items-center' onSubmit={handleSubmit(onSubmit)}>
+                <form className='flex flex-col gap-16 items-center mb-24' onSubmit={handleSubmit(onSubmit)}>
                     <div className='flex flex-col gap-16'>
                         {step === 1 && <Step1 register={register} errors={errors} setValue={setValue} setStep={setStep} step={step} />}
                         {step === 2 && <Step2 register={register} errors={errors} setValue={setValue} setStep={setStep} step={step} />}
@@ -38,8 +38,9 @@ export default function QuoteFormDemo() {
                         {step === 4 && <Step4 register={register} errors={errors} setValue={setValue} setStep={setStep} step={step} moveType={moveType} />}
                         {step === 5 && <Step5 register={register} errors={errors} setValue={setValue} setStep={setStep} step={step} moveType={moveType }/>}
                         {step === 6 && <Step6 register={register} errors={errors} setValue={setValue} setStep={setStep} step={step} />}
-                        {step === 7 && <Step7 register={register} errors={errors} setValue={setValue} isSubmitting={isSubmitting} submit={handleSubmit(onSubmit)} />}
+                        {step === 7 && <Step7 register={register} errors={errors} setValue={setValue} isSubmitting={isSubmitting} step={step} setStep={setStep} />}
                     </div>
+                    <p>* indicates required fields</p>
                 </form>
                 :
                 <div className="py-80 text-center text-xl">

@@ -1,6 +1,6 @@
 export default function Step1({ register, errors, setStep, step }) {
 
-    const handleNextStep = (event) => {
+    const handleNextStep = async (event) => {
         event.preventDefault();
         setStep(step + 1);
     }
@@ -10,7 +10,6 @@ export default function Step1({ register, errors, setStep, step }) {
             <h2 className='font-bold text-3xl absolute transform -translate-y-20 bg-[#f5f7f2] pt-2 px-8 rounded-md'>Contact Info</h2>
             <div className='flex flex-col gap-5 items-center'>
                 <div className='flex flex-col gap-5'>
-
                     <div className="grid grid-cols-2 gap-5">
                         <div>
                             <label className='font-bold mb-1 text-lg'>First Name*</label>
@@ -48,7 +47,9 @@ export default function Step1({ register, errors, setStep, step }) {
                         )}
                     </div>
                 </div>
-                <button onClick={(event) => {handleNextStep(event)}} className='w-1/4 p-2 bg-[#f5f7f2] text-lg text-black border-[#f5f7f2] border-2 rounded border-[#f5f7f2] hover:bg-transparent hover:cursor-pointer'>Next</button>
+                <div className="flex justify-end w-full">
+                    <button onClick={(event) => { handleNextStep(event) }} className='w-1/4 p-2 bg-[#f5f7f2] text-lg text-black border-[#f5f7f2] border-2 rounded border-[#f5f7f2] hover:bg-transparent hover:cursor-pointer'>Next</button>
+                </div>
             </div>
         </div>
     )
