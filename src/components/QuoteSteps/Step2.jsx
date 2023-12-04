@@ -1,10 +1,17 @@
 import { FaArrowLeft } from "react-icons/fa6";
+import { useState } from "react";
 
-export default function Step2({ register, errors, step, setStep }) {
+export default function Step2({ register, errors, step, setStep, isValid }) {
+    const [missingFields, setMissingFields] = useState(false);
 
     const handleNextStep = (event) => {
         event.preventDefault();
-        setStep(step + 1);
+        if (isValid) {
+            setStep(step + 1);
+        }
+        else {
+            setMissingFields(true);
+        }
     }
 
     const handleBackStep = (event) => {
@@ -21,7 +28,7 @@ export default function Step2({ register, errors, step, setStep }) {
                         <div className='w-1/3'>
                             <h3 className='font-bold mb-1 text-lg'>Desired Date*</h3>
                             <input className='rounded-md mb-3 w-full' type="date" placeholder="mm/dd/yy" {...register("moveDate", { required: true })} />
-                            {errors.desiredDate?.type === "required" && (
+                            {missingFields && (
                                 <p className="text-red-800 font-bold mb-3">Email is required</p>
                             )}
                         </div>
@@ -35,7 +42,7 @@ export default function Step2({ register, errors, step, setStep }) {
                                 <option value="By the end of this month">By the end of this month</option>
                                 <option value="More than one month">More than one month</option>
                             </select>
-                            {errors.flexibility?.type === "required" && (
+                            {missingFields && (
                                 <p className="text-red-800 font-bold mb-3">Flexibility is required</p>
                             )}
                         </div>

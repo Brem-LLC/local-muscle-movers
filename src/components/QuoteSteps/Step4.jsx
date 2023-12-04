@@ -1,10 +1,19 @@
 import { FaArrowLeft } from "react-icons/fa6";
+import { useState } from "react";
+import { set } from "react-hook-form";
 
-export default function Step4({ register, errors, moveType, setStep, step }) {
+export default function Step4({ register, isValid, moveType, setStep, step }) {
+
+    const [missingFields, setMissingFields] = useState(false);
 
     const handleNextStep = (event) => {
         event.preventDefault();
-        setStep(step + 1);
+        if (isValid) {
+            setStep(step + 1);
+        }
+        else {
+            setMissingFields(true);
+        }
     }
 
     const handleBackStep = (event) => {
@@ -23,14 +32,14 @@ export default function Step4({ register, errors, moveType, setStep, step }) {
                         <div className='w-full'>
                             <label className='font-bold mb-1 text-lg'>Street Address*</label>
                             <input type="text" className="rounded-md w-full" placeholder="12 Example St." {...register("originStreet", { required: true })} />
-                            {errors.originStreet?.type === "required" && (
+                            {missingFields && (
                                 <p className="text-red-800 font-bold mb-3">Street Address is required</p>
                             )}
                         </div>
                         <div>
                             <label className='font-bold mb-1 text-lg'>City*</label>
                             <input type="text" className="rounded-md w-full" placeholder="City" {...register("originCity", { required: true })} />
-                            {errors.originCity?.type === "required" && (
+                            {missingFields && (
                                 <p className="text-red-800 font-bold mb-3">City is required</p>
                             )}
                         </div>
@@ -91,14 +100,14 @@ export default function Step4({ register, errors, moveType, setStep, step }) {
                                 <option value="Wisconsin">Wisconsin</option>
                                 <option value="Wyoming">Wyoming</option>
                             </select>
-                            {errors.originState?.type === "required" && (
+                            {missingFields && (
                                 <p className="text-red-800 font-bold mb-3">Street Address is required</p>
                             )}
                         </div>
                         <div>
                             <label className='font-bold mb-1 text-lg'>Zip*</label>
                             <input type="text" className="rounded-md w-full" placeholder="Zip" {...register("originZip", { required: true })} />
-                            {errors.originZip?.type === "required" && (
+                            {missingFields && (
                                 <p className="text-red-800 font-bold mb-3">Zip is required</p>
                             )}
                         </div>
@@ -150,7 +159,7 @@ export default function Step4({ register, errors, moveType, setStep, step }) {
                                 <option value="250-500 Length of a football field">250-500 Length of a football field</option>
                                 <option value="Over 500 feet - Very long">Over 500 feet - Very long</option>
                             </select>
-                            {errors.distance?.type === "required" && (
+                            {missingFields && (
                                 <p className="text-red-800 font-bold mb-3">Distance is required</p>
                             )}
                         </div>

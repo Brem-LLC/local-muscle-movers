@@ -1,6 +1,8 @@
 import { FaArrowLeft } from "react-icons/fa6";
+import { useState } from "react";
+import { set } from "react-hook-form";
 
-export default function Step3({ register, errors, setValue, step, setStep, setMoveType }) {
+export default function Step3({ register, isValid, setValue, step, setStep, setMoveType }) {
 
     function toggleType(option) {
         const allOptions = document.querySelectorAll('[name=moveType]');
@@ -17,9 +19,16 @@ export default function Step3({ register, errors, setValue, step, setStep, setMo
         setValue('moveType', selected.value);
     }
 
+    const [missingFields, setMissingFields] = useState(false);
+
     const handleNextStep = (event) => {
         event.preventDefault();
-        setStep(step + 1);
+        if (isValid) {
+            setStep(step + 1);
+        }
+        else {
+            setMissingFields(true);
+        }
     }
 
     const handleBackStep = (event) => {
@@ -66,7 +75,7 @@ export default function Step3({ register, errors, setValue, step, setStep, setMo
                             <option value="10 X 15 Storage Unit">10 X 15 Storage Unit</option>
                             <option value="10 X 20 Storage Unit">10 X 20 Storage Unit</option>
                         </select>
-                        {errors.size?.type === "required" && (
+                        {missingFields && (
                             <p className="text-red-800 font-bold mb-3">Size is required</p>
                         )}
                     </div>
@@ -90,7 +99,7 @@ export default function Step3({ register, errors, setValue, step, setStep, setMo
                                 <label>Storage/Rental Unload Only</label>
                             </div>
                         </div>
-                        {errors.moveType?.type === "required" && (
+                        {missingFields && (
                             <p className="text-red-800 font-bold mb-3">Type is required</p>
                         )}
                     </div>

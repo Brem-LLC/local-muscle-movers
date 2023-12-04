@@ -1,11 +1,17 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { FaArrowLeft } from "react-icons/fa6";
 
-export default function Step5({ register, errors, setStep, step, moveType }) {
+export default function Step5({ register, isValid, setStep, step, moveType }) {
+    const [missingFields, setMissingFields] = useState(false);
 
     const handleNextStep = (event) => {
         event.preventDefault();
-        setStep(step + 1);
+        if (isValid) {
+            setStep(step + 1);
+        }
+        else {
+            setMissingFields(true);
+        }
     }
 
     useEffect(() => {
@@ -30,14 +36,14 @@ export default function Step5({ register, errors, setStep, step, moveType }) {
                                 <div className='w-full'>
                                     <label className='font-bold mb-1 text-lg'>Street Address*</label>
                                     <input type="text" className="rounded-md w-full" placeholder="12 Example St." {...register("destinationStreet", { required: true })} />
-                                    {errors.destStreet?.type === "required" && (
+                                    {missingFields && (
                                         <p className="text-red-800 font-bold mb-3">Street Address is required</p>
                                     )}
                                 </div>
                                 <div>
                                     <label className='font-bold mb-1 text-lg'>City*</label>
                                     <input type="text" className="rounded-md w-full" placeholder="City" {...register("destinationCity", { required: true })} />
-                                    {errors.destCity?.type === "required" && (
+                                    {missingFields && (
                                         <p className="text-red-800 font-bold mb-3">City is required</p>
                                     )}
                                 </div>
@@ -98,14 +104,14 @@ export default function Step5({ register, errors, setStep, step, moveType }) {
                                         <option value="Wisconsin">Wisconsin</option>
                                         <option value="Wyoming">Wyoming</option>
                                     </select>
-                                    {errors.destState?.type === "required" && (
+                                    {missingFields && (
                                         <p className="text-red-800 font-bold mb-3">Street Address is required</p>
                                     )}
                                 </div>
                                 <div>
                                     <label className='font-bold mb-1 text-lg'>Zip*</label>
                                     <input type="text" className="rounded-md w-full" placeholder="Zip" {...register("destinationZip", { required: true })} />
-                                    {errors.destZip?.type === "required" && (
+                                    {missingFields && (
                                         <p className="text-red-800 font-bold mb-3">Zip is required</p>
                                     )}
                                 </div>
@@ -157,7 +163,7 @@ export default function Step5({ register, errors, setStep, step, moveType }) {
                                         <option value="250-500 Length of a football field">250-500 Length of a football field</option>
                                         <option value="Over 500 feet - Very long">Over 500 feet - Very long</option>
                                     </select>
-                                    {errors.distance?.type === "required" && (
+                                    {missingFields && (
                                         <p className="text-red-800 font-bold mb-3">Distance is required</p>
                                     )}
                                 </div>

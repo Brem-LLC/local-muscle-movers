@@ -1,10 +1,17 @@
 import { FaArrowLeft } from "react-icons/fa6";
+import { useState } from "react";
 
-export default function Step6({ register, step, setStep }) {
+export default function Step6({ register, step, setStep, isValid }) {
+    const [missingFields, setMissingFields] = useState(false);
 
     const handleNextStep = (event) => {
         event.preventDefault();
-        setStep(step + 1);
+        if (isValid) {
+            setStep(step + 1);
+        }
+        else {
+            setMissingFields(true);
+        }
     }
 
     const handleBackStep = (event) => {

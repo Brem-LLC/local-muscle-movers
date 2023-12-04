@@ -1,8 +1,16 @@
-export default function Step1({ register, errors, setStep, step }) {
+import { useState } from "react";
+
+export default function Step1({ register, setStep, step, isValid }) {
+    const [missingFields, setMissingFields] = useState(false);
 
     const handleNextStep = async (event) => {
         event.preventDefault();
-        setStep(step + 1);
+        if (isValid) {
+            setStep(step + 1);
+        }
+        else {
+            setMissingFields(true);
+        }
     }
 
     return (
@@ -14,14 +22,14 @@ export default function Step1({ register, errors, setStep, step }) {
                         <div>
                             <label className='font-bold mb-1 text-lg'>First Name*</label>
                             <input type="text" className="rounded-md w-full" placeholder="First Name" {...register("firstName", { required: true })} />
-                            {errors.firstName?.type === "required w-full" && (
+                            {missingFields && (
                                 <p className="text-red-800 font-bold mb-3">First name is required</p>
                             )}
                         </div>
                         <div>
                             <label className='font-bold mb-1 text-lg'>Last Name*</label>
                             <input type="text" className="rounded-md w-full" placeholder="Last Name" {...register("lastName", { required: true })} />
-                            {errors.lastName?.type === "required" && (
+                            {missingFields && (
                                 <p className="text-red-800 font-bold mb-3">Last name is required</p>
                             )}
                         </div>
@@ -30,7 +38,7 @@ export default function Step1({ register, errors, setStep, step }) {
                         <div className='w-3/4'>
                             <label className='font-bold mb-1 text-lg'>Phone*</label>
                             <input type="tel" className="rounded-md w-full" placeholder="(123) 555-6789" {...register("phoneNumber", { required: true })} />
-                            {errors.phone?.type === "required" && (
+                            {missingFields && (
                                 <p className="text-red-800 font-bold mb-3">Phone number is required</p>
                             )}
                         </div>
@@ -42,7 +50,7 @@ export default function Step1({ register, errors, setStep, step }) {
                     <div className='grid grid-cols-1'>
                         <label className='font-bold mb-1 text-lg'>Email*</label>
                         <input type="text" className="rounded-md w-full" placeholder="you@example.com" {...register("email", { required: true })} />
-                        {errors.email?.type === "required" && (
+                        {missingFields && (
                             <p className="text-red-800 font-bold mb-3">Email is required</p>
                         )}
                     </div>
