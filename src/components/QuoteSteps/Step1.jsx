@@ -56,7 +56,7 @@ export default function Step1({ register, setStep, step, isValid }) {
                     </div>
                 </div>
                 <div className="flex justify-end w-full">
-                    <button onClick={(event) => { handleNextStep(event) }} className='w-1/4 p-2 bg-[#f5f7f2] text-lg text-black border-[#f5f7f2] border-2 rounded border-[#f5f7f2] hover:bg-transparent hover:cursor-pointer'>Next</button>
+                    <button onClick={(event) => { handleNextStep(event) }} className='block text-primary rounded-md md:bg-primary px-3 py-3 text-center font-medium md:text-white lg:bg-white lg:text-primary hover:cursor-pointer'>Next</button>
                 </div>
             </div>
         </div>

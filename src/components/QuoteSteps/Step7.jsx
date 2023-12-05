@@ -89,7 +89,7 @@ export default function Step7({ register, errors, isSubmitting, step, setStep })
                         <FaArrowLeft onClick={(event) => { handleBackStep(event) }} className='hover:cursor-pointer' size='1.25rem' />
                     </div>
                     <div className='flex items-center'>
-                        <button disabled={isSubmitting} type="submit" className='w-1/4 p-2 bg-[#f5f7f2] text-lg text-black border-[#f5f7f2] border-2 rounded border-[#f5f7f2] hover:bg-transparent hover:cursor-pointer'>Submit</button>
+                        <button disabled={isSubmitting} type="submit" className='block text-primary rounded-md md:bg-primary px-3 py-3 text-center font-medium md:text-white lg:bg-white lg:text-primary hover:cursor-pointer'>Submit</button>
                     </div>
                 </div>
             </div>
