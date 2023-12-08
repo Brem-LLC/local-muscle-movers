@@ -10,7 +10,6 @@ import NedQuote from '@components/NedQuote.astro'
 import MovingChecklist from '@components/MovingChecklist.astro'
 import Policies from '@components/Policies.astro'
 import JoinForm from '@components/joinForm.jsx'
-import QuoteForm from '@components/quoteForm.jsx'
 import QuoteFormDemo from '@components/QuoteFormDemo'
 
 export async function getStaticPaths() {
@@ -42,7 +41,6 @@ const policiesBlock = entry?.componentBlocks.filter((bl) => bl.discriminant === 
 	{quoteBlock[0] && <NedQuote block={quoteBlock[0].value} />}
 	{movingChecklistBlock[0] && <MovingChecklist block={movingChecklistBlock[0].value} />}
 	{policiesBlock[0] && <Policies block={policiesBlock[0].value} />}
-	{slug === 'hire-us' && <QuoteForm client:only="react" />}
-	{slug === 'hire-us-demo' && <QuoteFormDemo client:only="react" />}
+	{slug === 'hire-us' && <QuoteFormDemo client:only="react" />}
 	{slug === 'join' && <JoinForm client:only="react" />}
 </Layout>
