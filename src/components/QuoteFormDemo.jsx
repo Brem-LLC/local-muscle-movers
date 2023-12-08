@@ -16,15 +16,14 @@ export default function QuoteFormDemo() {
     const { register, handleSubmit, setValue, formState: { errors, isValid } } = useForm();
     const onSubmit = async data => {
         setIsSubmitting(true);
-        console.log(data);
-        // const request = await fetch('/api/quote', {
-        //   method: 'POST',
-        //   headers: {
-        //     'Content-Type': 'application/json'
-        //   },
-        //   body: JSON.stringify(data)
-        // })
-        // const response = await request.json();
+        const request = await fetch('/api/quote', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify(data)
+        })
+        const response = await request.json();
     }
 
     return (
@@ -45,7 +44,7 @@ export default function QuoteFormDemo() {
                 :
                 <div className="py-80 text-center text-xl">
                     <h3 className="font-bold">Thank you for your interest in Local Muscle Movers!</h3>
-                    <p>We value your interest and time, and we will have your quote ready within soon.</p>
+                    <p>We value your interest and time, and we will have your quote ready soon.</p>
                 </div>
             }
         </div>
