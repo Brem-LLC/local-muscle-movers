@@ -1,0 +1,5 @@
+name: Hire Us Demo
+componentBlocks:
+  - discriminant: shortHero
+    value:
+      title: Hire Us

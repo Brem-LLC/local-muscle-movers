@@ -193,6 +193,11 @@ declare module 'astro:content' {
   collection: "pages";
   data: any
 };
+"hire-us-demo/index": {
+	id: "hire-us-demo/index";
+  collection: "pages";
+  data: any
+};
 "hire-us/index": {
 	id: "hire-us/index";
   collection: "pages";
