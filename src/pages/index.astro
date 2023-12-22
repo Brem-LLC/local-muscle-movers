@@ -16,7 +16,4 @@ const reviewCTAArea = homeData?.componentBlocks.filter(block => block.discrimina
 
 <Layout title="Home">
 	{heroData[0] && <Hero heroData={heroData[0].value} />}
-	{videoAndTextArea[0] || selectedServicesArea[0] ? <Services videoAndTextArea={videoAndTextArea[0].value} selectedServicesArea={selectedServicesArea[0].value} /> : <></>}
-	{reviewCTAArea && <ReviewCTA reviewContent={reviewCTAArea[0].value} />}
-	<CTA />
 </Layout>
