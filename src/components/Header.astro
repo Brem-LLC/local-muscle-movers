@@ -1,5 +1,6 @@
 ---
 import { Image } from 'astro:assets'
+import muscleLogo from '@images/1.png'
 import Logo from './logo.astro'
 import portland from '@images/portland.jpeg'
 import burlington from '@images/burlington.jpeg'
@@ -34,9 +35,11 @@ const menu = await reader.singletons.menu.read()
 	</div>
 	<div class="mx-auto flex max-w-screen-xl flex-wrap items-center justify-between p-4 transition-all duration-200 group-aria-[scrolled]:py-4 lg:group-aria-[scrolled]:py-2">
 		<a href="/" class="relative z-0 flex items-center lg:pl-32">
-			<Logo
+			<!-- <Logo
 				class="absolute -top-4 left-0 h-16 w-24 rounded-b fill-white transition-all duration-200 group-aria-[scrolled]:h-36 group-aria-[scrolled]:bg-white group-aria-[scrolled]:fill-black md:-top-8 md:h-28 md:w-32 lg:block"
-			/>
+			/> -->
+			<Image src={muscleLogo} alt="Local Muscle Movers" class="absolute -top-4 left-0 h-16 w-24 rounded-b fill-white transition-all duration-200 group-aria-[scrolled]:h-36 group-aria-[scrolled]:bg-white group-aria-[scrolled]:fill-black md:-top-8 md:h-28 md:w-32 lg:block"/>
+
 			<h3
 				class="lg:group-aria-lg:[scrolled]:opacity-0 ml-24 origin-left text-lg font-bold text-white transition-all lg:group-aria-[scrolled]:invisible group-aria-[scrolled]:text-black md:ml-0 md:text-2xl lg:group-aria-[scrolled]:scale-x-0">
 				Local Muscle Movers
@@ -131,14 +134,8 @@ const menu = await reader.singletons.menu.read()
 
 	<nav class="navigation left-0 right-0 z-50 w-full border-gray-200 bg-black transition-all duration-200 aria-[scrolled]:drop-shadow-lg">
 		<div class="mx-auto flex max-w-screen-xl flex-wrap items-center justify-between p-4 transition-all duration-200 group-aria-[scrolled]:py-4 lg:group-aria-[scrolled]:py-2">
-			<a href="/" class="relative z-0 flex items-center md:pl-32">
-				<Logo
-					class="absolute -top-4 left-0 w-16 rounded-b fill-primary-500 transition-all duration-200 group-aria-[scrolled]:h-36 group-aria-[scrolled]:bg-white group-aria-[scrolled]:fill-black sm:h-16 sm:w-24 md:-top-8 md:h-28 md:w-32 lg:block"
-				/>
-				<h3
-					class="lg:group-aria-lg:[scrolled]:opacity-0 ml-16 origin-left bg-gradient-1 bg-cover bg-clip-text bg-no-repeat text-base font-bold text-transparent transition-all lg:group-aria-[scrolled]:invisible group-aria-[scrolled]:text-black sm:ml-24 md:ml-0 lg:group-aria-[scrolled]:scale-x-0 xl:text-2xl">
-					Local Muscle Movers
-				</h3>
+			<a href="/" class="relative z-0 flex items-center">
+				<Image src={muscleLogo} alt="Local Muscle Movers" class="absolute -top-6 left-0 w-44 rounded-b fill-primary-500 transition-all duration-200 group-aria-[scrolled]:bg-white group-aria-[scrolled]:fill-black max-w-none md:-top-2 md:w-72 object-contain lg:block"/>
 			</a>
 			<div class="flex items-center lg:order-2 lg:hidden">
 				<button
