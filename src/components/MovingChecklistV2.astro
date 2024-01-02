@@ -1,0 +1,33 @@
+---
+const { block } = Astro.props
+const checklistP1 = block.checklist.slice(0, 5)
+const checklistP2 = block.checklist.slice(5, 10)
+---
+
+<section class="bg-[#F4F1EC] px-5 pb-[108px] pt-[102px] lg:px-10">
+	<div class="mx-auto w-full max-w-[1200px]">
+		<div class="mb-10 text-center">
+			<h2 class="mb-5 font-primary text-[38px] leading-tight text-black">{block.header}</h2>
+			<p class="text-base leading-relaxed">{block.subText}</p>
+		</div>
+
+		<div class="mb-14 grid grid-cols-1 gap-3 pb-1 sm:grid-cols-2 md:grid-cols-4">
+			{
+				block.images.map((image) => (
+					<div>
+						<img src={image} alt="placeholder" class="aspect-square w-full object-cover" />
+					</div>
+				))
+			}
+		</div>
+
+		<div class="grid gap-5 sm:grid-cols-2">
+			<ul class="list-disc space-y-3 pl-6 text-base">
+				{checklistP1.map((item) => <li>{item}</li>)}
+			</ul>
+			<ul class="list-disc space-y-3 pl-6 text-base">
+				{checklistP2.map((item) => <li>{item}</li>)}
+			</ul>
+		</div>
+	</div>
+</section>
