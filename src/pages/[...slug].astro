@@ -5,10 +5,10 @@ import Layout from '@layouts/Base.astro'
 import ShortHero from '@components/ShortHero.astro'
 import Story from '@components/Story.astro'
 import Mission from '@components/Mission.astro'
-import WhyLMM from '@components/WhyLMM.astro'
+import WhyLMMV2 from '@components/WhyLMMV2.astro'
 import NedQuote from '@components/NedQuote.astro'
-import MovingChecklist from '@components/MovingChecklist.astro'
-import Policies from '@components/Policies.astro'
+import MovingChecklistV2 from '@components/MovingChecklistV2.astro'
+import PoliciesV2 from '@components/PoliciesV2.astro'
 import JoinForm from '@components/joinForm.jsx'
 import QuoteFormDemo from '@components/QuoteFormDemo'
 
@@ -27,21 +27,21 @@ const { slug } = Astro.params
 
 const shortHeroBlock = entry?.componentBlocks.filter((bl) => bl.discriminant === 'shortHero')
 const storyBlock = entry?.componentBlocks.filter((bl) => bl.discriminant === 'videoText')
-const headerAndTextBlocks = entry?.componentBlocks.filter((bl) => bl.discriminant === 'headerText')
 const ourMission = entry?.componentBlocks.filter((bl) => bl.discriminant === 'headerTextAndImage' && bl.value.sectionType === 'ourMission')
 const quoteBlock = entry?.componentBlocks.filter((bl) => bl.discriminant === 'testimonialCTA')
-const movingChecklistBlock = entry?.componentBlocks.filter((bl) => bl.discriminant === 'movingChecklist')
+const movingChecklistBlock = entry?.componentBlocks.filter((bl) => bl.discriminant === 'movingChecklistV2')
 const policiesBlock = entry?.componentBlocks.filter((bl) => bl.discriminant === 'policiesAndContracts')
+const whyLMM =  entry?.componentBlocks.filter((bl) => bl.discriminant === 'headerTextButtonAndImages')
 ---
 
 <Layout title={entry.name}>
 	{shortHeroBlock[0] && <ShortHero block={shortHeroBlock[0].value} />}
 	{storyBlock[0] && <Story block={storyBlock[0].value} />}
 	{ourMission[0] && <Mission block={ourMission[0].value} />}
-	{headerAndTextBlocks[1] && <WhyLMM block={headerAndTextBlocks[0].value} />}
+	{whyLMM[0] && <WhyLMMV2 block={whyLMM[0].value} />}
 	{quoteBlock[0] && <NedQuote block={quoteBlock[0].value} />}
-	{movingChecklistBlock[0] && <MovingChecklist block={movingChecklistBlock[0].value} />}
-	{policiesBlock[0] && <Policies block={policiesBlock[0].value} />}
+	{movingChecklistBlock[0] && <MovingChecklistV2 block={movingChecklistBlock[0].value} />}
+	{policiesBlock[0] && <PoliciesV2 block={policiesBlock[0].value} />}
 	{slug === 'hire-us' && <QuoteFormDemo client:only="react" />}
 	{slug === 'join' && <JoinForm client:only="react" />}
 </Layout>

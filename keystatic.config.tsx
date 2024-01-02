@@ -405,7 +405,25 @@ export default config({
 									}
 								)
 							})
-						}
+						},
+						headerTextButtonAndImages: {
+							label: 'Header, Text, Button, and Images',
+							schema: fields.object({
+								header: fields.text({ label: 'Header' }),
+								content: fields.text({ label: 'Paragraph Content', multiline: true }),
+								button: fields.object({
+									text: fields.text({ label: 'Button Text' }),
+									link: fields.text({ label: 'Button Link' })
+								}),
+								images: fields.array(
+									fields.image({
+										label: 'Image',
+										directory: 'public/images/resources',
+										publicPath: '/images/resources/'
+									}),
+								)
+							})
+						},
 					},
 					{ label: 'Component Blocks' }
 				)

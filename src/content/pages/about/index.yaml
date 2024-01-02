@@ -26,26 +26,29 @@ componentBlocks:
         To provide a stress free and cost effective move that leaves you
         wondering what you were worried about in the first place.
       image: /images/resources/about/componentBlocks/2/value/image.jpeg
-  - discriminant: headerText
+  - discriminant: headerTextButtonAndImages
     value:
-      header: Why choose Local Muscle?
-      text: >-
-        We've built a reputation throughout New England as a moving company you
-        can trust. Whether you're moving halfway across the country or across
-        the street, we've got you covered.Throughout our history we really have
-        seen it all, and use that knowledge to make your move as smooth as
-        possible.Many of our customers have returned to us time and time again
-        for their moving needs. That being said, we prefer to let our reviews
-        speak for themselves. Check us out on Google Reviews and Yelp for more
-        firsthand customer feedback!
+      header: Why Choose Local Muscle Movers?
+      content: >-
+        Moving day blues? Not with us! We're your New England neighbors,
+        tackling big and small moves with a smile. Over the years, we've seen it
+        all (trust us, it gets wild!) and used that wisdom to smooth out every
+        bump in the road. Happy customers keep coming back, but we let our
+        Google and Yelp reviews do the talking.
 
 
-        Put simply, we want to change your opinion of movers and moving for the
-        better. Each move is carefully tailored to best fit your needs and
-        ensure a positive experience for customers and crews alike. From the
-        point you complete our estimate form, a member of our dedicated staff
-        will be in contact with you every step of the way. Get started with our
-        estimate form.
+        We want to change your moving mindset! Each move is like a handshake,
+        carefully planned to make both you and our crew feel welcome and
+        supported. From filling out our form to unpacking the last box, a
+        friendly face will be right there with you.
+      button:
+        text: get in touch
+        link: '#'
+      images:
+        - /images/resources/about/componentBlocks/3/value/images/0.jpeg
+        - /images/resources/about/componentBlocks/3/value/images/1.jpeg
+        - /images/resources/about/componentBlocks/3/value/images/2.jpeg
+        - /images/resources/about/componentBlocks/3/value/images/3.jpeg
   - discriminant: testimonialCTA
     value:
       personName: Ned Swain
