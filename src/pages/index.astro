@@ -1,19 +1,32 @@
 ---
 import Layout from '@layouts/Base.astro'
 import Hero from '@components/Hero.astro'
-import CTA from '@components/CTA.astro'
-import Services from '@components/Services.astro'
+import WhoAreWe from '@components/WhoAreWe.astro';
+import Mission from '@components/Mission.astro';
+import Services from '@components/Services.astro';
+import CallToAction from '@components/CallToAction.astro';
+import MovingChecklistV2 from '@components/MovingChecklistV2.astro';
 import { createReader } from '@keystatic/core/reader';
 import keystaticConfig from '../../keystatic.config';
-import ReviewCTA from '@components/ReviewCTA.astro'
+import PoliciesV2 from '@components/PoliciesV2.astro';
 const reader = createReader(process.cwd(), keystaticConfig);
 const homeData = await reader.collections.pages.read('home');
 const heroData = homeData?.componentBlocks.filter(block => block.discriminant == 'banner');
-const videoAndTextArea = homeData?.componentBlocks.filter(block => block.discriminant == 'videoText');
-const selectedServicesArea = homeData?.componentBlocks.filter(block => block.discriminant == 'serviceSelector');
-const reviewCTAArea = homeData?.componentBlocks.filter(block => block.discriminant == 'testimonialCTA');
+const whoAreWe = homeData?.componentBlocks.filter(block => block.discriminant == 'headerTextAndImage' && block.value.sectionType == 'whoAreWe');
+const ourMission = homeData?.componentBlocks.filter(block => block.discriminant == 'headerTextAndImage' && block.value.sectionType == 'ourMission');
+const ourServices = homeData?.componentBlocks.filter(block => block.discriminant == 'serviceSelector');
+const callToAction = homeData?.componentBlocks.filter(block => block.discriminant == 'callToAction');
+const movingChecklist = homeData?.componentBlocks.filter(block => block.discriminant == 'movingChecklistV2');
+const policies = homeData?.componentBlocks.filter(block => block.discriminant == 'policiesAndContracts');
 ---
 
 <Layout title="Home">
 	{heroData[0] && <Hero heroData={heroData[0].value} />}
+	{whoAreWe[0] && <WhoAreWe block={whoAreWe[0].value} />}
+	{ourMission[0] && <Mission block={ourMission[0].value} />}
+	{ourServices[0] && <Services block={ourServices[0].value} />}
+	{callToAction[0] && <CallToAction block={callToAction[0].value} />}
+	{movingChecklist[0] && <MovingChecklistV2 block={movingChecklist[0].value} />}
+	{policies[0] && <PoliciesV2 block={policies[0].value} />}
+	{callToAction[0] && <CallToAction block={callToAction[0].value} />}
 </Layout>

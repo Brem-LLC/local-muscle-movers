@@ -1,0 +1,70 @@
+---
+const { block } = Astro.props
+let subtextArray = []
+if (block.subtext.includes('\n')) {
+	subtextArray = block.subtext.split('\n')
+}
+else {
+	subtextArray.push(block.subtext)
+}
+---
+
+<section class="px-5 py-24 lg:px-10">
+	<div class="mx-auto flex w-full max-w-[1200px] flex-col items-center md:flex-row">
+		<div class="md:w-1/3">
+			<div>
+				<h2 class="mb-5 font-primary text-[38px] leading-tight text-black">{block.header}</h2>
+				<p class="text-base leading-relaxed">
+					{subtextArray.map((subtext) => {
+						return <span>{subtext}<br /></span>
+					})}
+				</p>
+				<a
+					href="#"
+					class="mt-5 inline-flex items-center bg-gradient-1 px-6 py-3.5 text-center text-lg font-bold uppercase text-black hover:bg-gradient-1 focus:outline-none focus:ring-4 focus:ring-sky-600"
+					>Learn More</a
+				>
+			</div>
+		</div>
+		<div class="mt-6 md:w-2/3 md:pl-8">
+			<div class="mx-auto grid w-full grid-cols-1 gap-5 sm:grid-cols-2 md:max-w-lg">
+				<div class="bg-black px-9 pb-12 pt-10 text-white">
+					<h4 class="mb-3 font-sans text-lg">Local (in-state)</h4>
+					<ul class="mb-7 list-disc pl-4 text-sm">
+						{block.localPolicies.map(item => (
+							item.discriminant === 'link' ?
+							<li><a href={item.url} class="underline">{item.value.title}</a></li>
+							:
+							<li><a href={item.upload} class="underline">{item.value.title}</a></li>
+						))}
+					</ul>
+					<div class="text-center">
+						<a
+							href='/resources'
+							class="inline-flex items-center bg-gradient-1 px-6 py-3.5 text-center text-lg font-bold uppercase text-black hover:bg-gradient-1 focus:outline-none focus:ring-4 focus:ring-sky-600"
+							>Local</a
+						>
+					</div>
+				</div>
+				<div class="bg-black px-9 pb-12 pt-10 text-white">
+					<h4 class="mb-3 font-sans text-lg">Interstate (national)</h4>
+					<ul class="mb-7 list-disc pl-4 text-sm">
+						{block.interstatePolicies.map(item => (
+							item.discriminant === 'link' ?
+							<li><a href={item.url} class="underline">{item.value.title}</a></li>
+							:
+							<li><a href={item.upload} class="underline">{item.value.title}</a></li>
+						))}
+					</ul>
+					<div class="text-center">
+						<a
+							href='/resources'
+							class="inline-flex items-center bg-gradient-1 px-6 py-3.5 text-center text-lg font-bold uppercase text-black hover:bg-gradient-1 focus:outline-none focus:ring-4 focus:ring-sky-600"
+							>Intersate</a
+						>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
