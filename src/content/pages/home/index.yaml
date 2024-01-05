@@ -19,38 +19,31 @@ componentBlocks:
       learnMoreButton:
         buttonText: Learn More
         buttonLink: '#'
-  - discriminant: headerTextAndImage
-    value:
-      sectionType: whoAreWe
-      header: Who We Are
-      description: >-
-        We've built a reputation throughout New England as a moving company you
-        can trust. Whether you're moving halfway across the country or across
-        the street, we've got you covered. Throughout our history, we've seen it
-        all, and we use that experience to make your move as smooth as possible.
-        Our customers return to us time and time again for their moving needs.
-        Let our reviews speak for themselves: Check us out on Google Reviews and
-        Yelp for more firsthand customer feedback!
-      image: /images/resources/home/componentBlocks/1/value/image.jpeg
-  - discriminant: headerTextAndImage
-    value:
-      sectionType: ourMission
-      header: Our Mission
-      description: >-
-        To provide a stress free and cost effective move that leaves you
-        wondering what you were worried about in the first place.
-      image: /images/resources/home/componentBlocks/2/value/image.jpeg
   - discriminant: serviceSelector
     value:
       header: Our Services
       subtext: >-
         Our Services include heavy lifting, residential and commercial moving,
         rearrangement, and more.
-      featuredImage: /images/resources/home/componentBlocks/3/value/featuredImage.jpeg
+      featuredImage: /images/resources/home/componentBlocks/1/value/featuredImage.jpeg
       services:
         - heavy-items
         - moving
         - rearrangement
+  - discriminant: testimonialCTA
+    value:
+      personName: Lee Van Dyke
+      review: >-
+        We moved to our home in Portland just before Thanksgiving weekend. We
+        scheduled our PODS arrivals in conjunction with our Local Muscle guys,
+        and they were both on time, but worked with efficiency and intelligence.
+        They were a joy to have around, if joy can be had when moving one's life
+        possessions. What I mean to say is they were courteous, careful, and
+        cheerful about the day. Great workers. I'd recommend them absolutely.
+        And you know I'm telling you the truth, because I'm determined to not
+        move again myself, any time soon. i.e. I have no motive other than to
+        assist anyone considering hiring them.
+      testimonialType: review
   - discriminant: callToAction
     value:
       header: Start your move with Local Muscle Movers.
@@ -58,56 +51,6 @@ componentBlocks:
         text: Get an estimate today
         link: '#'
       imageArray:
-        - /images/resources/home/componentBlocks/4/value/imageArray/0.jpeg
-        - /images/resources/home/componentBlocks/4/value/imageArray/1.jpeg
-        - /images/resources/home/componentBlocks/4/value/imageArray/2.jpeg
-  - discriminant: movingChecklistV2
-    value:
-      header: Local Muscle Movers Moving Check List
-      subtext: Quick reference for steps to ensure your move goes off without a hitch
-      images:
-        - /images/resources/home/componentBlocks/5/value/images/0.jpg
-        - /images/resources/home/componentBlocks/5/value/images/1.jpg
-        - /images/resources/home/componentBlocks/5/value/images/2.jpg
-        - /images/resources/home/componentBlocks/5/value/images/3.jpg
-      checklist:
-        - Check list bullet point option text
-        - Check list bullet point option text
-        - Check list bullet point option text
-        - Check list bullet point option text
-        - Check list bullet point option text
-        - Check list bullet point option text
-        - Check list bullet point option text
-        - Check list bullet point option text
-        - Check list bullet point option text
-        - Check list bullet point option text
-  - discriminant: policiesAndContracts
-    value:
-      header: Policies and Contracts
-      subtext: >-
-        We've outlined our Terms of Service and Full Value Replacement Coverage
-        in simple language for quick reference. For interstate moves, the FMCSA
-        also provides brochures regarding your legal rights.
-
-
-        We bill differently for interstate moves, as mandated by law. We will
-        determine a flat rate and provide a quote, rather than create an
-        hourly-based estimate.
-      localPolicies:
-        - discriminant: link
-          value:
-            title: In State Terms and Conditions Outline
-            url: '#'
-        - discriminant: link
-          value:
-            title: In State Full Value Replacement Coverage
-            url: '#'
-      interstatePolicies:
-        - discriminant: link
-          value:
-            title: National Terms and Conditions Outline
-            url: '#'
-        - discriminant: link
-          value:
-            title: National Full Value Replacement Coverage
-            url: '#'
+        - /images/resources/home/componentBlocks/3/value/imageArray/0.jpeg
+        - /images/resources/home/componentBlocks/3/value/imageArray/1.jpeg
+        - /images/resources/home/componentBlocks/3/value/imageArray/2.jpeg

@@ -3,21 +3,19 @@ componentBlocks:
   - discriminant: shortHero
     value:
       title: Meet the Muscle
-  - discriminant: videoText
+  - discriminant: headerTextAndImage
     value:
-      video: zsexg2uA4ak
-      heading: Our story, in storage units
+      sectionType: whoAreWe
+      header: Who We Are
       description: >-
-        No doubt we're well acquainted with storage units. Ten years ago our
-        story started in one. Founding partner Alex Sargent got the idea to
-        start a moving company after overhearing complaints about the moving
-        experience and attitude of the movers people had hired. Ned Swain, a
-        frequent customer, liked the idea so much he brought it to two other
-        friends, Jake Holz and Jon Donnell. Soon after, Local Muscle was born
-        with the driving idea that customer service and attitude of the crews
-        will be what sets us apart. The results speak for themselves.
-      optionalLink: {}
-      type: vertical
+        We've built a reputation throughout New England as a moving company you
+        can trust. Whether you're moving halfway across the country or across
+        the street, we've got you covered. Throughout our history, we've seen it
+        all, and we use that experience to make your move as smooth as possible.
+        Our customers return to us time and time again for their moving needs.
+        Let our reviews speak for themselves: Check us out on Google Reviews and
+        Yelp for more firsthand customer feedback!
+      image: /images/resources/about/componentBlocks/1/value/image.jpeg
   - discriminant: headerTextAndImage
     value:
       sectionType: ourMission

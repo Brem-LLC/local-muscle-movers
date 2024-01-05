@@ -11,6 +11,7 @@ import MovingChecklistV2 from '@components/MovingChecklistV2.astro'
 import PoliciesV2 from '@components/PoliciesV2.astro'
 import JoinForm from '@components/joinForm.jsx'
 import QuoteFormDemo from '@components/QuoteFormDemo'
+import WhoAreWe from '@components/WhoAreWe.astro'
 
 export async function getStaticPaths() {
 	const reader = createReader(process.cwd(), keystaticConfig)
@@ -26,7 +27,7 @@ const { entry } = Astro.props
 const { slug } = Astro.params
 
 const shortHeroBlock = entry?.componentBlocks.filter((bl) => bl.discriminant === 'shortHero')
-const storyBlock = entry?.componentBlocks.filter((bl) => bl.discriminant === 'videoText')
+const storyBlock = entry?.componentBlocks.filter((bl) => bl.discriminant === 'headerTextAndImage' && bl.value.sectionType === 'whoAreWe')
 const ourMission = entry?.componentBlocks.filter((bl) => bl.discriminant === 'headerTextAndImage' && bl.value.sectionType === 'ourMission')
 const quoteBlock = entry?.componentBlocks.filter((bl) => bl.discriminant === 'testimonialCTA')
 const movingChecklistBlock = entry?.componentBlocks.filter((bl) => bl.discriminant === 'movingChecklistV2')
@@ -36,7 +37,7 @@ const whyLMM =  entry?.componentBlocks.filter((bl) => bl.discriminant === 'heade
 
 <Layout title={entry.name}>
 	{shortHeroBlock[0] && <ShortHero block={shortHeroBlock[0].value} />}
-	{storyBlock[0] && <Story block={storyBlock[0].value} />}
+	{storyBlock[0] && <WhoAreWe block={storyBlock[0].value} />}
 	{ourMission[0] && <Mission block={ourMission[0].value} />}
 	{whyLMM[0] && <WhyLMMV2 block={whyLMM[0].value} />}
 	{quoteBlock[0] && <NedQuote block={quoteBlock[0].value} />}
