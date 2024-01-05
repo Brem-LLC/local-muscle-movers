@@ -25,7 +25,23 @@ export default config({
 				phone: fields.text({ label: 'Phone Number Maine' }),
 				phoneSecondary: fields.text({ label: 'Phone Number Vermont' }),
 				email: fields.text({ label: 'Email Address' }),
-				hours: fields.text({ label: 'Hours of Operation' })
+				hours: fields.text({ label: 'Hours of Operation' }),
+				officeAddress: fields.object({
+					street: fields.text({ label: 'Street Address' }),
+					city: fields.text({ label: 'City' }),
+					state: fields.text({ label: 'State' }),
+					zip: fields.text({ label: 'Zip Code' }),
+				}),
+				footerImage: fields.image({
+					label: 'Footer Image',
+					directory: '/public/images/',
+					publicPath: '/images/'
+				}),
+				socialMedia: fields.object({
+					facebook: fields.text({ label: 'Facebook Link' }),
+					instagram: fields.text({ label: 'Instagram Link' }),
+					twitter: fields.text({ label: 'Youtube Link' }),
+				})
 			}
 		}),
 		menu: singleton({
@@ -68,8 +84,14 @@ export default config({
 								}),
 								heading: fields.text({ label: 'Heading' }),
 								subheading: fields.text({ label: 'Subheading', multiline: true }),
-								buttonText: fields.text({ label: 'Button Text' }),
-								buttonLink: fields.text({ label: 'Button Link' })
+								ctaButton: fields.object({
+									buttonText: fields.text({ label: 'Call To Action Button Text' }),
+									buttonLink: fields.text({ label: 'Call To Action Button Link' })
+								}),
+								learnMoreButton: fields.object({
+									buttonText: fields.text({ label: 'Learn More Button Text' }),
+									buttonLink: fields.text({ label: 'Learn More Button Link' })
+								})
 							})
 						},
 						shortHero: {
@@ -143,6 +165,13 @@ export default config({
 						serviceSelector: {
 							label: 'Service Selector',
 							schema: fields.object({
+								header: fields.text({ label: 'Header' }),
+								subtext: fields.text({ label: 'Text Under Header', multiline: true }),
+								featuredImage: fields.image({
+									label: 'Featured Image',
+									directory: 'public/images/resources',
+									publicPath: '/images/resources/'
+								}),
 								services: fields.array(
 									fields.relationship({
 										label: 'Services',
@@ -200,7 +229,7 @@ export default config({
 							label: 'Policies And Contracts',
 							schema: fields.object({
 								header: fields.text({ label: 'Header' }),
-								subtext: fields.text({ label: 'Text Under Header' }),
+								subtext: fields.text({ label: 'Text Under Header', multiline: true}),
 								localPolicies: fields.array(
 									fields.conditional(
 										fields.select({
@@ -317,7 +346,84 @@ export default config({
 									}
 								)
 							})
-						}
+						},
+						headerTextAndImage: {
+							label: 'Header, Text, and Image',
+							schema: fields.object({
+								sectionType: fields.select({
+									label: 'Section Type',
+									description: 'What type of section is this?',
+									options: [
+										{ label: 'Who Are We', value: 'whoAreWe' },
+										{ label: 'Our Mission', value: 'ourMission' },
+									],
+									defaultValue: 'whoAreWe',
+								}),
+								header: fields.text({ label: 'Header' }),
+								description: fields.text({ label: 'Text Under Header', multiline: true }),
+								image: fields.image({
+									label: 'Image',
+									directory: 'public/images/resources',
+									publicPath: '/images/resources/'
+								})
+							})
+						},
+						callToAction: {
+							label: 'Call To Action',
+							schema: fields.object({
+								header: fields.text({ label: 'Header' }),
+								button: fields.object({
+									text: fields.text({ label: 'Button Text' }),
+									link: fields.text({ label: 'Button Link' })
+								}),
+								imageArray: fields.array(
+									fields.image({
+										label: 'Image',
+										directory: 'public/images/resources',
+										publicPath: '/images/resources/'
+									}),
+								)
+							})
+						},
+						movingChecklistV2: {
+							label: 'Moving Checklist V2',
+							schema: fields.object({
+								header: fields.text({ label: 'Checklist Header' }),
+								subtext: fields.text({ label: 'Text Under Header' }),
+								images: fields.array(
+									fields.image({
+										label: 'Moving Image',
+										directory: 'public/images/resources',
+										publicPath: '/images/resources/'
+									}),
+								),
+								checklist: fields.array(
+									fields.text({ label: 'Checklist Item' }),
+									{
+										label: 'Checklist Items',
+										itemLabel: (props) => props.value !== null ? props.value : "Checklist Item"
+									}
+								)
+							})
+						},
+						headerTextButtonAndImages: {
+							label: 'Header, Text, Button, and Images',
+							schema: fields.object({
+								header: fields.text({ label: 'Header' }),
+								content: fields.text({ label: 'Paragraph Content', multiline: true }),
+								button: fields.object({
+									text: fields.text({ label: 'Button Text' }),
+									link: fields.text({ label: 'Button Link' })
+								}),
+								images: fields.array(
+									fields.image({
+										label: 'Image',
+										directory: 'public/images/resources',
+										publicPath: '/images/resources/'
+									}),
+								)
+							})
+						},
 					},
 					{ label: 'Component Blocks' }
 				)

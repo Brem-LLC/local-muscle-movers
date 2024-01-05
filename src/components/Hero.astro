@@ -2,18 +2,23 @@
 const { heroData } = Astro.props
 ---
 
-<section class="flex items-end bg-primary/60 bg-cover bg-fixed bg-center bg-no-repeat px-7 pt-44 bg-blend-color-burn lg:px-10 lg:pt-40" style=`background-image: url(${heroData.bannerImage})`>
-	<div class="z-1 relative mx-auto w-full max-w-screen-xl py-8 text-white lg:pb-20 lg:pt-16 xl:px-0">
+<section class="py-16 md:py-24" style=`background-image: linear-gradient(rgba(0,0,0,.8),rgba(0,0,0,.8)),url(${heroData.bannerImage})`>
+	<div class="z-1 relative mx-auto w-full max-w-screen-xl px-4 text-white">
 		<div class="mb-6 max-w-screen-md lg:mb-0">
-			<h1 class="mb-4 text-4xl font-extrabold leading-tight tracking-tight text-white md:text-5xl lg:text-6xl">{heroData.heading}</h1>
-			<p class="mb-6 text-gray-200 text-xl lg:mb-8 lg:text-2xl">
-				{heroData.subheading}
-			</p>
-			<a
-				href={heroData.buttonLink}
-				class="focus:ring-primary-900 dark:bg-primary-600 inline-flex items-center rounded-lg bg-primary px-5 py-3 text-center font-bold text-white text-lg hover:bg-primary focus:outline-none focus:ring-4 dark:hover:bg-primary dark:focus:ring-primary border-2 border-white"
-				>{heroData.buttonText}</a
-			>
+			<h1 class="mb-4 w-fit bg-gradient-1 bg-clip-text font-primary text-[40px] font-bold text-transparent xl:text-6xl xl:leading-normal">{heroData.heading}</h1>
+			{heroData.subheading && <p class="mb-8 text-lg leading-relaxed text-[#F4F1EC]">{heroData.subheading}</p>}
+			<div class="flex flex-col items-center gap-x-8 gap-y-4 sm:flex-row">
+				<a
+					href={heroData.ctaButton.buttonLink}
+					class="inline-flex w-full items-center justify-center bg-gradient-1 px-6 py-3.5 text-center text-lg font-bold uppercase text-black hover:bg-gradient-1 focus:outline-none focus:ring-4 focus:ring-sky-600 sm:w-auto"
+					>{heroData.ctaButton.buttonText}</a
+				>
+				<a
+					href={heroData.learnMoreButton.buttonLink}
+					class="inline-flex w-full items-center justify-center border-2 border-white px-6 py-3 text-center text-lg font-bold uppercase text-white focus:outline-none focus:ring-4 focus:ring-sky-600 sm:w-auto"
+					>{heroData.learnMoreButton.buttonText}</a
+				>
+			</div>
 		</div>
 	</div>
 </section>

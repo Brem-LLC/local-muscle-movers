@@ -23,8 +23,8 @@ export default function Form() {
       {!isSubmitting ?
         <form className='flex flex-col gap-16 items-center' onSubmit={handleSubmit(onSubmit)}>
           <div className='flex flex-col gap-24'>
-            <div className='flex flex-col gap-3 bg-[#f5f7f2] p-12 rounded-lg'>
-              <h2 className='font-bold text-3xl absolute transform -translate-y-20 bg-[#f5f7f2] pt-2 px-8 rounded-md'>Contact Info</h2>
+            <div className='flex flex-col gap-3 bg-[#f4dd973a] p-12 rounded-lg'>
+              <h2 className='font-bold text-3xl absolute transform -translate-y-20 bg-[#f4dd973a] pt-2 px-8 rounded-md'>Contact Info</h2>
               <div className="grid grid-cols-2 gap-5">
                 <div>
                   <label className='font-bold mb-1 text-lg'>First Name*</label>
@@ -62,8 +62,8 @@ export default function Form() {
                 )}
               </div>
             </div>
-            <div className='flex flex-col gap-3 bg-[#f5f7f2] p-12 rounded-lg'>
-              <h2 className='font-bold text-3xl absolute transform -translate-y-20 bg-[#f5f7f2] pt-2 px-8 rounded-md'>Location</h2>
+            <div className='flex flex-col gap-3 bg-[#f4dd973a] p-12 rounded-lg'>
+              <h2 className='font-bold text-3xl absolute transform -translate-y-20 bg-[#f4dd973a] pt-2 px-8 rounded-md'>Location</h2>
               <div className="grid grid-cols-2 gap-5">
                 <div>
                   <label className='font-bold mb-1 text-lg'>Which branch are you interested in contacting?</label>
@@ -78,15 +78,15 @@ export default function Form() {
                 </div>
               </div>
             </div>
-            <div className='flex flex-col gap-5 bg-[#f5f7f2] p-12 rounded-lg items-center'>
+            <div className='flex flex-col gap-5 bg-[#f4dd973a] p-12 rounded-lg items-center'>
               <div>
-                <h2 className='font-bold text-3xl absolute transform -translate-y-20 bg-[#f5f7f2] pt-2 px-8 rounded-md'>Tell us about yourself</h2>
+                <h2 className='font-bold text-3xl absolute transform -translate-y-20 bg-[#f4dd973a] pt-2 px-8 rounded-md'>Tell us about yourself</h2>
                 <div className='w-full'>
                   <label className='font-bold mb-1 text-lg'>Your interests, work history, availability, anything you think is relevant:</label>
                   <textarea type="text" className="rounded-md w-full" placeholder="Additional Information" {...register("additionalInfo")} />
                 </div>
               </div>
-              <button disabled={isSubmitting} type="submit" className='w-1/4 p-2 bg-[#f5f7f2] text-lg text-black border-[#f5f7f2] border-2 rounded border-[#f5f7f2] hover:bg-transparent hover:text-black hover:cursor-pointer'>Submit</button>
+              <button disabled={isSubmitting} type="submit" className='w-1/4 p-2 bg-[#f4dd973a] text-lg text-black border-[#f5f7f2] border-2 rounded border-[#f5f7f2] hover:bg-transparent hover:text-black hover:cursor-pointer'>Submit</button>
             </div>
           </div>
         </form>

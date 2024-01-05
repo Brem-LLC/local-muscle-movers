@@ -13,29 +13,22 @@ componentBlocks:
         move across town or a five bedroom house move out of state, we have you
         covered. Moving with Local Muscle is like moving with friends and that's
         why moving isn't just what we do for a living, it's what we live to do. 
-      buttonText: Get an Estimate Today!
-      buttonLink: /hire-us
-  - discriminant: videoText
-    value:
-      video: CLv16TFTKNs
-      heading: Services Offered
-      description: >-
-        We've built a reputation throughout New England as a moving company you
-        can trust. Whether you're moving halfway across the country or across
-        the street, we've got you covered. Throughout our history we've seen it
-        all, and we use that experience to make your move as smooth as possible.
-        Our customers return to us time and time again for their moving needs.
-        Let our reviews speak for themselves: Check us out on Google Reviews and
-        Yelp for more firsthand customer feedback!
-      optionalLink:
-        link: /join
-        text: Contact sales to learn more
-      type: vertical
+      ctaButton:
+        buttonText: Get an Estimate Today!
+        buttonLink: /hire-us
+      learnMoreButton:
+        buttonText: Learn More
+        buttonLink: '#'
   - discriminant: serviceSelector
     value:
+      header: Our Services
+      subtext: >-
+        Our Services include heavy lifting, residential and commercial moving,
+        rearrangement, and more.
+      featuredImage: /images/resources/home/componentBlocks/1/value/featuredImage.jpeg
       services:
-        - moving
         - heavy-items
+        - moving
         - rearrangement
   - discriminant: testimonialCTA
     value:
@@ -51,3 +44,13 @@ componentBlocks:
         move again myself, any time soon. i.e. I have no motive other than to
         assist anyone considering hiring them.
       testimonialType: review
+  - discriminant: callToAction
+    value:
+      header: Start your move with Local Muscle Movers.
+      button:
+        text: Get an estimate today
+        link: '#'
+      imageArray:
+        - /images/resources/home/componentBlocks/3/value/imageArray/0.jpeg
+        - /images/resources/home/componentBlocks/3/value/imageArray/1.jpeg
+        - /images/resources/home/componentBlocks/3/value/imageArray/2.jpeg
