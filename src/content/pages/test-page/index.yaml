@@ -1,0 +1,5 @@
+name: Test Page
+componentBlocks:
+  - discriminant: plainText
+    value:
+      text: This is a test page
