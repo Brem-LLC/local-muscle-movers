@@ -12,37 +12,52 @@ import PoliciesV2 from '@components/PoliciesV2.astro'
 import JoinForm from '@components/joinForm.jsx'
 import QuoteFormDemo from '@components/QuoteFormDemo'
 import WhoAreWe from '@components/WhoAreWe.astro'
+import CallToAction from '@components/CallToAction.astro';
+import Services from '@components/Services.astro'
 
 export async function getStaticPaths() {
-	const reader = createReader(process.cwd(), keystaticConfig)
-	const pages = await reader.collections.pages.all()
-	return pages.map(({ slug, entry }) => {
-		return {
-			params: { slug },
-			props: { entry }
-		}
-	})
+    const reader = createReader(process.cwd(), keystaticConfig)
+    const pages = await reader.collections.pages.all()
+    return pages.map(({ slug, entry }) => {
+        return {
+            params: { slug },
+            props: { entry }
+        }
+    })
 }
 const { entry } = Astro.props
 const { slug } = Astro.params
-
-const shortHeroBlock = entry?.componentBlocks.filter((bl) => bl.discriminant === 'shortHero')
-const storyBlock = entry?.componentBlocks.filter((bl) => bl.discriminant === 'headerTextAndImage' && bl.value.sectionType === 'whoAreWe')
-const ourMission = entry?.componentBlocks.filter((bl) => bl.discriminant === 'headerTextAndImage' && bl.value.sectionType === 'ourMission')
-const quoteBlock = entry?.componentBlocks.filter((bl) => bl.discriminant === 'testimonialCTA')
-const movingChecklistBlock = entry?.componentBlocks.filter((bl) => bl.discriminant === 'movingChecklistV2')
-const policiesBlock = entry?.componentBlocks.filter((bl) => bl.discriminant === 'policiesAndContracts')
-const whyLMM =  entry?.componentBlocks.filter((bl) => bl.discriminant === 'headerTextButtonAndImages')
 ---
 
 <Layout title={entry.name}>
-	{shortHeroBlock[0] && <ShortHero block={shortHeroBlock[0].value} />}
-	{storyBlock[0] && <WhoAreWe block={storyBlock[0].value} />}
-	{ourMission[0] && <Mission block={ourMission[0].value} />}
-	{whyLMM[0] && <WhyLMMV2 block={whyLMM[0].value} />}
-	{quoteBlock[0] && <NedQuote block={quoteBlock[0].value} />}
-	{movingChecklistBlock[0] && <MovingChecklistV2 block={movingChecklistBlock[0].value} />}
-	{policiesBlock[0] && <PoliciesV2 block={policiesBlock[0].value} />}
-	{slug === 'hire-us' && <QuoteFormDemo client:only="react" />}
-	{slug === 'join' && <JoinForm client:only="react" />}
+    {entry?.componentBlocks[0] && entry?.componentBlocks.map((block: any) => {
+		if (slug === 'join') {
+			return <JoinForm client:only="react" />
+		}
+		if (slug === 'hire-us') {
+			return <QuoteFormDemo client:only="react" />
+		}
+		switch (block.discriminant) {
+			case 'shortHero':
+				return <ShortHero block={block.value} />
+			case 'headerTextAndImage':
+				return <Mission block={block.value} />
+			case 'headerTextButtonAndImages':
+				return <WhyLMMV2 block={block.value} />
+			case 'testimonialCTA':
+				return <NedQuote block={block.value} />
+			case 'movingChecklistV2':
+				return <MovingChecklistV2 block={block.value} />
+			case 'policiesAndContracts':
+				return <PoliciesV2 block={block.value} />
+			case 'imageAndText':
+				return <WhoAreWe block={block.value} />
+			case 'videoAndText':
+				return <Story block={block.value} />
+			case 'ourServices':
+				return <Services block={block.value} />
+			case 'callToAction':
+				return <CallToAction block={block.value} />
+		}
+    })}
 </Layout>
