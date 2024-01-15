@@ -1,0 +1,17 @@
+name: Test page
+componentBlocks:
+  - discriminant: shortHero
+    value:
+      backgroundImage: /images/shortHeros/test-page/componentBlocks/0/value/backgroundImage.jpg
+      title: Test
+      description: A new page test
+  - discriminant: imageText
+    value:
+      heading: Hello
+      description: This is an image
+      imagePlacement: left
+  - discriminant: imageText
+    value:
+      heading: A second one
+      description: This is a second one
+      imagePlacement: right
