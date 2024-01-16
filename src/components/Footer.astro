@@ -3,7 +3,6 @@ import { createReader } from '@keystatic/core/reader'
 import keystaticConfig from '../../keystatic.config'
 const reader = createReader(process.cwd(), keystaticConfig)
 const generalInformation = await reader.singletons.general.read()
-console.log(generalInformation)
 ---
 
 <footer class="py-16">
