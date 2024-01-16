@@ -7,9 +7,9 @@ email: example@supercoolsite.com
 hours: 9AM to 4PM
 officeAddress:
   street: 123 Anywhere St.
-  city: Any City
-  state: Any State
-  zip: '12345'
+  city: Portland
+  state: Maine
+  zip: '04103'
 footerImage: /images/footerImage.jpeg
 socialMedia:
   facebook: '#'
