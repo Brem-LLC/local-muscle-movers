@@ -30,34 +30,20 @@ const { slug } = Astro.params
 ---
 
 <Layout title={entry.name}>
-    {entry?.componentBlocks[0] && entry?.componentBlocks.map((block: any) => {
-		if (slug === 'join') {
-			return <JoinForm client:only="react" />
-		}
-		if (slug === 'hire-us') {
-			return <QuoteFormDemo client:only="react" />
-		}
-		switch (block.discriminant) {
-			case 'shortHero':
-				return <ShortHero block={block.value} />
-			case 'headerTextAndImage':
-				return <Mission block={block.value} />
-			case 'headerTextButtonAndImages':
-				return <WhyLMMV2 block={block.value} />
-			case 'testimonialCTA':
-				return <NedQuote block={block.value} />
-			case 'movingChecklistV2':
-				return <MovingChecklistV2 block={block.value} />
-			case 'policiesAndContracts':
-				return <PoliciesV2 block={block.value} />
-			case 'imageAndText':
-				return <WhoAreWe block={block.value} />
-			case 'videoAndText':
-				return <Story block={block.value} />
-			case 'ourServices':
-				return <Services block={block.value} />
-			case 'callToAction':
-				return <CallToAction block={block.value} />
-		}
-    })}
+    {entry?.componentBlocks[0] && entry?.componentBlocks.map((block: any) => (
+		<>
+		{block.discriminant === 'shortHero' ? <ShortHero block={block.value} /> : <></>}
+		{block.discriminant === 'headerTextAndImage' && block.value.sectionType === 'ourMission' && <Mission block={block.value} />}
+		{block.discriminant === 'headerTextAndImage' && block.value.sectionType === 'whoAreWe' && <WhoAreWe block={block.value} />}
+		{block.discriminant === 'headerTextButtonAndImages' && <WhyLMMV2 block={block.value} />}
+		{block.discriminant === 'testimonialCTA' && <NedQuote block={block.value} />}
+		{block.discriminant === 'callToAction' && <CallToAction block={block.value} />}
+		{block.discriminant === 'ourServices' && <Services block={block.value} />}
+		{block.discriminant === 'movingChecklistV2' && <MovingChecklistV2 block={block.value} />}
+		{block.discriminant === 'policiesAndContracts' && <PoliciesV2 block={block.value} />}
+		{block.discriminant === 'videoAndText' && <Story block={block.value} />}
+		{slug === 'hire-us' && <QuoteFormDemo client:only="react" />}
+		{slug === 'join' && <JoinForm client:only="react" />}
+		</>
+    ))}
 </Layout>
