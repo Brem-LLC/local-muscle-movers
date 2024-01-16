@@ -12,6 +12,6 @@ officeAddress:
   zip: '04103'
 footerImage: /images/footerImage.jpeg
 socialMedia:
-  facebook: '#'
+  facebook: https://www.facebook.com/Local.Muscle/
   instagram: '#'
   twitter: '#'
