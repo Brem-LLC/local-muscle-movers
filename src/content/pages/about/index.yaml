@@ -3,11 +3,6 @@ componentBlocks:
   - discriminant: shortHero
     value:
       title: Meet the Muscle
-  - discriminant: testimonialCTA
-    value:
-      personName: Ned Swain
-      review: '"I love lifting heavy awkward things, and running around."'
-      testimonialType: review
   - discriminant: headerTextAndImage
     value:
       sectionType: whoAreWe
@@ -20,7 +15,7 @@ componentBlocks:
         Our customers return to us time and time again for their moving needs.
         Let our reviews speak for themselves: Check us out on Google Reviews and
         Yelp for more firsthand customer feedback!
-      image: /images/resources/about/componentBlocks/2/value/image.jpeg
+      image: /images/resources/about/componentBlocks/1/value/image.jpeg
   - discriminant: headerTextAndImage
     value:
       sectionType: ourMission
@@ -28,7 +23,7 @@ componentBlocks:
       description: >-
         To provide a stress free and cost effective move that leaves you
         wondering what you were worried about in the first place.
-      image: /images/resources/about/componentBlocks/3/value/image.jpeg
+      image: /images/resources/about/componentBlocks/2/value/image.jpeg
   - discriminant: headerTextButtonAndImages
     value:
       header: Why Choose Local Muscle Movers?
@@ -48,7 +43,12 @@ componentBlocks:
         text: get in touch
         link: '#'
       images:
-        - /images/resources/about/componentBlocks/4/value/images/0.jpeg
-        - /images/resources/about/componentBlocks/4/value/images/1.jpeg
-        - /images/resources/about/componentBlocks/4/value/images/2.jpeg
-        - /images/resources/about/componentBlocks/4/value/images/3.jpeg
+        - /images/resources/about/componentBlocks/3/value/images/0.jpeg
+        - /images/resources/about/componentBlocks/3/value/images/1.jpeg
+        - /images/resources/about/componentBlocks/3/value/images/2.jpeg
+        - /images/resources/about/componentBlocks/3/value/images/3.jpeg
+  - discriminant: testimonialCTA
+    value:
+      personName: Ned Swain
+      review: '"I love lifting heavy awkward things, and running around."'
+      testimonialType: review
