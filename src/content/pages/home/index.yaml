@@ -71,20 +71,32 @@ componentBlocks:
             from your clients. People love recommendations so feedback from
             others who've tried it is invaluable. 
           personName: Lorna Alvarado
-  - discriminant: testimonialCTA
+  - discriminant: policiesAndContracts
     value:
-      personName: Lee Van Dyke
-      review: >-
-        We moved to our home in Portland just before Thanksgiving weekend. We
-        scheduled our PODS arrivals in conjunction with our Local Muscle guys,
-        and they were both on time, but worked with efficiency and intelligence.
-        They were a joy to have around, if joy can be had when moving one's life
-        possessions. What I mean to say is they were courteous, careful, and
-        cheerful about the day. Great workers. I'd recommend them absolutely.
-        And you know I'm telling you the truth, because I'm determined to not
-        move again myself, any time soon. i.e. I have no motive other than to
-        assist anyone considering hiring them.
-      testimonialType: review
+      header: Policies And Contracts
+      subtext: >-
+        We've outlined our Terms of Service and Full Value Replacement Coverage
+        in simple language for quick reference. For interstate moves, the FMCSA
+        also provides brochures regarding your legal rights.
+      localPolicies:
+        - discriminant: file
+          value:
+            title: In State Terms and Conditions Outline
+        - discriminant: file
+          value:
+            title: In State Full Value Replacement Coverage
+      interstatePolicies:
+        - discriminant: file
+          value:
+            title: Interstate Carrier Liability Agreement
+        - discriminant: file
+          value: {}
+        - discriminant: file
+          value: {}
+      disclaimer: >-
+        We bill differently for interstate moves, as mandated by law. We will
+        determine a flat rate and provide a quote, rather than create an
+        hourly-based estimate.
   - discriminant: callToAction
     value:
       header: Start your move with Local Muscle Movers.
