@@ -25,8 +25,8 @@ componentBlocks:
         the street, we've got you covered. Throughout our history, we've seen ti
         al, and we use that experience to make your move as smooth as possible.
         Our customers return to us time and time again for their moving needs.
-        Let our reviews speak for themselves: Check us out on Google Reviews and
-        Yelp for more firsthand customer feedback!
+        Let our reviews speak for themselves: Check us out on Google Reviews for
+        more firsthand customer feedback!
       image: /images/resources/home/componentBlocks/1/value/image.png
   - discriminant: headerTextAndImage
     value:
@@ -53,20 +53,55 @@ componentBlocks:
       subtext: Why you should hire our Local Muscle Movers.
       testimonials:
         - review: >-
-            Boost your product and service's credibility by adding testimonials
-            from your clients. People love recommendations so feedback from
-            others who've tried it is invaluable.
-          personName: Hannah Morales
+            The team of movers were courteous, friendly,  very helpful and moved
+            along our house efficiently. This made our move quick and painless.
+            Professionals from beginning to the end and were always responsive
+            to any of our questions. They were a very nice group of guys and I
+            would highly recommend Muscle Movers and I would definitely use them
+            again!
+          personName: Kristen G.
         - review: >
-            Boost your product and service's credibility by adding testimonials
-            from your clients. People love recommendations so feedback from
-            others who've tried it is invaluable. 
-          personName: Teddy Yuhui
-        - review: >
-            Boost your product and service's credibility by adding testimonials
-            from your clients. People love recommendations so feedback from
-            others who've tried it is invaluable. 
-          personName: Lorna Alvarado
+            These are real professionals. The prep work was streamlined and
+            easy. The rates were a good value. I had used them in 2021, and I
+            had such a good experience that I made sure to use them again. They
+            were just as good this time.
+
+
+            This time we were moving from an apartment up one flight of stairs
+            in downtown Portland to home in Casco…they were able to handle both.
+            Nothing got damaged. The movers were kind and professional.
+
+
+            I highly recommend them.
+          personName: Matty S.
+        - review: >-
+            The Local Muscle team helped us moved our furniture and unload the
+            contents of our PODs into our new home. They were punctual,
+            efficient, and communicative, and made the whole process of moving
+            so much less stressful. Throughout the whole process, they took
+            excellent care of all of our belongings and were a delight to work
+            with. If I ever need to move again, I would hire Local Muscle in a
+            heartbeat. Highly recommend!!
+          personName: Eugenia O.
+        - review: >-
+            Very pleasant movers who were punctual and thorough. They were
+            careful and went the extra mile.  I would definitely use them again
+            and would  certainly recommend them to any one that is looking for a
+            moving company.
+          personName: Logan G.
+        - review: >-
+            From start to finish we had a great experience. Communication was
+            clear and timely, our movers showed up exactly when they predicted,
+            and the estimate was spot on. The pair who came to move for us were
+            conscientious, extremely polite, and so strong!
+          personName: Carla M.
+        - review: >-
+            These guys are awesome! They were prompt, efficient, SO nice and
+            easy to work with and did a great job moving our stuff! Our total
+            cost came in even lower than the estimate too which was an added
+            bonus. We will definitely use them again if we move - highly
+            recommend!
+          personName: Erin P.
       image: /images/home/home/componentBlocks/4/value/image.png
   - discriminant: policiesAndContracts
     value:

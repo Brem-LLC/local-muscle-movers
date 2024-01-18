@@ -13,8 +13,8 @@ componentBlocks:
         the street, we've got you covered. Throughout our history, we've seen it
         all, and we use that experience to make your move as smooth as possible.
         Our customers return to us time and time again for their moving needs.
-        Let our reviews speak for themselves: Check us out on Google Reviews and
-        Yelp for more firsthand customer feedback!
+        Let our reviews speak for themselves: Check us out on Google Reviews for
+        more firsthand customer feedback!
       image: /images/resources/about/componentBlocks/1/value/image.jpeg
   - discriminant: headerTextAndImage
     value:
@@ -37,8 +37,8 @@ componentBlocks:
 
         We want to change your moving mindset! Each move is like a handshake,
         carefully planned to make both you and our crew feel welcome and
-        supported. From filling out our form to unpacking the last box, a
-        friendly face will be right there with you.
+        supported. From filling out our form to unload the last box, a friendly
+        face will be right there with you.
       button:
         text: get in touch
         link: '#'
