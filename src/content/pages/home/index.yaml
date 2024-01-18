@@ -71,6 +71,7 @@ componentBlocks:
             from your clients. People love recommendations so feedback from
             others who've tried it is invaluable. 
           personName: Lorna Alvarado
+      image: /images/home/home/componentBlocks/4/value/image.jpeg
   - discriminant: policiesAndContracts
     value:
       header: Policies And Contracts
