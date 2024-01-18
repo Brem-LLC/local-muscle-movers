@@ -19,13 +19,26 @@ componentBlocks:
       learnMoreButton:
         buttonText: Learn More
         buttonLink: '#'
+  - discriminant: headerTextAndImage
+    value:
+      sectionType: servicesOffered
+      header: Services Offered
+      description: >-
+        We've built a reputation throughout New England as a moving company you
+        can trust. Whether you're moving halfway across the country or across
+        the street, we've got you covered. Throughout our history, we've seen it
+        all, and we use that experience to make your move as smooth as possible.
+        Our customers return to us time and time again for their moving needs.
+        Let our reviews speak for themselves: Check us out on Google Reviews and
+        Yelp for more firsthand customer feedback!
+      image: /images/resources/home/componentBlocks/1/value/image.jpeg
   - discriminant: serviceSelector
     value:
       header: Our Services
       subtext: >-
         Our Services include heavy lifting, residential and commercial moving,
         rearrangement, and more.
-      featuredImage: /images/resources/home/componentBlocks/1/value/featuredImage.jpeg
+      featuredImage: /images/resources/home/componentBlocks/2/value/featuredImage.jpeg
       services:
         - heavy-items
         - moving
@@ -51,6 +64,6 @@ componentBlocks:
         text: Get an estimate today
         link: '#'
       imageArray:
-        - /images/resources/home/componentBlocks/3/value/imageArray/0.jpeg
-        - /images/resources/home/componentBlocks/3/value/imageArray/1.jpeg
-        - /images/resources/home/componentBlocks/3/value/imageArray/2.jpeg
+        - /images/resources/home/componentBlocks/4/value/imageArray/0.jpeg
+        - /images/resources/home/componentBlocks/4/value/imageArray/1.jpeg
+        - /images/resources/home/componentBlocks/4/value/imageArray/2.jpeg
