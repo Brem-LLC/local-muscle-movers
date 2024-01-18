@@ -51,6 +51,26 @@ componentBlocks:
         - heavy-items
         - moving
         - rearrangement
+  - discriminant: feedbackFromClients
+    value:
+      header: Feedback From Clients
+      subtext: Why you should hire our Local Muscle Movers.
+      testimonials:
+        - review: >-
+            Boost your product and service's credibility by adding testimonials
+            from your clients. People love recommendations so feedback from
+            others who've tried it is invaluable.
+          personName: Hannah Morales
+        - review: >
+            Boost your product and service's credibility by adding testimonials
+            from your clients. People love recommendations so feedback from
+            others who've tried it is invaluable. 
+          personName: Teddy Yuhui
+        - review: >
+            Boost your product and service's credibility by adding testimonials
+            from your clients. People love recommendations so feedback from
+            others who've tried it is invaluable. 
+          personName: Lorna Alvarado
   - discriminant: testimonialCTA
     value:
       personName: Lee Van Dyke
@@ -72,26 +92,6 @@ componentBlocks:
         text: Get an estimate today
         link: '#'
       imageArray:
-        - /images/resources/home/componentBlocks/5/value/imageArray/0.jpeg
-        - /images/resources/home/componentBlocks/5/value/imageArray/1.jpeg
-        - /images/resources/home/componentBlocks/5/value/imageArray/2.jpeg
-  - discriminant: feedbackFromClients
-    value:
-      header: Feedback From Clients
-      subtext: Why you should hire our Local Muscle Movers.
-      testimonials:
-        - review: >-
-            Boost your product and service's credibility by adding testimonials
-            from your clients. People love recommendations so feedback from
-            others who've tried it is invaluable.
-          personName: Hannah Morales
-        - review: >
-            Boost your product and service's credibility by adding testimonials
-            from your clients. People love recommendations so feedback from
-            others who've tried it is invaluable. 
-          personName: Teddy Yuhui
-        - review: >
-            Boost your product and service's credibility by adding testimonials
-            from your clients. People love recommendations so feedback from
-            others who've tried it is invaluable. 
-          personName: Lorna Alvarado
+        - /images/resources/home/componentBlocks/6/value/imageArray/0.jpeg
+        - /images/resources/home/componentBlocks/6/value/imageArray/1.jpeg
+        - /images/resources/home/componentBlocks/6/value/imageArray/2.jpeg
