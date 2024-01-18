@@ -25,8 +25,8 @@ componentBlocks:
         the street, we've got you covered. Throughout our history, we've seen ti
         al, and we use that experience to make your move as smooth as possible.
         Our customers return to us time and time again for their moving needs.
-        Let our reviews speak for themselves: Check us out on Google Reviews and
-        Yelp for more firsthand customer feedback!
+        Let our reviews speak for themselves: Check us out on Google Reviews for
+        more firsthand customer feedback!
       image: /images/resources/home/componentBlocks/1/value/image.png
   - discriminant: headerTextAndImage
     value:
@@ -53,20 +53,43 @@ componentBlocks:
       subtext: Why you should hire our Local Muscle Movers.
       testimonials:
         - review: >-
-            Boost your product and service's credibility by adding testimonials
-            from your clients. People love recommendations so feedback from
-            others who've tried it is invaluable.
-          personName: Hannah Morales
+            The team of movers were courteous, friendly,  very helpful and moved
+            along our house efficiently. This made our move quick and painless.
+            Professionals from beginning to the end and were always responsive
+            to any of our questions. They were a very nice group of guys and I
+            would highly recommend Muscle Movers and I would definitely use them
+            again!
+          personName: Kristen G.
         - review: >
-            Boost your product and service's credibility by adding testimonials
-            from your clients. People love recommendations so feedback from
-            others who've tried it is invaluable. 
-          personName: Teddy Yuhui
-        - review: >
-            Boost your product and service's credibility by adding testimonials
-            from your clients. People love recommendations so feedback from
-            others who've tried it is invaluable. 
-          personName: Lorna Alvarado
+            These are real professionals. The prep work was streamlined and
+            easy. The rates were a good value. I had used them in 2021, and I
+            had such a good experience that I made sure to use them again. They
+            were just as good this time.
+
+
+            This time we were moving from an apartment up one flight of stairs
+            in downtown Portland to home in Casco…they were able to handle both.
+            Nothing got damaged. The movers were kind and professional.
+
+
+            I highly recommend them.
+          personName: Matty S.
+        - review: >-
+            I just moved to Portland from Seattle, with the contents of my old
+            2-bedroom house & garage packed into a 16-foot moving container.
+            Local Muscle Movers unloaded my moving container into my new
+            *studio* apartment, and I can't say enough about how fabulous they
+            were! Their customer service was top notch. They were kind,
+            understanding, and patient with me even when I had to reschedule my
+            move on short notice due to logistical challenges. The movers were
+            efficient, conscientious, and kind. They listened to my preferences
+            on where I wanted furniture placed and they moved everything with
+            care. They made up for the absolutely abysmal service that the
+            moving company in Seattle provided in loading the container. I
+            imagine that I'll be moving again in the next few years, and they
+            will definitely be the first I call to help with the move. I
+            recommend their service without hesitation!
+          personName: Megan F.
       image: /images/home/home/componentBlocks/4/value/image.png
   - discriminant: policiesAndContracts
     value:
