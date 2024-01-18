@@ -2,15 +2,13 @@
 const { block } = Astro.props
 ---
 
-<section class="relative z-0 px-5 py-20 md:py-[226px]">
+<section class="relative z-0 px-5 py-20 md:py-[300px]">
 	<div class="mx-auto w-full max-w-2xl text-center">
 		<h3 class="mx-auto mb-5 w-fit bg-gradient-1 bg-clip-text font-primary text-[38px] text-transparent">{block.header}</h3>
-		<p class="font-primary text-lg leading-relaxed tracking-wide text-white">
+		<p class="font-primary text-lg leading-relaxed tracking-wide text-primary-500">
 			{block.description}
 		</p>
 	</div>
-
-	<div class="pointer-events-none absolute inset-0 -z-10 bg-black/80"></div>
 	<img
 		src={block.image}
 		alt="background"

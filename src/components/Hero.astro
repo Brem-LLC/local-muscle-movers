@@ -2,7 +2,7 @@
 const { heroData } = Astro.props
 ---
 
-<section class="py-16 md:py-24" style=`background-image: linear-gradient(rgba(0,0,0,.8),rgba(0,0,0,.8)),url(${heroData.bannerImage})`>
+<section class="py-16 md:py-56" style=`background-image: url(${heroData.bannerImage})`>
 	<div class="z-1 relative mx-auto w-full max-w-screen-xl px-4 text-white">
 		<div class="mb-6 max-w-screen-md lg:mb-0">
 			<h1 class="mb-4 w-fit bg-gradient-1 bg-clip-text font-primary text-[40px] font-bold text-transparent xl:text-6xl xl:leading-normal">{heroData.heading}</h1>
