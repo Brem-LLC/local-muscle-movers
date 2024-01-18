@@ -89,6 +89,19 @@ componentBlocks:
             and would  certainly recommend them to any one that is looking for a
             moving company.
           personName: Logan G.
+        - review: >-
+            From start to finish we had a great experience. Communication was
+            clear and timely, our movers showed up exactly when they predicted,
+            and the estimate was spot on. The pair who came to move for us were
+            conscientious, extremely polite, and so strong!
+          personName: Carla M.
+        - review: >-
+            These guys are awesome! They were prompt, efficient, SO nice and
+            easy to work with and did a great job moving our stuff! Our total
+            cost came in even lower than the estimate too which was an added
+            bonus. We will definitely use them again if we move - highly
+            recommend!
+          personName: Erin P.
       image: /images/home/home/componentBlocks/4/value/image.png
   - discriminant: policiesAndContracts
     value:
