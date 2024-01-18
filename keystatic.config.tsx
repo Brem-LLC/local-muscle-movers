@@ -106,6 +106,24 @@ export default config({
 								description: fields.text({ label: 'Hero Description' })
 							})
 						},
+						feedbackFromClients: {
+							label: 'Feedback From Clients',
+							schema: fields.object({
+								header: fields.text({label: 'Header'}),
+								subtext: fields.text({label: 'Text Under Header'}),
+								testimonials: fields.array(
+									fields.object({
+										review: fields.text({label: 'Review', multiline: true}),
+										personName: fields.text({label: 'Person\'s Name'}),
+									})
+								),
+								image: fields.image({
+									label: 'Image',
+									directory: 'public/images/home',
+									publicPath: '/images/home/'
+								})
+							})
+						},
 						imageText: {
 							label: 'Image and Text',
 							schema: fields.object({
@@ -356,6 +374,7 @@ export default config({
 									options: [
 										{ label: 'Who Are We', value: 'whoAreWe' },
 										{ label: 'Our Mission', value: 'ourMission' },
+										{ label: 'Services Offered', value: 'servicesOffered' },
 									],
 									defaultValue: 'whoAreWe',
 								}),

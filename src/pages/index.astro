@@ -1,28 +1,40 @@
 ---
 import Layout from '@layouts/Base.astro'
 import Hero from '@components/Hero.astro'
-import WhoAreWe from '@components/WhoAreWe.astro';
-import Mission from '@components/Mission.astro';
-import Services from '@components/Services.astro';
-import NedQuote from '@components/NedQuote.astro';
-import CallToAction from '@components/CallToAction.astro';
-import { createReader } from '@keystatic/core/reader';
-import keystaticConfig from '../../keystatic.config';
-const reader = createReader(process.cwd(), keystaticConfig);
+import WhoAreWe from '@components/WhoAreWe.astro'
+import Mission from '@components/Mission.astro'
+import Services from '@components/Services.astro'
+import ShortHero from '@components/ShortHero.astro'
+import WhyLMMV2 from '@components/WhyLMMV2.astro'
+import CustomerFeedback from '@components/CustomerFeedback.astro'
+import MovingChecklistV2 from '@components/MovingChecklistV2.astro'
+import PoliciesV2 from '@components/PoliciesV2.astro'
+import Story from '@components/Story.astro'
+import NedQuote from '@components/NedQuote.astro'
+import CallToAction from '@components/CallToAction.astro'
+import { createReader } from '@keystatic/core/reader'
+import keystaticConfig from '../../keystatic.config'
+const reader = createReader(process.cwd(), keystaticConfig)
 const homeData = await reader.collections.pages.read('home');
-const heroData = homeData?.componentBlocks.filter(block => block.discriminant == 'banner');
-const whoAreWe = homeData?.componentBlocks.filter(block => block.discriminant == 'headerTextAndImage' && block.value.sectionType == 'whoAreWe');
-const ourMission = homeData?.componentBlocks.filter(block => block.discriminant == 'headerTextAndImage' && block.value.sectionType == 'ourMission');
-const ourServices = homeData?.componentBlocks.filter(block => block.discriminant == 'serviceSelector');
-const callToAction = homeData?.componentBlocks.filter(block => block.discriminant == 'callToAction');
-const quoteBlock = homeData?.componentBlocks.filter((bl) => bl.discriminant === 'testimonialCTA')
 ---
 
 <Layout title="Home">
-	{heroData && heroData[0] && <Hero heroData={heroData[0].value} />}
-	{ourServices && ourServices[0] && <Services block={ourServices[0].value} />}
-	{quoteBlock && quoteBlock[0] && <NedQuote block={quoteBlock[0].value} />}
-	{whoAreWe && whoAreWe[0] && <WhoAreWe block={whoAreWe[0].value} />}
-	{ourMission && ourMission[0] && <Mission block={ourMission[0].value} />}
-	{callToAction && callToAction[0] && <CallToAction block={callToAction[0].value} />}
+    {homeData?.componentBlocks[0] && homeData?.componentBlocks.map((block: any) => (
+		<>
+		{block.discriminant === 'banner' ? <Hero heroData={block.value} /> : <></>}
+		{block.discriminant === 'serviceSelector' && <Services block={block.value} />}
+		{block.discriminant === 'feedbackFromClients' && <CustomerFeedback block={block.value} />}
+		{block.discriminant === 'shortHero' ? <ShortHero block={block.value} /> : <></>}
+		{block.discriminant === 'headerTextAndImage' && block.value.sectionType === 'ourMission' && <Mission block={block.value} />}
+		{block.discriminant === 'headerTextAndImage' && block.value.sectionType === 'whoAreWe' && <WhoAreWe block={block.value} />}
+		{block.discriminant === 'headerTextAndImage' && block.value.sectionType === 'servicesOffered' && <WhoAreWe block={block.value} />}
+		{block.discriminant === 'headerTextButtonAndImages' && <WhyLMMV2 block={block.value} />}
+		{block.discriminant === 'testimonialCTA' && <NedQuote block={block.value} />}
+		{block.discriminant === 'callToAction' && <CallToAction block={block.value} />}
+		{block.discriminant === 'ourServices' && <Services block={block.value} />}
+		{block.discriminant === 'movingChecklistV2' && <MovingChecklistV2 block={block.value} />}
+		{block.discriminant === 'policiesAndContracts' && <PoliciesV2 block={block.value} />}
+		{block.discriminant === 'videoAndText' && <Story block={block.value} />}
+		</>
+    ))}
 </Layout>
