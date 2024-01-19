@@ -2,4 +2,5 @@ name: Hire Us
 componentBlocks:
   - discriminant: shortHero
     value:
+      backgroundImage: /images/shortHeros/hire-us/componentBlocks/0/value/backgroundImage.png
       title: Hire Us
