@@ -53,6 +53,8 @@ componentBlocks:
         link: /hire-us
       images:
         - /images/resources/about/componentBlocks/3/value/images/0.png
+        - /images/resources/about/componentBlocks/3/value/images/1.png
+        - /images/resources/about/componentBlocks/3/value/images/2.png
   - discriminant: testimonialCTA
     value:
       personName: Ned Swain
