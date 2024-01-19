@@ -23,7 +23,7 @@ componentBlocks:
       description: >-
         To provide a stress free and cost effective move that leaves you
         wondering what you were worried about in the first place.
-      image: /images/resources/about/componentBlocks/2/value/image.jpeg
+      image: /images/resources/about/componentBlocks/2/value/image.jpg
   - discriminant: headerTextButtonAndImages
     value:
       header: Why Choose Local Muscle Movers?
