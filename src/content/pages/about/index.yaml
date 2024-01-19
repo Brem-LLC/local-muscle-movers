@@ -48,8 +48,11 @@ componentBlocks:
         point you complete our estimate form, a member of our dedicated staff
         will be in contact with you every step of the way. Get started with our
         estimate form.
-      button: {}
-      images: []
+      button:
+        text: Get In Touch
+        link: /hire-us
+      images:
+        - /images/resources/about/componentBlocks/3/value/images/0.png
   - discriminant: testimonialCTA
     value:
       personName: Ned Swain
