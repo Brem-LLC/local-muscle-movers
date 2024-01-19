@@ -2,6 +2,7 @@ name: Resources
 componentBlocks:
   - discriminant: shortHero
     value:
+      backgroundImage: /images/shortHeros/resources/componentBlocks/0/value/backgroundImage.png
       title: Resources
   - discriminant: movingChecklistV2
     value:
@@ -94,3 +95,4 @@ componentBlocks:
         We bill differently for interstate moves, as mandated by law. We will
         determine a flat rate and provide a quote, rather than create an
         hourly-based estimate.
+      button: {}
