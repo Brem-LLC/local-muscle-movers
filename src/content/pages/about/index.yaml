@@ -2,7 +2,6 @@ name: About
 componentBlocks:
   - discriminant: shortHero
     value:
-      backgroundImage: /images/shortHeros/about/componentBlocks/0/value/backgroundImage.jpg
       title: Meet the Muscle
   - discriminant: headerTextAndImage
     value:
@@ -33,7 +32,7 @@ componentBlocks:
         tackling big and small moves with a smile. Over the years, we've seen it
         all (trust us, it gets wild!) and used that wisdom to smooth out every
         bump in the road. Happy customers keep coming back, but we let our
-        Google and Yelp reviews do the talking.
+        Google reviews do the talking.
 
 
         We want to change your moving mindset! Each move is like a handshake,
