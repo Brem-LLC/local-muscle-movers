@@ -2,7 +2,7 @@ name: About
 componentBlocks:
   - discriminant: shortHero
     value:
-      backgroundImage: /images/shortHeros/about/componentBlocks/0/value/backgroundImage.jpg
+      backgroundImage: /images/shortHeros/about/componentBlocks/0/value/backgroundImage.png
       title: Meet the Muscle
   - discriminant: videoText
     value:
