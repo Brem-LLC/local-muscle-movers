@@ -10,9 +10,9 @@ const { block } = Astro.props
 				{block.description}
 			</p>
 			<a
-				href="#"
+				href={block.button.link ? block.button.link : '#'}
 				class="mt-6 inline-flex items-center bg-gradient-1 px-6 py-3.5 text-center text-lg font-bold uppercase text-black hover:bg-gradient-1 focus:outline-none focus:ring-4 focus:ring-sky-600"
-				>get in touch</a
+				>{block.button.text ? block.button.text : "get in touch"}</a
 			>
 		</div>
 		<div>

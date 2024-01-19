@@ -11,7 +11,7 @@ const { block } = Astro.props
 			>
 		</div>
 		<div class="grid h-[450px] grid-cols-2 grid-rows-2 gap-3">
-			{block.imageArray.map(image => (
+			{block.imageArray.map((image: any) => (
 			<div>
 				<img
 					src={image}

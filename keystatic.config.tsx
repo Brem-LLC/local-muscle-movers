@@ -16,7 +16,6 @@ export default config({
 				logo: fields.image({
 					label: 'Logo',
 					description: 'Local Muscle Mover Logo',
-					// This will output the images in the "public" directory
 					directory: '/public/images/',
 					publicPath: '/images/'
 				}),
@@ -314,7 +313,11 @@ export default config({
 										// itemLabel: (props) => props.fields.title !== null ? props.fields.title : "Policy"
 									}
 								),
-								disclaimer: fields.text({ label: 'Disclaimer', multiline: true })
+								disclaimer: fields.text({ label: 'Disclaimer', multiline: true }),
+								button: fields.object({
+									text: fields.text({ label: 'Button Text' }),
+									link: fields.text({ label: 'Button Link' })
+								})
 							})
 						},
 						plainText: {
@@ -384,6 +387,10 @@ export default config({
 									label: 'Image',
 									directory: 'public/images/resources',
 									publicPath: '/images/resources/'
+								}),
+								button: fields.object({
+									text: fields.text({ label: 'Button Text' }),
+									link: fields.text({ label: 'Button Link' })
 								})
 							})
 						},

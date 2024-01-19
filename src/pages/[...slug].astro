@@ -38,6 +38,7 @@ const { slug } = Astro.params
 		{block.discriminant === 'headerTextButtonAndImages' && <WhyLMMV2 block={block.value} />}
 		{block.discriminant === 'testimonialCTA' && <NedQuote block={block.value} />}
 		{block.discriminant === 'callToAction' && <CallToAction block={block.value} />}
+		{block.discriminant === 'videoText' && <Story block={block.value} />}
 		{block.discriminant === 'ourServices' && <Services block={block.value} />}
 		{block.discriminant === 'movingChecklistV2' && <MovingChecklistV2 block={block.value} />}
 		{block.discriminant === 'policiesAndContracts' && <PoliciesV2 block={block.value} />}
