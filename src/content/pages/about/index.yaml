@@ -19,16 +19,19 @@ componentBlocks:
         will be what sets us apart. The results speak for themselves.
       optionalLink: {}
       type: vertical
-  - discriminant: headerText
+  - discriminant: headerTextAndImage
     value:
+      sectionType: ourMission
       header: Our Mission
-      text: >-
+      description: >-
         To provide a stress free and cost effective move that leaves you
         wondering what you were worried about in the first place.
-  - discriminant: headerText
+      image: /images/resources/about/componentBlocks/2/value/image.png
+      button: {}
+  - discriminant: headerTextButtonAndImages
     value:
       header: Why choose Local Muscle?
-      text: >-
+      content: >-
         We've built a reputation throughout New England as a moving company you
         can trust. Whether you're moving halfway across the country or across
         the street, we've got you covered.Throughout our history we really have
@@ -45,6 +48,8 @@ componentBlocks:
         point you complete our estimate form, a member of our dedicated staff
         will be in contact with you every step of the way. Get started with our
         estimate form.
+      button: {}
+      images: []
   - discriminant: testimonialCTA
     value:
       personName: Ned Swain
