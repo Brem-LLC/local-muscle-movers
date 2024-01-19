@@ -14,7 +14,7 @@ componentBlocks:
         buttonLink: /hire-us
       learnMoreButton:
         buttonText: Learn More
-        buttonLink: '#'
+        buttonLink: /about
   - discriminant: headerTextAndImage
     value:
       sectionType: servicesOffered
