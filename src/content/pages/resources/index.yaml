@@ -9,6 +9,7 @@ componentBlocks:
       subtext: Quick reference for steps to ensure your move goes off without a hitch
       images:
         - /images/resources/resources/componentBlocks/1/value/images/0.jpg
+        - /images/resources/resources/componentBlocks/1/value/images/1.jpg
       checklist:
         - All small and loose items are protected and boxed
         - >-
