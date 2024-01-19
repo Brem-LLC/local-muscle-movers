@@ -77,11 +77,11 @@ componentBlocks:
             upload: >-
               /files/resources/componentBlocks/3/value/localPolicies/1/value/upload.pdf
       interstatePolicies:
-        - discriminant: file
+        - discriminant: link
           value:
-            title: Interstate Carrier Liability Agreement
-            upload: >-
-              /files/resources/componentBlocks/3/value/interstatePolicies/0/value/upload.pdf
+            title: In-State Terms and Conditions
+            url: >-
+              https://localmusclemovers.com/files/resources/componentBlocks/2/value/interstatePolicies/0/value/upload.pdf
         - discriminant: file
           value:
             title: Ready To Move
