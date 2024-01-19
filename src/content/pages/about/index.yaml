@@ -2,53 +2,51 @@ name: About
 componentBlocks:
   - discriminant: shortHero
     value:
+      backgroundImage: /images/shortHeros/about/componentBlocks/0/value/backgroundImage.jpg
       title: Meet the Muscle
-  - discriminant: headerTextAndImage
+  - discriminant: videoText
     value:
-      sectionType: whoAreWe
-      header: Who We Are
+      video: zsexg2uA4ak
+      heading: Our story, in storage units
       description: >-
-        We've built a reputation throughout New England as a moving company you
-        can trust. Whether you're moving halfway across the country or across
-        the street, we've got you covered. Throughout our history, we've seen it
-        all, and we use that experience to make your move as smooth as possible.
-        Our customers return to us time and time again for their moving needs.
-        Let our reviews speak for themselves: Check us out on Google Reviews for
-        more firsthand customer feedback!
-      image: /images/resources/about/componentBlocks/1/value/image.jpg
-  - discriminant: headerTextAndImage
+        No doubt we're well acquainted with storage units. Ten years ago our
+        story started in one. Founding partner Alex Sargent got the idea to
+        start a moving company after overhearing complaints about the moving
+        experience and attitude of the movers people had hired. Ned Swain, a
+        frequent customer, liked the idea so much he brought it to two other
+        friends, Jake Holz and Jon Donnell. Soon after, Local Muscle was born
+        with the driving idea that customer service and attitude of the crews
+        will be what sets us apart. The results speak for themselves.
+      optionalLink: {}
+      type: vertical
+  - discriminant: headerText
     value:
-      sectionType: ourMission
       header: Our Mission
-      description: >-
+      text: >-
         To provide a stress free and cost effective move that leaves you
         wondering what you were worried about in the first place.
-      image: /images/resources/about/componentBlocks/2/value/image.jpg
-  - discriminant: headerTextButtonAndImages
+  - discriminant: headerText
     value:
-      header: Why Choose Local Muscle Movers?
-      content: >-
-        Moving day blues? Not with us! We're your New England neighbors,
-        tackling big and small moves with a smile. Over the years, we've seen it
-        all (trust us, it gets wild!) and used that wisdom to smooth out every
-        bump in the road. Happy customers keep coming back, but we let our
-        Google reviews do the talking.
+      header: Why choose Local Muscle?
+      text: >-
+        We've built a reputation throughout New England as a moving company you
+        can trust. Whether you're moving halfway across the country or across
+        the street, we've got you covered.Throughout our history we really have
+        seen it all, and use that knowledge to make your move as smooth as
+        possible.Many of our customers have returned to us time and time again
+        for their moving needs. That being said, we prefer to let our reviews
+        speak for themselves. Check us out on Google Reviews and Yelp for more
+        firsthand customer feedback!
 
 
-        We want to change your moving mindset! Each move is like a handshake,
-        carefully planned to make both you and our crew feel welcome and
-        supported. From filling out our form to unload the last box, a friendly
-        face will be right there with you.
-      button:
-        text: get in touch
-        link: '#'
-      images:
-        - /images/resources/about/componentBlocks/3/value/images/0.jpeg
-        - /images/resources/about/componentBlocks/3/value/images/1.jpeg
-        - /images/resources/about/componentBlocks/3/value/images/2.jpeg
-        - /images/resources/about/componentBlocks/3/value/images/3.jpeg
+        Put simply, we want to change your opinion of movers and moving for the
+        better. Each move is carefully tailored to best fit your needs and
+        ensure a positive experience for customers and crews alike. From the
+        point you complete our estimate form, a member of our dedicated staff
+        will be in contact with you every step of the way. Get started with our
+        estimate form.
   - discriminant: testimonialCTA
     value:
       personName: Ned Swain
       review: '"I love lifting heavy awkward things, and running around."'
-      testimonialType: review
+      testimonialType: quote
