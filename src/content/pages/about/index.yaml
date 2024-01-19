@@ -15,7 +15,7 @@ componentBlocks:
         Our customers return to us time and time again for their moving needs.
         Let our reviews speak for themselves: Check us out on Google Reviews for
         more firsthand customer feedback!
-      image: /images/resources/about/componentBlocks/1/value/image.jpeg
+      image: /images/resources/about/componentBlocks/1/value/image.jpg
   - discriminant: headerTextAndImage
     value:
       sectionType: ourMission
