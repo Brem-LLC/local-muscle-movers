@@ -28,6 +28,9 @@ componentBlocks:
         Let our reviews speak for themselves: Check us out on Google Reviews for
         more firsthand customer feedback!
       image: /images/resources/home/componentBlocks/1/value/image.png
+      button:
+        text: Get In Touch
+        link: /hire-us
   - discriminant: headerTextAndImage
     value:
       sectionType: ourMission
@@ -36,6 +39,7 @@ componentBlocks:
         To provide a stress free and cost effective move that leaves you
         wondering what you were worried about in the first place.
       image: /images/resources/home/componentBlocks/2/value/image.png
+      button: {}
   - discriminant: serviceSelector
     value:
       header: Our Services
@@ -129,12 +133,15 @@ componentBlocks:
         We bill differently for interstate moves, as mandated by law. We will
         determine a flat rate and provide a quote, rather than create an
         hourly-based estimate.
+      button:
+        text: Learn More
+        link: /resources
   - discriminant: callToAction
     value:
       header: Start your move with Local Muscle Movers.
       button:
         text: Get an estimate today
-        link: '#'
+        link: /hire-us
       imageArray:
         - /images/resources/home/componentBlocks/6/value/imageArray/0.png
         - /images/resources/home/componentBlocks/6/value/imageArray/1.png
