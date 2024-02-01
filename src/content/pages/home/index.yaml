@@ -118,6 +118,8 @@ componentBlocks:
         - discriminant: file
           value:
             title: In State Terms and Conditions Outline
+            upload: >-
+              /files/home/componentBlocks/5/value/localPolicies/0/value/upload.webp
         - discriminant: file
           value:
             title: In State Full Value Replacement Coverage
