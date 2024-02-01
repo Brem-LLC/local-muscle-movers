@@ -128,10 +128,6 @@ componentBlocks:
         - discriminant: file
           value:
             title: Interstate Carrier Liability Agreement
-        - discriminant: file
-          value: {}
-        - discriminant: file
-          value: {}
       disclaimer: >-
         We bill differently for interstate moves, as mandated by law. We will
         determine a flat rate and provide a quote, rather than create an
