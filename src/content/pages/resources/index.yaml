@@ -4,38 +4,11 @@ componentBlocks:
     value:
       backgroundImage: /images/shortHeros/resources/componentBlocks/0/value/backgroundImage.png
       title: Resources
-  - discriminant: movingChecklistV2
-    value:
-      header: Moving Checklist
-      subtext: Quick reference for steps to ensure your move goes off without a hitch
-      images:
-        - /images/resources/resources/componentBlocks/1/value/images/0.jpg
-        - /images/resources/resources/componentBlocks/1/value/images/1.jpg
-      checklist:
-        - All small and loose items are protected and boxed
-        - >-
-          A 'no pack' zone is designated for essentials (phone chargers,
-          medicine, keys)
-        - Boxes are sealed and labeled
-        - Items in drawers and on shelves are cleared
-        - Appliances are detached/unhooked
-        - Gas/oil is removed from equipment
-        - >-
-          Flammable substances, ammunitions, explosives, and alcohol, are
-          handled separately
-        - Parking arrangements are secured
-        - Property management/neighbors are aware of your move
-        - Confirm no other work crews are scheduled at the same time as us
-        - Pathways are clear, inside and outside load and unload sites
-        - Sites are clean, sanitary, and safe
-        - >-
-          In the Winter, your driveway, walkways, and roads are plowed and
-          salted/sanded
   - discriminant: movingChecklist
     value:
       header: Moving Checklist
       subtext: Quick reference for steps to ensure your move goes off without a hitch
-      image: /images/resources/resources/componentBlocks/2/value/image.jpg
+      image: /images/resources/resources/componentBlocks/1/value/image.jpg
       checklist:
         - All small and loose items are protected and boxed
         - >-
@@ -69,12 +42,12 @@ componentBlocks:
           value:
             title: In State Terms and Conditions Outline
             upload: >-
-              /files/resources/componentBlocks/3/value/localPolicies/0/value/upload.pdf
+              /files/resources/componentBlocks/2/value/localPolicies/0/value/upload.pdf
         - discriminant: file
           value:
             title: In State Full Value Replacement Coverage
             upload: >-
-              /files/resources/componentBlocks/3/value/localPolicies/1/value/upload.pdf
+              /files/resources/componentBlocks/2/value/localPolicies/1/value/upload.pdf
       interstatePolicies:
         - discriminant: link
           value:
@@ -85,12 +58,12 @@ componentBlocks:
           value:
             title: Ready To Move
             upload: >-
-              /files/resources/componentBlocks/3/value/interstatePolicies/1/value/upload.pdf
+              /files/resources/componentBlocks/2/value/interstatePolicies/1/value/upload.pdf
         - discriminant: file
           value:
             title: Your Rights and Responsibilities
             upload: >-
-              /files/resources/componentBlocks/3/value/interstatePolicies/2/value/upload.pdf
+              /files/resources/componentBlocks/2/value/interstatePolicies/2/value/upload.pdf
       disclaimer: >-
         We bill differently for interstate moves, as mandated by law. We will
         determine a flat rate and provide a quote, rather than create an
