@@ -1,0 +1,7 @@
+name: Join Our Crew
+componentBlocks:
+  - discriminant: shortHero
+    value:
+      backgroundImage: >-
+        /images/shortHeros/join-our-crew/componentBlocks/0/value/backgroundImage.png
+      title: Join Our Crew
