@@ -14,6 +14,7 @@ import QuoteFormDemo from '@components/QuoteFormDemo'
 import WhoAreWe from '@components/WhoAreWe.astro'
 import CallToAction from '@components/CallToAction.astro';
 import Services from '@components/Services.astro'
+import MovingChecklist from '@components/OldComponents/MovingChecklist.astro'
 
 export async function getStaticPaths() {
     const reader = createReader(process.cwd(), keystaticConfig)
@@ -40,7 +41,7 @@ const { slug } = Astro.params
 		{block.discriminant === 'callToAction' && <CallToAction block={block.value} />}
 		{block.discriminant === 'videoText' && <Story block={block.value} />}
 		{block.discriminant === 'ourServices' && <Services block={block.value} />}
-		{block.discriminant === 'movingChecklistV2' && <MovingChecklistV2 block={block.value} />}
+		{block.discriminant === 'movingChecklist' && <MovingChecklist block={block.value} />}
 		{block.discriminant === 'policiesAndContracts' && <PoliciesV2 block={block.value} />}
 		{block.discriminant === 'videoAndText' && <Story block={block.value} />}
 		{slug === 'hire-us' && <QuoteFormDemo client:only="react" />}

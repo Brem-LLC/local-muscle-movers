@@ -5,17 +5,16 @@ const { block } = Astro.props
 <section>
     <div class="mx-auto w-full max-w-7xl px-7 py-16 lg:px-10">
         <div class="mx-auto w-full max-w-6xl text-center">
-            <h1 class="mb-2 text-3xl font-bold md:text-5xl">{block.header}</h1>
+            <h1 class="mb-2 text-3xl font-primary md:text-5xl">{block.header}</h1>
             <p class="text-lg leading-relaxed">{block.subtext}</p>
         </div>
         <div class="mt-10 grid grid-cols-1 md:grid-cols-2 gap-10">
             <ul class="list-disc space-y-3 pl-6 leading-relaxed">
-                {block.checklist.map(item => (
+                {block.checklist.map((item: any) => (
                 <li class="flex items-start gap-1">
-                    <svg class="mr-1.5 mt-1.5 h-4 w-4 flex-shrink-0 text-primary" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"
+                    <svg class="mr-1.5 mt-1.5 h-4 w-4 flex-shrink-0 text-[#ba9525]" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"
                         ><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"
-                        ></path></svg
-                    >
+                        ></path></svg>
                     {item}
                 </li>
                 ))}
