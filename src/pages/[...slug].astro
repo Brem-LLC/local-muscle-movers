@@ -44,7 +44,7 @@ const { slug } = Astro.params
 		{block.discriminant === 'policiesAndContracts' && <PoliciesV2 block={block.value} />}
 		{block.discriminant === 'videoAndText' && <Story block={block.value} />}
 		{slug === 'hire-us' && <QuoteFormDemo client:only="react" />}
-		{slug === 'join' && <JoinForm client:only="react" />}
+		{slug === 'join-our-crew' && <JoinForm client:only="react" />}
 		</>
     ))}
 </Layout>

@@ -247,6 +247,7 @@ export default config({
 							schema: fields.object({
 								header: fields.text({ label: 'Header' }),
 								subtext: fields.text({ label: 'Text Under Header', multiline: true}),
+								policyHolder: fields.text({ label: 'Text Above Policies and Contracts' }),
 								localPolicies: fields.array(
 									fields.conditional(
 										fields.select({
