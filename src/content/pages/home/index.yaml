@@ -114,6 +114,7 @@ componentBlocks:
         We've outlined our Terms of Service and Full Value Replacement Coverage
         in simple language for quick reference. For interstate moves, the FMCSA
         also provides brochures regarding your legal rights.
+      policyHolder: See These Documents
       localPolicies:
         - discriminant: file
           value:
