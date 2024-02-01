@@ -35,7 +35,7 @@ componentBlocks:
     value:
       header: Moving Checklist
       subtext: Quick reference for steps to ensure your move goes off without a hitch
-      image: /images/resources/resources/componentBlocks/2/value/image.jpeg
+      image: /images/resources/resources/componentBlocks/2/value/image.jpg
       checklist:
         - All small and loose items are protected and boxed
         - >-
