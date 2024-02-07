@@ -1,0 +1,12 @@
+name: test
+componentBlocks:
+  - discriminant: banner
+    value:
+      heading: sdfsdf
+      subheading: sdfsdf
+      ctaButton:
+        buttonText: sdfdsf
+        buttonLink: sdfsdfs
+      learnMoreButton:
+        buttonText: fsdfsdf
+        buttonLink: sdfsdfs
