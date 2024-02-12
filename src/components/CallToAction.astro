@@ -1,5 +1,6 @@
 ---
 const { block } = Astro.props
+console.log(block.imageArray)
 ---
 
 <section class="bg-[#F4F1EC] py-16 md:py-28">
@@ -10,16 +11,16 @@ const { block } = Astro.props
 				>{block.button.text}</a
 			>
 		</div>
-		<div class="grid h-[450px] grid-cols-2 grid-rows-2 gap-3">
-			{block.imageArray.map((image: any) => (
-			<div>
-				<img
-					src={image}
-					alt="pexels"
-					class="h-full w-full object-cover"
-				/>
+		<div class="grid h-[450px] grid-cols-2 gap-3">
+			<div class="grid grid-rows-2 gap-3 h-[450px]">
+				<div>
+					<img src={block.imageArray[0]} alt={block.header} class=" object-cover w-full h-full" />
+				</div>
+				<div>
+					<img src={block.imageArray[1]} alt={block.header} class="object-cover w-full h-full" />
+				</div>
 			</div>
-			))}
+			<img src={block.imageArray[2]} alt={block.header} class="object-cover h-full" />
 		</div>
 	</div>
 </section>

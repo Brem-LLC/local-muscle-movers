@@ -31,13 +31,18 @@ else {
 			</div>
 		</div>
 		<div class="mt-6 md:w-2/3 md:pl-8">
-			<div class="mx-auto grid w-full grid-cols-1 gap-5 sm:grid-cols-2 md:max-w-lg">
+			<div class="mx-auto grid w-full grid-cols-1 gap-5 sm:grid-cols-2 md:max-w-2xl">
 				<div class="bg-black px-9 pb-12 pt-10 text-white">
-					<h4 class="mb-3 font-sans text-lg">{block.policyHolder}</h4>
+					<h4 class="mb-3 font-sans text-3xl">Local (In State)</h4>
 					<ul class="mb-7 list-disc pl-4 text-sm">
 						{block.localPolicies.map((item: any) => (
 							<li class="mb-4"><a href={item.discriminant === 'link' ? `${item.value.url}` : `${item.value.upload}`} target="_blank" class="underline">{item.value.title}</a></li>
 						))}
+					</ul>
+				</div>
+				<div class="bg-black px-9 pb-12 pt-10 text-white">
+					<h4 class="mb-3 font-sans text-3xl">Interstate</h4>
+					<ul class="mb-7 list-disc pl-4 text-sm">
 						{block.interstatePolicies.map((item: any) => (
 							<li class="mb-4"><a href={item.discriminant === 'link' ? `${item.value.url}` : `${item.value.upload}`} target="_blank" class="underline">{item.value.title}</a></li>
 						))}

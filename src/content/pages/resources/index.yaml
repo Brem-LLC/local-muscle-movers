@@ -45,7 +45,7 @@ componentBlocks:
               /files/resources/componentBlocks/2/value/localPolicies/0/value/upload.pdf
         - discriminant: file
           value:
-            title: In State Full Value Replacement Coverage
+            title: Full Value Replacement Coverage
             upload: >-
               /files/resources/componentBlocks/2/value/localPolicies/1/value/upload.pdf
       interstatePolicies:

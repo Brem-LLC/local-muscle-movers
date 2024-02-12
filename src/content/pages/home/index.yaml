@@ -120,14 +120,28 @@ componentBlocks:
           value:
             title: In State Terms and Conditions Outline
             upload: >-
-              /files/home/componentBlocks/5/value/localPolicies/0/value/upload.webp
+              /files/home/componentBlocks/5/value/localPolicies/0/value/upload.pdf
         - discriminant: file
           value:
-            title: In State Full Value Replacement Coverage
+            title: Full Value Replacement Coverage
+            upload: >-
+              /files/home/componentBlocks/5/value/localPolicies/1/value/upload.pdf
       interstatePolicies:
         - discriminant: file
           value:
             title: Interstate Carrier Liability Agreement
+            upload: >-
+              /files/home/componentBlocks/5/value/interstatePolicies/0/value/upload.pdf
+        - discriminant: file
+          value:
+            title: Ready To Move
+            upload: >-
+              /files/home/componentBlocks/5/value/interstatePolicies/1/value/upload.pdf
+        - discriminant: file
+          value:
+            title: Your Rights and Responsibilities
+            upload: >-
+              /files/home/componentBlocks/5/value/interstatePolicies/2/value/upload.pdf
       disclaimer: >-
         We bill differently for interstate moves, as mandated by law. We will
         determine a flat rate and provide a quote, rather than create an
@@ -142,6 +156,6 @@ componentBlocks:
         text: Get an estimate today
         link: /hire-us
       imageArray:
-        - /images/resources/home/componentBlocks/6/value/imageArray/0.png
-        - /images/resources/home/componentBlocks/6/value/imageArray/1.png
-        - /images/resources/home/componentBlocks/6/value/imageArray/2.png
+        - /images/resources/home/componentBlocks/6/value/imageArray/0.jpg
+        - /images/resources/home/componentBlocks/6/value/imageArray/1.jpg
+        - /images/resources/home/componentBlocks/6/value/imageArray/2.jpg
