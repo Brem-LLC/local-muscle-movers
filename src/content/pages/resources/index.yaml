@@ -49,11 +49,11 @@ componentBlocks:
             upload: >-
               /files/resources/componentBlocks/2/value/localPolicies/1/value/upload.pdf
       interstatePolicies:
-        - discriminant: link
+        - discriminant: file
           value:
-            title: In-State Terms and Conditions
-            url: >-
-              https://localmusclemovers.com/files/resources/componentBlocks/2/value/interstatePolicies/0/value/upload.pdf
+            title: Interstate Terms and Conditions
+            upload: >-
+              /files/resources/componentBlocks/2/value/interstatePolicies/0/value/upload.pdf
         - discriminant: file
           value:
             title: Ready To Move
