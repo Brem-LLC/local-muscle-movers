@@ -37,26 +37,29 @@ export const POST = async ({ request, redirect }) => {
       ${data.originStreet},<br>
       ${data.originCity}, ${data.originState} ${data.originZip}<br>
       <br>
-      ${data.originFloorBasement && "Has basement"}<br>
-      ${data.originFloorFirst && "Has First Floor"}<br>
-      Second Floor: ${data.originFloorSecond ? "Yes"}<br>
-      Third Floor: ${data.originFloorThird ? "Yes"}<br>
-      Fourth Floor: ${data.originFloorFourth ? "Yes"}<br>
-      Elevator: ${data.originFloorElevator ? "Yes"}<br>
-      Distance: ${data.originDistance}<br>
+      Floors to move:
       <br>
+      ${data.originFloorBasement ? "Basement<br>" : ''}
+      ${data.originFloorFirst ? "First Floor<br>" : ''}
+      ${data.originFloorSecond ? "Second Floor<br>" : ''}
+      ${data.originFloorThird ? "Thrid Floor<br>" : ''}
+      ${data.originFloorFourth ? "Fourth Floor<br>" : ''}
+      ${data.originFloorElevator ? "Elevator<br>" : ''}
+      Distance: ${data.originDistance}<br>
       <br>
       Destination Details:<br>
       <br>
       ${data.destinationStreet},<br>
       ${data.destinationCity}, ${data.destinationState} ${data.destinationZip}<br>
       <br>
-      Basement: ${data.destFloorBasement ? "Yes"}<br>
-      First Floor: ${data.destFloorFirst ? "Yes"}<br>
-      Second Floor: ${data.destFloorSecond ? "Yes"}<br>
-      Third Floor: ${data.destFloorThird ? "Yes"}<br>
-      Fourth Floor: ${data.destFloorFourth ? "Yes"}<br>
-      Elevator: ${data.destFloorElevator ? "Yes"}<br>
+      Floors to move:
+      <br>
+      ${data.destFloorBasement ? "Basement<br>" : ''}
+      ${data.destFloorFirst ? "First Floor<br>" : ''}
+      ${data.destFloorSecond ? "Second Floor<br>" : ''}
+      ${data.destFloorThird ? "Thrid Floor<br>" : ''}
+      ${data.destFloorFourth ? "Fourth Floor<br>" : ''}
+      ${data.destFloorElevator ? "Elevator<br>" : ''}
       Distance: ${data.destDistance}<br>
       <br>
       <br>
