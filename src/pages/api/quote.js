@@ -37,8 +37,8 @@ export const POST = async ({ request, redirect }) => {
       ${data.originStreet},<br>
       ${data.originCity}, ${data.originState} ${data.originZip}<br>
       <br>
-      ${data.originFloorBasement && "Basement = Yes"}<br>
-      First Floor: ${data.originFloorFirst ? "Yes"}<br>
+      ${data.originFloorBasement && "Has basement"}<br>
+      ${data.originFloorFirst && "Has First Floor"}<br>
       Second Floor: ${data.originFloorSecond ? "Yes"}<br>
       Third Floor: ${data.originFloorThird ? "Yes"}<br>
       Fourth Floor: ${data.originFloorFourth ? "Yes"}<br>
