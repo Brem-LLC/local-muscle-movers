@@ -6,7 +6,7 @@ export const POST = async ({ request, redirect }) => {
   const data = await request.json();
 
 
-  const req = await fetch("https://api.smartmoving.com/api/leads/from-provider/v2?providerKey=2f400089-28bf-46c7-8a17-adfd01096041", {
+  const req = await fetch(import.meta.env.QUOTE_API, {
     method: "POST",
     headers: {
       "Content-Type": "application/json"
@@ -39,12 +39,12 @@ export const POST = async ({ request, redirect }) => {
       <br>
       Floors to move:
       <br>
-      ${data.originFloorBasement ? "Basement<br>" : ''}
-      ${data.originFloorFirst ? "First Floor<br>" : ''}
-      ${data.originFloorSecond ? "Second Floor<br>" : ''}
-      ${data.originFloorThird ? "Thrid Floor<br>" : ''}
-      ${data.originFloorFourth ? "Fourth Floor<br>" : ''}
-      ${data.originFloorElevator ? "Elevator<br>" : ''}
+      ${data.originFloorBasement && "Basement<br>"}
+      ${data.originFloorFirst && "First Floor<br>"}
+      ${data.originFloorSecond && "Second Floor<br>"}
+      ${data.originFloorThird && "Thrid Floor<br>"}
+      ${data.originFloorFourth && "Fourth Floor<br>"}
+      ${data.originFloorElevator && "Elevator<br>"}
       Distance: ${data.originDistance}<br>
       <br>
       Destination Details:<br>
@@ -54,12 +54,12 @@ export const POST = async ({ request, redirect }) => {
       <br>
       Floors to move:
       <br>
-      ${data.destFloorBasement ? "Basement<br>" : ''}
-      ${data.destFloorFirst ? "First Floor<br>" : ''}
-      ${data.destFloorSecond ? "Second Floor<br>" : ''}
-      ${data.destFloorThird ? "Thrid Floor<br>" : ''}
-      ${data.destFloorFourth ? "Fourth Floor<br>" : ''}
-      ${data.destFloorElevator ? "Elevator<br>" : ''}
+      ${data.destFloorBasement && "Basement<br>"}
+      ${data.destFloorFirst && "First Floor<br>"}
+      ${data.destFloorSecond && "Second Floor<br>"}
+      ${data.destFloorThird && "Thrid Floor<br>"}
+      ${data.destFloorFourth && "Fourth Floor<br>"}
+      ${data.destFloorElevator && "Elevator<br>"}
       Distance: ${data.destDistance}<br>
       <br>
       <br>
