@@ -1,8 +1,9 @@
-name: Join
+name: Join Our Crew
 componentBlocks:
   - discriminant: shortHero
     value:
-      backgroundImage: /images/shortHeros/join/componentBlocks/0/value/backgroundImage.jpg
+      backgroundImage: >-
+        /images/shortHeros/join-our-crew/componentBlocks/0/value/backgroundImage.png
       title: Join Our Crew
       description: >-
         Local Muscle is currently looking for able-bodied, reliable people to

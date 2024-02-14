@@ -1,5 +1,14 @@
 title: Local Muscle Movers
 usdot: '2162841'
 phone: 207-370-9090
-email: holz@localmusclemovers.com
-hours: 9am - 4pm
+phoneSecondary: 802-899-0908
+email: sales@localmusclemovers.com
+hours: Mon-Fri, 9AM to 4PM
+officeAddress:
+  street: 511 Riverside Industrial Parkway
+  city: Portland
+  state: Maine
+  zip: '04103'
+footerImage: /images/footerImage.png
+socialMedia:
+  facebook: https://www.facebook.com/Local.Muscle/

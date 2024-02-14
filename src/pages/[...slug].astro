@@ -5,42 +5,47 @@ import Layout from '@layouts/Base.astro'
 import ShortHero from '@components/ShortHero.astro'
 import Story from '@components/Story.astro'
 import Mission from '@components/Mission.astro'
-import WhyLMM from '@components/WhyLMM.astro'
+import WhyLMMV2 from '@components/WhyLMMV2.astro'
 import NedQuote from '@components/NedQuote.astro'
-import MovingChecklist from '@components/MovingChecklist.astro'
-import Policies from '@components/Policies.astro'
+import MovingChecklistV2 from '@components/MovingChecklistV2.astro'
+import PoliciesV2 from '@components/PoliciesV2.astro'
 import JoinForm from '@components/joinForm.jsx'
 import QuoteFormDemo from '@components/QuoteFormDemo'
+import WhoAreWe from '@components/WhoAreWe.astro'
+import CallToAction from '@components/CallToAction.astro';
+import Services from '@components/Services.astro'
+import MovingChecklist from '@components/OldComponents/MovingChecklist.astro'
 
 export async function getStaticPaths() {
-	const reader = createReader(process.cwd(), keystaticConfig)
-	const pages = await reader.collections.pages.all()
-	return pages.map(({ slug, entry }) => {
-		return {
-			params: { slug },
-			props: { entry }
-		}
-	})
+    const reader = createReader(process.cwd(), keystaticConfig)
+    const pages = await reader.collections.pages.all()
+    return pages.map(({ slug, entry }) => {
+        return {
+            params: { slug },
+            props: { entry }
+        }
+    })
 }
 const { entry } = Astro.props
 const { slug } = Astro.params
-
-const shortHeroBlock = entry?.componentBlocks.filter((bl) => bl.discriminant === 'shortHero')
-const storyBlock = entry?.componentBlocks.filter((bl) => bl.discriminant === 'videoText')
-const headerAndTextBlocks = entry?.componentBlocks.filter((bl) => bl.discriminant === 'headerText')
-const quoteBlock = entry?.componentBlocks.filter((bl) => bl.discriminant === 'testimonialCTA')
-const movingChecklistBlock = entry?.componentBlocks.filter((bl) => bl.discriminant === 'movingChecklist')
-const policiesBlock = entry?.componentBlocks.filter((bl) => bl.discriminant === 'policiesAndContracts')
 ---
 
 <Layout title={entry.name}>
-	{shortHeroBlock[0] && <ShortHero block={shortHeroBlock[0].value} />}
-	{storyBlock[0] && <Story block={storyBlock[0].value} />}
-	{headerAndTextBlocks[0] && <Mission block={headerAndTextBlocks[0].value} />}
-	{headerAndTextBlocks[1] && <WhyLMM block={headerAndTextBlocks[1].value} />}
-	{quoteBlock[0] && <NedQuote block={quoteBlock[0].value} />}
-	{movingChecklistBlock[0] && <MovingChecklist block={movingChecklistBlock[0].value} />}
-	{policiesBlock[0] && <Policies block={policiesBlock[0].value} />}
-	{slug === 'hire-us' && <QuoteFormDemo client:only="react" />}
-	{slug === 'join' && <JoinForm client:only="react" />}
+    {entry?.componentBlocks[0] && entry?.componentBlocks.map((block: any) => (
+		<>
+		{block.discriminant === 'shortHero' ? <ShortHero block={block.value} /> : <></>}
+		{block.discriminant === 'headerTextAndImage' && block.value.sectionType === 'ourMission' && <Mission block={block.value} />}
+		{block.discriminant === 'headerTextAndImage' && block.value.sectionType === 'whoAreWe' && <WhoAreWe block={block.value} />}
+		{block.discriminant === 'headerTextButtonAndImages' && <WhyLMMV2 block={block.value} />}
+		{block.discriminant === 'testimonialCTA' && <NedQuote block={block.value} />}
+		{block.discriminant === 'callToAction' && <CallToAction block={block.value} />}
+		{block.discriminant === 'videoText' && <Story block={block.value} />}
+		{block.discriminant === 'ourServices' && <Services block={block.value} />}
+		{block.discriminant === 'movingChecklist' && <MovingChecklist block={block.value} />}
+		{block.discriminant === 'policiesAndContracts' && <PoliciesV2 block={block.value} />}
+		{block.discriminant === 'videoAndText' && <Story block={block.value} />}
+		{slug === 'hire-us' && <QuoteFormDemo client:only="react" />}
+		{slug === 'join-our-crew' && <JoinForm client:only="react" />}
+		</>
+    ))}
 </Layout>

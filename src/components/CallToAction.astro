@@ -1,0 +1,26 @@
+---
+const { block } = Astro.props
+console.log(block.imageArray)
+---
+
+<section class="bg-[#F4F1EC] py-16 md:py-28">
+	<div class="mx-auto grid w-full max-w-7xl grid-cols-1 items-center gap-12 px-4 md:grid-cols-[45%_45%] md:gap-[10%]">
+		<div>
+			<h2 class="mb-4 font-primary text-[38px] text-black">{block.header}</h2>
+			<a href={block.button.link} class="inline-flex items-center bg-gradient-1 px-6 py-3.5 text-center text-lg font-bold uppercase text-black hover:bg-gradient-1 focus:outline-none focus:ring-4 focus:ring-sky-600"
+				>{block.button.text}</a
+			>
+		</div>
+		<div class="grid h-[450px] grid-cols-2 gap-3">
+			<div class="grid grid-rows-2 gap-3 h-[450px]">
+				<div>
+					<img src={block.imageArray[0]} alt={block.header} class=" object-cover w-full h-full" />
+				</div>
+				<div>
+					<img src={block.imageArray[1]} alt={block.header} class="object-cover w-full h-full" />
+				</div>
+			</div>
+			<img src={block.imageArray[2]} alt={block.header} class="object-cover h-full" />
+		</div>
+	</div>
+</section>

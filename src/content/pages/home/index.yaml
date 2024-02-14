@@ -2,52 +2,160 @@ name: Home
 componentBlocks:
   - discriminant: banner
     value:
-      bannerImage: /images/home/home/componentBlocks/0/value/bannerImage.webp
-      heading: Let's get moving!
+      bannerImage: /images/home/home/componentBlocks/0/value/bannerImage.png
+      heading: Let's get moving.
       subheading: >-
-        "You don't know how much you have to move until you go to move it."
-        Local Muscle understands how challenging and stressful moving can be.
-        That's why we work closely with our customers to understand their needs
-        and the scope of their move to ensure we provide the right resources to
-        help make it happen smoothly. Whether it's a small apartment or office
-        move across town or a five bedroom house move out of state, we have you
-        covered. Moving with Local Muscle is like moving with friends and that's
-        why moving isn't just what we do for a living, it's what we live to do. 
-      buttonText: Get an Estimate Today!
-      buttonLink: /hire-us
-  - discriminant: videoText
+        Moving is stressful, so Local Muscle Movers works with you to ensure a
+        smooth move, whether it's a small apartment or a big house.
+
+        We're not just movers, we're your moving friends.
+      ctaButton:
+        buttonText: Get an Estimate Today!
+        buttonLink: /hire-us
+      learnMoreButton:
+        buttonText: Learn More
+        buttonLink: /about
+  - discriminant: headerTextAndImage
     value:
-      video: CLv16TFTKNs
-      heading: Services Offered
+      sectionType: servicesOffered
+      header: Services Offered
       description: >-
         We've built a reputation throughout New England as a moving company you
         can trust. Whether you're moving halfway across the country or across
-        the street, we've got you covered. Throughout our history we've seen it
-        all, and we use that experience to make your move as smooth as possible.
+        the street, we've got you covered. Throughout our history, we've seen ti
+        al, and we use that experience to make your move as smooth as possible.
         Our customers return to us time and time again for their moving needs.
-        Let our reviews speak for themselves: Check us out on Google Reviews and
-        Yelp for more firsthand customer feedback!
-      optionalLink:
-        link: /join
-        text: Contact sales to learn more
-      type: vertical
+        Let our reviews speak for themselves: Check us out on Google Reviews for
+        more firsthand customer feedback!
+      image: /images/resources/home/componentBlocks/1/value/image.png
+      button:
+        text: Get In Touch
+        link: /hire-us
+  - discriminant: headerTextAndImage
+    value:
+      sectionType: ourMission
+      header: Our Mission
+      description: >-
+        To provide a stress free and cost effective move that leaves you
+        wondering what you were worried about in the first place.
+      image: /images/resources/home/componentBlocks/2/value/image.png
+      button: {}
   - discriminant: serviceSelector
     value:
+      header: Our Services
+      subtext: >-
+        Our Services include heavy lifting, residential and commercial moving,
+        rearrangement, and more.
+      featuredImage: /images/resources/home/componentBlocks/3/value/featuredImage.png
       services:
-        - moving
         - heavy-items
+        - moving
         - rearrangement
-  - discriminant: testimonialCTA
+  - discriminant: feedbackFromClients
     value:
-      personName: Lee Van Dyke
-      review: >-
-        We moved to our home in Portland just before Thanksgiving weekend. We
-        scheduled our PODS arrivals in conjunction with our Local Muscle guys,
-        and they were both on time, but worked with efficiency and intelligence.
-        They were a joy to have around, if joy can be had when moving one's life
-        possessions. What I mean to say is they were courteous, careful, and
-        cheerful about the day. Great workers. I'd recommend them absolutely.
-        And you know I'm telling you the truth, because I'm determined to not
-        move again myself, any time soon. i.e. I have no motive other than to
-        assist anyone considering hiring them.
-      testimonialType: review
+      header: Feedback From Clients
+      subtext: Why you should hire our Local Muscle Movers.
+      testimonials:
+        - review: >-
+            The team of movers were courteous, friendly,  very helpful and moved
+            along our house efficiently. This made our move quick and painless.
+            Professionals from beginning to the end and were always responsive
+            to any of our questions. They were a very nice group of guys and I
+            would highly recommend Muscle Movers and I would definitely use them
+            again!
+          personName: Kristen G.
+        - review: >
+            These are real professionals. The prep work was streamlined and
+            easy. The rates were a good value. I had used them in 2021, and I
+            had such a good experience that I made sure to use them again. They
+            were just as good this time.
+
+
+            This time we were moving from an apartment up one flight of stairs
+            in downtown Portland to home in Casco…they were able to handle both.
+            Nothing got damaged. The movers were kind and professional.
+
+
+            I highly recommend them.
+          personName: Matty S.
+        - review: >-
+            The Local Muscle team helped us moved our furniture and unload the
+            contents of our PODs into our new home. They were punctual,
+            efficient, and communicative, and made the whole process of moving
+            so much less stressful. Throughout the whole process, they took
+            excellent care of all of our belongings and were a delight to work
+            with. If I ever need to move again, I would hire Local Muscle in a
+            heartbeat. Highly recommend!!
+          personName: Eugenia O.
+        - review: >-
+            Very pleasant movers who were punctual and thorough. They were
+            careful and went the extra mile.  I would definitely use them again
+            and would  certainly recommend them to any one that is looking for a
+            moving company.
+          personName: Logan G.
+        - review: >-
+            From start to finish we had a great experience. Communication was
+            clear and timely, our movers showed up exactly when they predicted,
+            and the estimate was spot on. The pair who came to move for us were
+            conscientious, extremely polite, and so strong!
+          personName: Carla M.
+        - review: >-
+            These guys are awesome! They were prompt, efficient, SO nice and
+            easy to work with and did a great job moving our stuff! Our total
+            cost came in even lower than the estimate too which was an added
+            bonus. We will definitely use them again if we move - highly
+            recommend!
+          personName: Erin P.
+      image: /images/home/home/componentBlocks/4/value/image.png
+  - discriminant: policiesAndContracts
+    value:
+      header: Policies And Contracts
+      subtext: >-
+        We've outlined our Terms of Service and Full Value Replacement Coverage
+        in simple language for quick reference. For interstate moves, the FMCSA
+        also provides brochures regarding your legal rights.
+      policyHolder: See These Documents
+      localPolicies:
+        - discriminant: file
+          value:
+            title: In State Terms and Conditions Outline
+            upload: >-
+              /files/home/componentBlocks/5/value/localPolicies/0/value/upload.pdf
+        - discriminant: file
+          value:
+            title: Full Value Replacement Coverage
+            upload: >-
+              /files/home/componentBlocks/5/value/localPolicies/1/value/upload.pdf
+      interstatePolicies:
+        - discriminant: file
+          value:
+            title: Interstate Carrier Liability Agreement
+            upload: >-
+              /files/home/componentBlocks/5/value/interstatePolicies/0/value/upload.pdf
+        - discriminant: file
+          value:
+            title: Ready To Move
+            upload: >-
+              /files/home/componentBlocks/5/value/interstatePolicies/1/value/upload.pdf
+        - discriminant: file
+          value:
+            title: Your Rights and Responsibilities
+            upload: >-
+              /files/home/componentBlocks/5/value/interstatePolicies/2/value/upload.pdf
+      disclaimer: >-
+        We bill differently for interstate moves, as mandated by law. We will
+        determine a flat rate and provide a quote, rather than create an
+        hourly-based estimate.
+      button:
+        text: Learn More
+        link: /resources
+  - discriminant: callToAction
+    value:
+      header: Start your move with Local Muscle Movers.
+      button:
+        text: Get an estimate today
+        link: /hire-us
+      imageArray:
+        - /images/resources/home/componentBlocks/6/value/imageArray/0.jpg
+        - /images/resources/home/componentBlocks/6/value/imageArray/1.jpg
+        - /images/resources/home/componentBlocks/6/value/imageArray/2.jpg

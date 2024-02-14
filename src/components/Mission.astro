@@ -2,9 +2,16 @@
 const { block } = Astro.props
 ---
 
-<section class="bg-gray-100 py-16">
-    <div class="mx-auto w-full max-w-7xl px-7 text-center lg:px-10">
-        <h2 class="mb-8 text-3xl font-bold md:text-5xl">{block.header}</h2>
-        <p class="text-lg leading-relaxed">{block.text}</p>
-    </div>
+<section class="relative z-0 px-5 py-20 md:py-[300px]">
+	<div class="mx-auto w-full max-w-2xl text-center">
+		<h3 class="mx-auto mb-5 w-fit bg-gradient-1 bg-clip-text font-primary text-[38px] text-transparent">{block.header}</h3>
+		<p class="font-primary text-lg leading-relaxed tracking-wide text-primary-500">
+			{block.description}
+		</p>
+	</div>
+	<img
+		src={block.image}
+		alt="background"
+		class="pointer-events-none absolute inset-0 -z-20 h-full w-full object-cover"
+	/>
 </section>

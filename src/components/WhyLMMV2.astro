@@ -1,0 +1,37 @@
+---
+const { block } = Astro.props
+let textArray = []
+if (block.content.includes('\n')) {
+	textArray = block.content.split('\n')
+} else {
+	textArray.push(block.content)
+}
+---
+
+<section class="bg-[#F4F1EC] py-16 md:py-28">
+	<div class="mx-auto grid w-full max-w-7xl grid-cols-1 items-center gap-12 px-4 md:grid-cols-[45%_45%] md:gap-[10%]">
+		<div class="grid h-[650px] grid-cols-2 gap-3">
+			<div class="grid h-[650px] grid-rows-2 gap-3">
+				<div>
+					<img src={block.images[0]} alt={block.header} class="h-full w-full object-cover" />
+				</div>
+				<div>
+					<img src={block.images[1]} alt={block.header} class="h-full w-full object-cover" />
+				</div>
+			</div>
+			<div>
+				<img src={block.images[2]} alt={block.header} class="h-full object-cover" />
+			</div>
+		</div>
+
+		<div>
+			<h2 class="mb-4 font-primary text-[38px] leading-tight text-black">{block.header}</h2>
+			{textArray.map((text: any) => <p class="mb-6">{text}</p>)}
+			<a
+				href={block.button.link}
+				class="inline-flex items-center bg-gradient-1 px-6 py-3.5 text-center text-lg font-bold uppercase text-black hover:bg-gradient-1 focus:outline-none focus:ring-4 focus:ring-sky-600"
+				>{block.button.text}</a
+			>
+		</div>
+	</div>
+</section>

@@ -1,0 +1,22 @@
+---
+const { block } = Astro.props
+---
+
+<section class="py-16 md:py-32">
+	<div class="mx-auto grid w-full max-w-7xl grid-cols-1 items-center gap-11 px-4 md:grid-cols-2">
+		<div>
+			<h2 class="mb-5 font-primary text-[38px] font-bold text-black">{block.header}</h2>
+			<p class="text-xl leading-relaxed">
+				{block.description}
+			</p>
+			<a
+				href={block.button.link ? block.button.link : '#'}
+				class="mt-6 inline-flex items-center bg-gradient-1 px-6 py-3.5 text-center text-lg font-bold uppercase text-black hover:bg-gradient-1 focus:outline-none focus:ring-4 focus:ring-sky-600"
+				>{block.button.text ? block.button.text : "get in touch"}</a
+			>
+		</div>
+		<div>
+			<img src={block.image} alt="image" class="aspect-[16/12] w-full object-cover" />
+		</div>
+	</div>
+</section>

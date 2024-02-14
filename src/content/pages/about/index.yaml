@@ -2,7 +2,7 @@ name: About
 componentBlocks:
   - discriminant: shortHero
     value:
-      backgroundImage: /images/shortHeros/about/componentBlocks/0/value/backgroundImage.jpg
+      backgroundImage: /images/shortHeros/about/componentBlocks/0/value/backgroundImage.png
       title: Meet the Muscle
   - discriminant: videoText
     value:
@@ -18,16 +18,20 @@ componentBlocks:
         with the driving idea that customer service and attitude of the crews
         will be what sets us apart. The results speak for themselves.
       optionalLink: {}
-  - discriminant: headerText
+      type: vertical
+  - discriminant: headerTextAndImage
     value:
+      sectionType: ourMission
       header: Our Mission
-      text: >-
+      description: >-
         To provide a stress free and cost effective move that leaves you
         wondering what you were worried about in the first place.
-  - discriminant: headerText
+      image: /images/resources/about/componentBlocks/2/value/image.png
+      button: {}
+  - discriminant: headerTextButtonAndImages
     value:
       header: Why choose Local Muscle?
-      text: >-
+      content: >-
         We've built a reputation throughout New England as a moving company you
         can trust. Whether you're moving halfway across the country or across
         the street, we've got you covered.Throughout our history we really have
@@ -44,7 +48,15 @@ componentBlocks:
         point you complete our estimate form, a member of our dedicated staff
         will be in contact with you every step of the way. Get started with our
         estimate form.
+      button:
+        text: Get In Touch
+        link: /hire-us
+      images:
+        - /images/resources/about/componentBlocks/3/value/images/0.jpg
+        - /images/resources/about/componentBlocks/3/value/images/1.jpg
+        - /images/resources/about/componentBlocks/3/value/images/2.jpg
   - discriminant: testimonialCTA
     value:
       personName: Ned Swain
       review: '"I love lifting heavy awkward things, and running around."'
+      testimonialType: quote

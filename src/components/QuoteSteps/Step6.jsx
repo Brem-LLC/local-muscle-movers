@@ -20,8 +20,8 @@ export default function Step6({ register, step, setStep, isValid }) {
     }
 
     return (
-        <div className='flex flex-col gap-5 bg-[#f5f7f2] p-12 rounded-lg'>
-            <h2 className='font-bold text-3xl absolute transform -translate-y-20 bg-[#f5f7f2] pt-2 px-8 rounded-md'>Location Notes:</h2>
+        <div className='flex flex-col gap-5 bg-[#f4dd973a] p-12 rounded-lg'>
+            <h2 className='font-bold text-3xl absolute transform -translate-y-[91px] bg-[#f4dd973a] pt-2 px-8 rounded-md'>Location Notes:</h2>
             <div className='flex flex-col gap-5 items-center'>
                 <div className='flex flex-col gap-5'>
                     <div className='w-full'>

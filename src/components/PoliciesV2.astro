@@ -1,0 +1,54 @@
+---
+const { block } = Astro.props
+let subtextArray = []
+if (block.subtext.includes('\n')) {
+	subtextArray = block.subtext.split('\n')
+}
+else {
+	subtextArray.push(block.subtext)
+}
+---
+
+<section class="px-5 py-24 lg:px-10">
+	<div class="mx-auto flex w-full max-w-[1200px] flex-col items-center md:flex-row">
+		<div class="md:w-1/3">
+			<div>
+				<h2 class="mb-5 font-primary text-[38px] leading-tight text-black">{block.header}</h2>
+				<p class="text-base leading-relaxed">
+					{subtextArray.map((subtext: any) => {
+						return <span>{subtext}<br /></span>
+					})}
+				</p>
+				<br/>
+				<p class="text-base leading-relaxed">
+					{block.disclaimer}
+				</p>
+				<a
+					href={block.button.link ? block.button.link : '#'}
+					class="mt-5 inline-flex items-center bg-gradient-1 px-6 py-3.5 text-center text-lg font-bold uppercase text-black hover:bg-gradient-1 focus:outline-none focus:ring-4 focus:ring-sky-600"
+					>{block.button.text ? block.button.text : "Learn More"}</a
+				>
+			</div>
+		</div>
+		<div class="mt-6 md:w-2/3 md:pl-8">
+			<div class="mx-auto grid w-full grid-cols-1 gap-5 sm:grid-cols-2 md:max-w-2xl">
+				<div class="bg-black px-9 pb-12 pt-10 text-white">
+					<h4 class="mb-3 font-sans text-3xl">Local (In State)</h4>
+					<ul class="mb-7 list-disc pl-4 text-sm">
+						{block.localPolicies.map((item: any) => (
+							<li class="mb-4"><a href={item.discriminant === 'link' ? `${item.value.url}` : `${item.value.upload}`} target="_blank" class="underline">{item.value.title}</a></li>
+						))}
+					</ul>
+				</div>
+				<div class="bg-black px-9 pb-12 pt-10 text-white">
+					<h4 class="mb-3 font-sans text-3xl">Interstate</h4>
+					<ul class="mb-7 list-disc pl-4 text-sm">
+						{block.interstatePolicies.map((item: any) => (
+							<li class="mb-4"><a href={item.discriminant === 'link' ? `${item.value.url}` : `${item.value.upload}`} target="_blank" class="underline">{item.value.title}</a></li>
+						))}
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>

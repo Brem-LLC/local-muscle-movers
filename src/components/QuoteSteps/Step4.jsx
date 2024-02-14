@@ -22,8 +22,8 @@ export default function Step4({ register, isValid, moveType, setStep, step }) {
     }
 
     return (
-        <div className='flex flex-col gap-5 bg-[#f5f7f2] p-12 rounded-lg'>
-            <h2 className='font-bold text-3xl absolute transform -translate-y-20 bg-[#f5f7f2] pt-2 px-8 rounded-md'>
+        <div className='flex flex-col gap-5 bg-[#f4dd973a] p-12 rounded-lg'>
+            <h2 className='font-bold text-3xl absolute transform -translate-y-[91px] bg-[#f4dd973a] pt-2 px-8 rounded-md'>
                 {moveType === "Moving with our trucks" ? "Origin" : "Address"}
             </h2>
             <div className='flex flex-col gap-5 items-center'>
