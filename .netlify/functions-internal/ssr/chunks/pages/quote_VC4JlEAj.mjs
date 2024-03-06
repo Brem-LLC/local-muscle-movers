@@ -1,19 +1,16 @@
-export const prerender = false;
-import * as postmark from "postmark";
+import * as postmark from 'postmark';
 
-export const POST = async ({ request, redirect }) => {
-  const client = new postmark.ServerClient(import.meta.env.POSTMARK_TOKEN);
+const prerender = false;
+const POST = async ({ request, redirect }) => {
+  const client = new postmark.ServerClient("7d4ddd4e-561f-40ac-a1a8-6baa25072dba");
   const data = await request.json();
-
-
-  const req = await fetch("https://api.smartmoving.com/api/leads/from-provider/v2?providerKey=2f400089-28bf-46c7-8a17-adfd01096041", {
+  await fetch("https://api.smartmoving.com/api/leads/from-provider/v2?providerKey=2f400089-28bf-46c7-8a17-adfd01096041", {
     method: "POST",
     headers: {
       "Content-Type": "application/json"
     },
     body: JSON.stringify(data)
-  })
-
+  });
   client.sendEmail({
     "From": "Local Muscle Movers <holz@localmusclemovers.com>",
     "To": `${data.email}, holz@localmusclemovers.com, info@brem.io`,
@@ -39,12 +36,12 @@ export const POST = async ({ request, redirect }) => {
       <br>
       Floors to move:
       <br>
-      ${data.originFloorBasement ? "Basement<br>" : ''}
-      ${data.originFloorFirst ? "First Floor<br>" : ''}
-      ${data.originFloorSecond ? "Second Floor<br>" : ''}
-      ${data.originFloorThird ? "Thrid Floor<br>" : ''}
-      ${data.originFloorFourth ? "Fourth Floor<br>" : ''}
-      ${data.originFloorElevator ? "Elevator<br>" : ''}
+      ${data.originFloorBasement ? "Basement<br>" : ""}
+      ${data.originFloorFirst ? "First Floor<br>" : ""}
+      ${data.originFloorSecond ? "Second Floor<br>" : ""}
+      ${data.originFloorThird ? "Thrid Floor<br>" : ""}
+      ${data.originFloorFourth ? "Fourth Floor<br>" : ""}
+      ${data.originFloorElevator ? "Elevator<br>" : ""}
       Distance: ${data.originDistance}<br>
       ${data.destinationStreet ? `
       <br>
@@ -55,16 +52,16 @@ export const POST = async ({ request, redirect }) => {
       <br>
       Floors to move:
       <br>
-      ${data.destFloorBasement ? "Basement<br>" : ''}
-      ${data.destFloorFirst ? "First Floor<br>" : ''}
-      ${data.destFloorSecond ? "Second Floor<br>" : ''}
-      ${data.destFloorThird ? "Thrid Floor<br>" : ''}
-      ${data.destFloorFourth ? "Fourth Floor<br>" : ''}
-      ${data.destFloorElevator ? "Elevator<br>" : ''}
+      ${data.destFloorBasement ? "Basement<br>" : ""}
+      ${data.destFloorFirst ? "First Floor<br>" : ""}
+      ${data.destFloorSecond ? "Second Floor<br>" : ""}
+      ${data.destFloorThird ? "Thrid Floor<br>" : ""}
+      ${data.destFloorFourth ? "Fourth Floor<br>" : ""}
+      ${data.destFloorElevator ? "Elevator<br>" : ""}
       Distance: ${data.destDistance}<br>
-      ` : ''}
+      ` : ""}
       <br>
-      ${data.locationNotes ? `Location Notes:<br>${data.locationNotes}<br>` : ''}
+      ${data.locationNotes ? `Location Notes:<br>${data.locationNotes}<br>` : ""}
       <br>
       Preferred Contact Method: ${data.preferredContact}<br>
       Include Mi-Box portable storage: ${data.includeMiBox}<br>
@@ -73,10 +70,11 @@ export const POST = async ({ request, redirect }) => {
       200+ lb Items: ${data.weightThreshold}<br>
       Accurate Inventory Assurance: ${data.inventoryAccuracy}<br>
       <br>
-      ${data.additionalInfo !== '' ? `Additional Move Information:<br>${data.additionalInfo}<br>` : ''}
+      ${data.additionalInfo !== "" ? `Additional Move Information:<br>${data.additionalInfo}<br>` : ""}
     `,
     "MessageStream": "outbound"
-  })
-
-  return redirect("/quote-thank-you", 302)
+  });
+  return redirect("/quote-thank-you", 302);
 };
+
+export { POST, prerender };
